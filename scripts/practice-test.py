@@ -23,6 +23,13 @@ EXAM_DISTRIBUTION = {
     "T6": 4, "T7": 4, "T8": 4, "T9": 2, "T0": 3,
 }
 
+# Questions that reference schematic diagrams
+FIGURE_QUESTIONS = {
+    "T6C01": "T-1.png", "T6C02": "T-1.png", "T6C03": "T-1.png", "T6C04": "T-1.png",
+    "T6C05": "T-2.png", "T6C06": "T-2.png", "T6C07": "T-2.png", "T6C08": "T-2.png",
+    "T6C09": "T-3.png", "T6C10": "T-3.png", "T6C11": "T-3.png", "T6C12": "T-3.png",
+}
+
 
 def load_pool():
     with open(POOL_PATH) as f:
@@ -57,6 +64,10 @@ def run_interactive(exam):
 
     for i, q in enumerate(exam, 1):
         print(f"Q{i}. [{q['id']}] {q['question']}")
+        # Show figure reference for schematic questions
+        if q['id'] in FIGURE_QUESTIONS:
+            fig = FIGURE_QUESTIONS[q['id']]
+            print(f"    📎 See figures/{fig}")
         letters = sorted(q["answers"].keys())
         for letter in letters:
             print(f"    {letter}) {q['answers'][letter]}")
@@ -88,6 +99,9 @@ def run_quick(exam):
 
     for i, q in enumerate(exam, 1):
         print(f"Q{i}. [{q['id']}] {q['question']}")
+        if q['id'] in FIGURE_QUESTIONS:
+            fig = FIGURE_QUESTIONS[q['id']]
+            print(f"    📎 See figures/{fig}")
         letters = sorted(q["answers"].keys())
         for letter in letters:
             mark = " ✅" if letter == q["correct"] else ""
