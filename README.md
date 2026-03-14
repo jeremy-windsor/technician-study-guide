@@ -98,6 +98,25 @@ Each MP3 reads the full question, all answer choices, the correct answer, and th
 
 [CRAM-SHEET.md](CRAM-SHEET.md) — one page of key facts, formulas, frequencies, and power limits. Read this the morning of your exam.
 
+## Regenerating Audio
+
+Audio is generated via [Kokoro](https://github.com/remsky/Kokoro-FastAPI) (OpenAI-compatible TTS). Requires Python 3.6+, `curl`, `ffmpeg`.
+
+```bash
+export SPEECH_URL="https://your-server:8100/v1/audio/speech"
+python3 tts/generate-audio.py --all --voice af_heart
+```
+
+Pronunciation rules are in `tts/pronunciation.md`. Use `--dry-run` to preview spoken text.
+
+## Updating for a New Pool
+
+1. Download the new pool PDF from [ncvec.org](https://ncvec.org/index.php/amateur-question-pools)
+2. Parse into `pools/YYYY-YYYY/questions.json`
+3. Regenerate subelement files and update practice test pool path
+4. Update dates in this README
+5. Regenerate audio with the TTS pipeline above
+
 ## Question Pool Source
 
 All questions are from the official NCVEC Technician Class Question Pool, released into the public domain.
