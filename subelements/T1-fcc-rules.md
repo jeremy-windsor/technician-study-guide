@@ -104,7 +104,7 @@
 
 ---
 
-## Group T1B — Frequency allocations; emission modes; spectrum sharing; transmissions near combband edges; power limits
+## Group T1B — Frequency allocations; emission modes; spectrum sharing; transmissions near band edges; power limits
 
 ### T1B01
 **[97.301 (e)] Which of the following frequency ranges are available for phone operation by Technician licensees?**
@@ -216,7 +216,7 @@
 
 ---
 
-## Group T1C — Licensing; call signs; classes of licensees;ும renewal; grace periods; vanity call signs
+## Group T1C — Licensing; call signs; classes of licensees; renewal; grace periods; vanity call signs
 
 ### T1C01
 **[97.9(a), 97.17(a)] For which license classes are new licenses currently available from the FCC?**

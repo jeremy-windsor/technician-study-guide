@@ -190,7 +190,6 @@
 - A) The antenna will not work properly because of induced voltages
 - B) The 60 Hz radiations from the feed line may increase the SWR
 - **C) The antenna could contact high-voltage power lines** ✅
-
 - D) All these choices are correct
 
 > Utility poles carry high-voltage power lines. Attaching an antenna creates the risk of contact with those lines — during installation, wind, ice loading, or structural failure. This is potentially fatal. The other answers about induced voltages and 60 Hz radiation affecting SWR are nonsensical distractors.

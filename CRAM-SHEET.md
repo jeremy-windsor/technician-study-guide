@@ -44,7 +44,7 @@ Read this the morning of your exam. Key facts, formulas, and numbers that show u
 | **80m** | 3.525–3.600 MHz | CW only | 200W PEP |
 | **40m** | 7.025–7.125 MHz | CW only | 200W PEP |
 | **15m** | 21.025–21.200 MHz | CW only | 200W PEP |
-| **10m** | 28.000–28.500 MHz | CW, RTTY, data | 200W PEP |
+| **10m** | 28.000–28.300 MHz | CW, RTTY, data | 200W PEP |
 | **10m** | 28.300–28.500 MHz | CW, SSB | 200W PEP |
 | **6m** | 50–54 MHz | All modes | 1500W PEP |
 | **2m** | 144–148 MHz | All modes | 1500W PEP |
@@ -89,8 +89,8 @@ Read this the morning of your exam. Key facts, formulas, and numbers that show u
 | VHF/UHF max power | **1500W PEP** |
 | Third-party traffic | **Allowed with countries that have agreements** |
 | Prohibited transmissions | **Music, obscenity, false signals, encryption to hide meaning** |
-| Encryption allowed when | **Only for satellite control** |
-| When can you transmit without ID | **Never (except brief tests)** |
+| Encryption allowed when | **Only for space station or radio control craft commands** |
+| When can you transmit without ID | **Only when controlling model craft** |
 | Operating another person's station | **Allowed — your privileges apply** |
 
 ## Propagation

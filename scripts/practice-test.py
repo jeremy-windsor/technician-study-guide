@@ -31,18 +31,14 @@ def load_pool():
 
 
 def generate_exam(questions):
-    """Select questions matching real exam distribution."""
-    by_sub = {}
+    """Select one question per group, matching real exam structure."""
+    by_group = {}
     for q in questions:
-        by_sub.setdefault(q["subelement"], []).append(q)
+        by_group.setdefault(q["group"], []).append(q)
 
     exam = []
-    for sub, count in EXAM_DISTRIBUTION.items():
-        pool = by_sub.get(sub, [])
-        if len(pool) >= count:
-            exam.extend(random.sample(pool, count))
-        else:
-            exam.extend(pool)
+    for group in sorted(by_group.keys()):
+        exam.append(random.choice(by_group[group]))
 
     random.shuffle(exam)
     return exam
