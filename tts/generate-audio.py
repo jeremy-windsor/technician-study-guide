@@ -35,7 +35,7 @@ REPO_DIR = SCRIPT_DIR.parent
 PRONUNCIATION_FILE = SCRIPT_DIR / "pronunciation.md"
 DEFAULT_VOICE = "will"
 MAX_CHUNK_CHARS = 2000
-KOKORO_CMD = "kokoro-tts"
+OPEN_SPEECH_URL = "https://192.0.2.24:8100/v1/audio/speech"
 
 
 def load_pronunciation(path):
@@ -197,8 +197,20 @@ def generate_audio(input_path, voice=DEFAULT_VOICE, dry_run=False):
             with open(chunk_file, 'w') as f:
                 f.write(chunk)
             print(f"  Generating chunk {i+1}/{len(chunks)}...")
+            import json as _json
+            payload = _json.dumps({
+                "input": chunk,
+                "voice": voice,
+                "model": "kokoro",
+                "response_format": "mp3"
+            })
             subprocess.run(
-                [KOKORO_CMD, chunk, "--voice", voice, "--format", "mp3", "--output", chunk_mp3],
+                ["curl", "-sk", "--max-time", "120",
+                 OPEN_SPEECH_URL,
+                 "-X", "POST",
+                 "-H", "Content-Type: application/json",
+                 "-d", payload,
+                 "-o", chunk_mp3],
                 check=True, capture_output=True
             )
 
