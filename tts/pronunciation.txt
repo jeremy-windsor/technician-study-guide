@@ -105,3 +105,4 @@ Part 97|part ninety seven
 CAT IV|cat 4
 CAT III|cat 3
 CAT II|cat 2
+IEEE|I. triple E.
