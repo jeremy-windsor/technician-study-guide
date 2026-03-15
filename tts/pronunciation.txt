@@ -102,3 +102,6 @@ Part 97|part ninety seven
 47 CFR|forty seven C F R
 
 # === Call sign example patterns handled inline ===
+CAT IV|cat 4
+CAT III|cat 3
+CAT II|cat 2
