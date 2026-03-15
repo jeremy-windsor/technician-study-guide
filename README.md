@@ -49,21 +49,27 @@ See [STUDY-PLAN.md](STUDY-PLAN.md) for the full day-by-day plan.
 
 ### Study Sections
 
-Each section has every question from that subelement with the correct answer highlighted and a brief explanation of *why* it's correct.
+Each subelement has three files:
 
-| Section | Topic | Exam Questions | Pool Size |
-|---------|-------|:-:|:-:|
-| [T1](subelements/T1-fcc-rules.md) | FCC Rules | 6 | 67 |
-| [T2](subelements/T2-operating-procedures.md) | Operating Procedures | 3 | 36 |
-| [T3](subelements/T3-radio-waves.md) | Radio Wave Propagation | 3 | 34 |
-| [T4](subelements/T4-amateur-practices.md) | Amateur Radio Practices | 2 | 24 |
-| [T5](subelements/T5-electrical-principles.md) | Electrical Principles | 4 | 52 |
-| [T6](subelements/T6-components.md) | Components | 4 | 47 |
-| [T7](subelements/T7-practical-circuits.md) | Practical Circuits | 4 | 43 |
-| [T8](subelements/T8-signals-emissions.md) | Signals & Emissions | 4 | 48 |
-| [T9](subelements/T9-antennas-feedlines.md) | Antennas & Feed Lines | 2 | 24 |
-| [T0](subelements/T0-safety.md) | Safety | 3 | 36 |
-| | **Total** | **35** | **411** |
+- **`T{N}-{name}.md`** — Study guide: a narrative walkthrough of the topic, written for learning
+- **`T{N}-{name}.mp3`** — Audio version of the study guide (listen while driving, working out, etc.)
+- **`T{N}-{name}-questions.md`** — Exam question bank: every question with the correct answer highlighted and explained
+
+Start with the study guide to learn the material, then drill the question bank to lock in the answers.
+
+| Section | Topic | Study Guide | Question Bank | Exam Qs | Pool Size |
+|---------|-------|-------------|---------------|:-:|:-:|
+| T1 | FCC Rules | [guide](subelements/T1-fcc-rules.md) | [questions](subelements/T1-fcc-rules-questions.md) | 6 | 67 |
+| T2 | Operating Procedures | [guide](subelements/T2-operating-procedures.md) | [questions](subelements/T2-operating-procedures-questions.md) | 3 | 36 |
+| T3 | Radio Wave Propagation | [guide](subelements/T3-radio-waves.md) | [questions](subelements/T3-radio-waves-questions.md) | 3 | 34 |
+| T4 | Amateur Radio Practices | [guide](subelements/T4-amateur-practices.md) | [questions](subelements/T4-amateur-practices-questions.md) | 2 | 24 |
+| T5 | Electrical Principles | [guide](subelements/T5-electrical-principles.md) | [questions](subelements/T5-electrical-principles-questions.md) | 4 | 52 |
+| T6 | Components | [guide](subelements/T6-components.md) | [questions](subelements/T6-components-questions.md) | 4 | 47 |
+| T7 | Practical Circuits | [guide](subelements/T7-practical-circuits.md) | [questions](subelements/T7-practical-circuits-questions.md) | 4 | 43 |
+| T8 | Signals & Emissions | [guide](subelements/T8-signals-emissions.md) | [questions](subelements/T8-signals-emissions-questions.md) | 4 | 48 |
+| T9 | Antennas & Feed Lines | [guide](subelements/T9-antennas-feedlines.md) | [questions](subelements/T9-antennas-feedlines-questions.md) | 2 | 24 |
+| T0 | Safety | [guide](subelements/T0-safety.md) | [questions](subelements/T0-safety-questions.md) | 3 | 36 |
+| | **Total** | | | **35** | **411** |
 
 ### Practice Test
 
@@ -92,7 +98,7 @@ Every section and the cram sheet are available as MP3 audio — study while driv
 | `CRAM-SHEET.mp3` | 9 min |
 | **Total** | **4h 47m** |
 
-Each MP3 reads the full question, all answer choices, the correct answer, and the explanation. Pronunciation of ham radio acronyms follows standard conventions (see `tts/pronunciation.md`).
+Each MP3 is the audio version of the corresponding study guide narrative. Pronunciation of ham radio acronyms follows standard conventions (see `tts/pronunciation.md`).
 
 ### Cram Sheet
 

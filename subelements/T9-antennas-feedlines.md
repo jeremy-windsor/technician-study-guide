@@ -1,222 +1,57 @@
 # T9 — Antennas and Feed Lines
-*2 questions on the exam from a pool of 24*
 
-## Group T9A — Antenna Types and Their Characteristics
+## Antenna Types and Characteristics
 
-### T9A01
-**What is a beam antenna?**
-- A) An antenna built from aluminum I-beams
-- B) An omnidirectional antenna invented by Clarence Beam
-- **C) An antenna that concentrates signals in one direction** ✅
-- D) An antenna that reverses the phase of received signals
+Let's talk about antennas — the part of your station that actually puts your signal into the air and pulls signals back out. Understanding antenna types and how they work is fundamental to getting the most out of your radio.
 
-> A beam antenna (like a Yagi) focuses RF energy in a specific direction, providing gain in that direction at the expense of coverage in other directions. Think of it like a flashlight versus a bare light bulb. The name refers to the "beam" of signal it creates.
+A beam antenna is one that concentrates signals in one direction, like a flashlight compared to a bare light bulb. The most common example is a Yagi antenna, which uses multiple elements — a reflector, a driven element, and one or more directors — to focus RF energy into a directional beam. Of the common antenna types, a Yagi offers the greatest gain. More elements means more gain. By comparison, an isotropic antenna has zero dBi gain by definition since it's just a theoretical reference point, and antennas like a J-pole or five-eighths wave vertical have only modest gain.
 
-### T9A02
-**Which of the following describes a type of antenna loading?**
-- **A) Electrically lengthening by inserting inductors in radiating elements** ✅
-- B) Inserting a resistor in the radiating portion of the antenna to make it resonant
-- C) Installing a spring in the base of a mobile vertical antenna to make it more flexible
-- D) Strengthening the radiating elements of a beam antenna to better resist wind damage
+So what exactly is antenna gain? It's the increase in signal strength in a specified direction compared to a reference antenna. Gain doesn't create power from nothing — it concentrates the existing power in a preferred direction by taking from other directions. Think of squeezing a balloon: you get more in one spot by reducing coverage elsewhere. Gain is measured in dBi when compared to an isotropic antenna, or dBd when compared to a dipole.
 
-> Loading an antenna means making it electrically longer than its physical size by adding inductors (coils). This lets you use a physically shorter antenna that behaves as if it were full-size. Loading coils are common on mobile HF antennas. Springs and reinforcement are mechanical, not electrical.
+Now let's look at the simple dipole. A dipole oriented parallel to Earth's surface is a horizontally polarized antenna — the electric field of the radio wave is horizontal, matching the orientation of the antenna elements. The polarization of your antenna should match the polarization of the station you're communicating with for the best signal. A half-wave dipole radiates its strongest signal broadside to the antenna — that means perpendicular to the wire. Picture a donut shape around the wire: maximum radiation comes from the sides, with nulls off the ends. This is important for pointing your antenna toward the stations you want to reach.
 
-### T9A03
-**Which of the following describes a simple dipole oriented parallel to Earth's surface?**
-- A) A ground-wave antenna
-- **B) A horizontally polarized antenna** ✅
-- C) A travelling-wave antenna
-- D) A vertically polarized antenna
+The resonant frequency of a dipole is determined by its length. Shortening a dipole increases its resonant frequency because frequency is inversely proportional to length. Conversely, making it longer lowers the frequency. Adding coils in series or capacitive loading to the ends electrically lengthens the antenna, also lowering its resonant frequency. Only physically shortening the antenna raises the frequency.
 
-> A dipole parallel to the ground is horizontally polarized — the electric field of the radio wave is horizontal. Polarization matches the orientation of the antenna's elements. Horizontal dipole = horizontal polarization. Vertical antenna = vertical polarization.
+Speaking of antenna loading — this is the technique of electrically lengthening an antenna by inserting inductors, or coils, into the radiating elements. Loading lets you use a physically shorter antenna that behaves as if it were full-size. This is very common on mobile HF antennas where a full-size antenna would be impractically long. Springs and structural reinforcement are mechanical modifications, not electrical loading.
 
-### T9A04
-**What is a disadvantage of the short, flexible antenna supplied with most handheld radio transceivers, compared to a full-sized quarter-wave antenna?**
-- **A) It has low efficiency** ✅
-- B) It transmits only circularly polarized signals
-- C) It is mechanically fragile
-- D) All these choices are correct
+For VHF and UHF mobile service, a five-eighths wavelength whip antenna has an advantage over a quarter-wave antenna — it has more gain. Specifically, about 3 decibels more, with a lower radiation angle that's better for ground-level mobile communications. It does not have 10 times the power gain though — that would be 10 decibels. The gain comes from concentrating radiation at a lower angle toward the horizon where other stations actually are.
 
-> The "rubber duck" antenna on handheld radios is a compromise — it's convenient but inefficient. Much of the transmitter power is lost as heat rather than radiated. A full quarter-wave antenna is significantly more efficient but less portable. The rubber duck is actually quite durable (not fragile).
+The short, flexible antenna supplied with most handheld transceivers — often called a rubber duck — has a significant disadvantage compared to a full-sized quarter-wave antenna: low efficiency. Much of the transmitter's power is wasted as heat rather than being radiated. A full quarter-wave antenna is significantly more efficient but less portable. The rubber duck is actually quite durable mechanically — it's the electrical efficiency that suffers.
 
-### T9A05
-**Which of the following increases the resonant frequency of a dipole antenna?**
-- A) Lengthening it
-- B) Inserting coils in series with radiating wires
-- **C) Shortening it** ✅
-- D) Adding capacitive loading to the ends of the radiating wires
+Using a handheld VHF transceiver with a flexible antenna inside a vehicle creates another problem. The vehicle's metal body acts like a Faraday cage, shielding and absorbing RF energy. Signal strength is significantly reduced in both transmit and receive directions. For reliable mobile operation, you really need an external antenna mounted on the vehicle's exterior.
 
-> Shorter antenna = higher frequency. This is because resonant frequency is inversely proportional to antenna length. Making an antenna longer lowers its resonant frequency, and adding coils or capacitive loading also electrically lengthens it (lowering frequency). Only shortening raises the frequency.
+## Antenna Dimensions
 
-### T9A06
-**Which of the following types of antenna offers the greatest gain?**
-- A) 5/8 wave vertical
-- B) Isotropic
-- C) J pole
-- **D) Yagi** ✅
+Knowing the approximate physical size of antennas for different frequencies is practical knowledge you'll use when building or buying antennas.
 
-> A Yagi antenna provides the most gain of these options through its multiple directional elements (reflector, driven element, directors). More elements = more gain. An isotropic antenna has 0 dBi gain by definition (it's the theoretical reference). A J-pole and 5/8 wave vertical have modest gain.
+A quarter-wavelength vertical antenna for 146 megahertz is approximately 19 inches long. At 146 megahertz, a full wavelength is about 80 inches — roughly 2 meters. A quarter of that is about 20 inches, and with velocity factor adjustment it works out to approximately 19 inches. The formula is: length in inches equals 2808 divided by the frequency in megahertz.
 
-### T9A07
-**What is a disadvantage of using a handheld VHF transceiver with a flexible antenna inside a vehicle?**
-- **A) Signal strength is reduced due to the shielding effect of the vehicle** ✅
-- B) The bandwidth of the antenna will decrease, increasing SWR
-- C) The SWR might decrease, decreasing the signal strength
-- D) All these choices are correct
+A half-wavelength 6-meter dipole antenna is approximately 112 inches long, which is about 9 and a third feet. The name "6 meters" refers to the full wavelength, and the dipole is half of that — about 3 meters or 118 inches, adjusted down to about 112 inches for velocity factor.
 
-> A vehicle's metal body acts as a Faraday cage, blocking and absorbing RF energy. Using a handheld inside a car significantly reduces signal strength in both directions. For reliable mobile operation, use an external antenna mounted on the vehicle.
+## Feed Lines and Connectors
 
-### T9A08
-**What is the approximate length, in inches, of a quarter-wavelength vertical antenna for 146 MHz?**
-- A) 112
-- B) 50
-- **C) 19** ✅
-- D) 12
+The feed line connects your radio to your antenna, and choosing the right one matters more than many new hams realize. Coaxial cable is the most common feed line for amateur radio antenna systems because it is easy to use and requires few special installation considerations. You can run coax through walls, along the ground, or even bury it. It doesn't need the special spacing that open-wire line requires. However, coax does not have the lowest loss of all feed line types — open-wire line beats it there. And it doesn't handle the most power — hardline does. Convenience is the main advantage of coax.
 
-> At 146 MHz, a full wavelength is about 80 inches (2 meters). A quarter wavelength is about 19 inches (80 ÷ 4 ≈ 20, with adjustment for velocity factor). The formula is: length (inches) = 2808 / frequency (MHz). For 146 MHz: 2808/146 ≈ 19.2 inches.
+The most common impedance of coaxial cables used in amateur radio is 50 ohms. Cables like RG-58, RG-213, and LMR-400 are all 50-ohm cables, and most amateur transceivers are designed for 50-ohm loads. Consumer TV cable is 75 ohms, and old-style open-wire feed line is 300 to 600 ohms.
 
-### T9A09
-**What is the approximate length, in inches, of a half-wavelength 6 meter dipole antenna?**
-- A) 6
-- B) 50
-- **C) 112** ✅
-- D) 236
+There's an important electrical difference between RG-58 and RG-213 coaxial cable: RG-213 has less loss at a given frequency. It achieves this because it's a larger diameter cable with a bigger center conductor and more shielding. RG-58 is thinner and more flexible, making it easier to work with, but it's lossier. Both are 50-ohm cables, but RG-213 is the better performer and handles more power.
 
-> A 6-meter band dipole is a half wavelength on 6 meters. Half of 6 meters ≈ 3 meters ≈ 118 inches, with velocity factor adjustment ≈ 112 inches (about 9.3 feet). The name "6 meters" refers to the full wavelength; the dipole is half that.
+As the frequency of a signal passing through coaxial cable increases, the loss increases. This is why VHF and UHF stations need lower-loss cable than HF stations — at 440 megahertz, cheap cable like RG-58 can lose half your signal over a moderate run length. The characteristic impedance, however, stays the same regardless of frequency.
 
-### T9A10
-**In which direction does a half-wave dipole antenna radiate the strongest signal?**
-- A) Equally in all directions
-- B) Off the ends of the antenna
-- C) In the direction of the feed line
-- **D) Broadside to the antenna** ✅
+For the lowest loss at VHF and UHF, air-insulated hardline is the best choice. Air is the best dielectric with the lowest loss, and the rigid copper construction minimizes conductor losses. It's expensive and difficult to install, but when loss matters most, it's the gold standard.
 
-> A dipole radiates strongest broadside (perpendicular) to the wire, with nulls off the ends. Picture a donut around the antenna wire — maximum radiation is from the sides, minimum from the tips. This is critical for orienting your antenna toward desired stations.
+There are multiple sources of loss in coaxial feed line. Water intrusion into connectors is perhaps the worst — it dramatically increases loss and eventually corrodes the cable. High SWR also increases effective loss because power travels back and forth through the lossy cable multiple times. And each connector in the line adds a small amount of loss. All three of these are real sources of feed line loss.
 
-### T9A11
-**What is antenna gain?**
-- A) The additional power that is added to the transmitter power
-- B) The additional power that is required in the antenna when transmitting on a higher frequency
-- **C) The increase in signal strength in a specified direction compared to a reference antenna** ✅
-- D) The increase in impedance on receive or transmit compared to a reference antenna
+Let's talk connectors. PL-259 connectors and their SO-239 mates are the most common amateur radio connectors. They're commonly used at HF and VHF frequencies. They are not watertight, not suitable for microwave frequencies, and they use a threaded coupling — not bayonet style like a BNC connector.
 
-> Antenna gain doesn't create power from nothing — it concentrates existing power in a preferred direction compared to a reference antenna (usually isotropic or dipole). It's like squeezing a balloon: you get more in one direction by taking from others. It's measured in dBi or dBd.
+For frequencies above 400 megahertz, Type N connectors are most suitable. They maintain consistent impedance and low loss at UHF and microwave frequencies. Despite the name "UHF connector," the PL-259 and SO-239 actually perform poorly above 400 megahertz due to their non-constant impedance design. The Type N was specifically designed for precision RF work at higher frequencies.
 
-### T9A12
-**What is an advantage of a 5/8 wavelength whip antenna for VHF or UHF mobile service?**
-- **A) It has more gain than a 1/4-wavelength antenna** ✅
-- B) It radiates at a very high angle
-- C) It eliminates distortion caused by reflected signals
-- D) It has 10 times the power gain of a 1/4 wavelength whip
+## SWR and Impedance Matching
 
-> A 5/8-wave antenna has about 3 dB more gain than a quarter-wave whip, with a lower radiation angle that's better for ground-level mobile communications. It does NOT have 10× power gain (that would be 10 dB). The gain comes from concentrating radiation at a lower angle toward the horizon.
+Standing wave ratio, or SWR, is a measure of how well a load is matched to a transmission line. A perfect match gives you a 1 to 1 SWR. Higher numbers indicate greater mismatch, with more power being reflected back toward the transmitter. SWR tells you about impedance matching — it says nothing about amplifier efficiency or ground quality.
 
-## Group T9B — Feed Lines, Connectors, and SWR
+A benefit of low SWR is reduced signal loss. Good impedance matching means more of your transmitter power reaches the antenna and is radiated, rather than being reflected back and wasted as heat in the feed line. Low SWR doesn't directly reduce television interference or antenna wear — it's about efficient power transfer.
 
-### T9B01
-**What is a benefit of low SWR?**
-- A) Reduced television interference
-- **B) Reduced signal loss** ✅
-- C) Less antenna wear
-- D) All these choices are correct
+An antenna tuner, also called an antenna coupler, matches the antenna system impedance to the transceiver's output impedance. It transforms whatever impedance the antenna presents into the 50 ohms your radio expects to see. An important point: the tuner doesn't actually make the antenna more efficient or change its resonant frequency. It just makes the transceiver see a matched load so it can deliver full power without folding back.
 
-> Low SWR means good impedance matching, which means more of your power reaches the antenna and less is reflected back and wasted as heat in the feed line. It doesn't directly reduce TVI or antenna wear. Low SWR = efficient power transfer.
-
-### T9B02
-**What is the most common impedance of coaxial cables used in amateur radio?**
-- A) 8 ohms
-- **B) 50 ohms** ✅
-- C) 600 ohms
-- D) 12 ohms
-
-> 50 ohms is the standard impedance for amateur radio coaxial cable (RG-58, RG-213, LMR-400, etc.). Most amateur transceivers are designed for 50-ohm loads. Consumer TV cable is 75 ohms, and old open-wire feed line is 300-600 ohms.
-
-### T9B03
-**Why is coaxial cable the most common feed line for amateur radio antenna systems?**
-- **A) It is easy to use and requires few special installation considerations** ✅
-- B) It has less loss than any other type of feed line
-- C) It can handle more power than any other type of feed line
-- D) It is less expensive than any other type of feed line
-
-> Coax is popular because it's easy — you can run it through walls, along the ground, bury it, and it doesn't need special spacing like open-wire line. It does NOT have the lowest loss (open-wire line beats it) or handle the most power (hardline does). Convenience is its killer feature.
-
-### T9B04
-**What is the major function of an antenna tuner (antenna coupler)?**
-- **A) It matches the antenna system impedance to the transceiver's output impedance** ✅
-- B) It helps a receiver automatically tune in weak stations
-- C) It allows an antenna to be used on both transmit and receive
-- D) It automatically selects the proper antenna for the frequency band being used
-
-> An antenna tuner (coupler) transforms the impedance presented by the antenna system to the 50 ohms your transceiver expects. It doesn't actually tune the antenna — it makes the transceiver "see" a matched load. The antenna's actual efficiency doesn't change.
-
-### T9B05
-**What happens as the frequency of a signal in coaxial cable is increased?**
-- A) The characteristic impedance decreases
-- B) The loss decreases
-- C) The characteristic impedance increases
-- **D) The loss increases** ✅
-
-> Coaxial cable loss increases with frequency. This is why VHF/UHF stations need lower-loss cable than HF stations — at 440 MHz, cheap cable like RG-58 can lose half your signal in a moderate run. The characteristic impedance stays the same regardless of frequency.
-
-### T9B06
-**Which of the following RF connector types is most suitable for frequencies above 400 MHz?**
-- A) UHF (PL-259/SO-239)
-- **B) Type N** ✅
-- C) RS-213
-- D) DB-25
-
-> Type N connectors maintain consistent impedance and low loss at UHF and microwave frequencies. Despite its name, the "UHF connector" (PL-259/SO-239) actually performs poorly above 400 MHz due to its non-constant impedance design. The Type N was designed for precision RF work.
-
-### T9B07
-**Which of the following is true of PL-259 type coax connectors?**
-- A) They are preferred for microwave operation
-- B) They are watertight
-- **C) They are commonly used at HF and VHF frequencies** ✅
-- D) They are a bayonet-type connector
-
-> PL-259 connectors (and their SO-239 mates) are the most common amateur radio connector for HF and VHF. They're NOT watertight, NOT suitable for microwave, and they're threaded (not bayonet — that's BNC). They're ubiquitous but imperfect.
-
-### T9B08
-**Which of the following is a source of loss in coaxial feed line?**
-- A) Water intrusion into coaxial connectors
-- B) High SWR
-- C) Multiple connectors in the line
-- **D) All these choices are correct** ✅
-
-> All three cause feed line loss. Water intrusion is the worst — it dramatically increases loss and eventually corrodes the cable. High SWR increases the effective loss because power travels back and forth through the lossy cable multiple times. Each connector adds a small amount of loss.
-
-### T9B09
-**What can cause erratic changes in SWR?**
-- A) Local thunderstorm
-- **B) Loose connection in the antenna or feed line** ✅
-- C) Over-modulation
-- D) Overload from a strong local station
-
-> Erratic (jumping around) SWR almost always indicates a loose or intermittent connection — a bad solder joint, corroded connector, or broken conductor. Stable problems cause stable SWR readings; only intermittent faults cause erratic readings. Thunderstorms, overmodulation, and overload don't cause SWR changes.
-
-### T9B10
-**What is the electrical difference between RG-58 and RG-213 coaxial cable?**
-- A) There is no significant difference between the two types
-- B) RG-58 cable has two shields
-- **C) RG-213 cable has less loss at a given frequency** ✅
-- D) RG-58 cable can handle higher power levels
-
-> RG-213 has lower loss than RG-58 because it's a larger diameter cable with a bigger center conductor and more shielding. RG-58 is thinner and more flexible but lossier. Both are 50-ohm cables, but RG-213 is the better performer (and handles more power).
-
-### T9B11
-**Which of the following types of feed line has the lowest loss at VHF and UHF?**
-- A) 50-ohm flexible coax
-- B) Multi-conductor unbalanced cable
-- **C) Air-insulated hardline** ✅
-- D) 75-ohm flexible coax
-
-> Air-insulated hardline has the lowest loss because air is the best dielectric (lowest loss). The rigid copper construction also minimizes conductor losses. It's expensive and difficult to install, but for VHF/UHF where loss matters most, it's the gold standard.
-
-### T9B12
-**What is standing wave ratio (SWR)?**
-- **A) A measure of how well a load is matched to a transmission line** ✅
-- B) The ratio of amplifier power output to input
-- C) The transmitter efficiency ratio
-- D) An indication of the quality of your station's ground connection
-
-> SWR measures impedance matching between the antenna (load) and the feed line. A 1:1 SWR = perfect match. Higher numbers indicate mismatch, with more power reflected back. It tells you nothing about amplifier efficiency or ground quality.
+If you're seeing erratic changes in SWR — readings that jump around unpredictably — the cause is almost certainly a loose connection in the antenna or feed line. A bad solder joint, corroded connector, or broken conductor that makes and breaks contact will cause the SWR to fluctuate. Stable problems produce stable SWR readings. Only intermittent faults cause erratic behavior. Thunderstorms, overmodulation, and strong local stations don't cause SWR changes.

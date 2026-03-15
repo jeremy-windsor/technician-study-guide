@@ -1,7 +1,7 @@
 #!/bin/bash
 # Generate TTS audio for a narrative-style markdown file.
 # Uses narrative-to-tts.py instead of tech-to-tts.py
-# Usage: gen-narrative.sh <narrative-audio.md> <output.mp3> [voice]
+# Usage: gen-narrative.sh <narrative.md> <output.mp3> [voice]
 set -e
 
 MD_FILE="$1"
@@ -10,7 +10,7 @@ VOICE="${3:-will}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 if [ -z "$MD_FILE" ] || [ -z "$OUTPUT" ]; then
-    echo "Usage: $0 <narrative-audio.md> <output.mp3> [voice]"
+    echo "Usage: $0 <narrative.md> <output.mp3> [voice]"
     exit 1
 fi
 
