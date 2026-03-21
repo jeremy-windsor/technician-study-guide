@@ -1,13 +1,13 @@
 # Amateur Radio Technician Exam Study Guide
 
-> ⚠️ **This guide covers the 2022–2026 question pool** (valid through June 30, 2026).
-> If you're studying after that date, you need the 2026–2030 pool.
+> 📅 **Two pools available:** Study guide content covers the **2022–2026 pool** (valid through June 30, 2026).
+> The **[2026–2030 pool](pools/2026-2030/)** (409 questions, effective July 1, 2026) is available in the PWA study app — it auto-selects the correct pool based on today's date.
 
 Pass the FCC Technician class license exam. All questions, all answers, explained.
 
 ## What's Inside
 
-- **411 real exam questions** with correct answers and explanations
+- **411 real exam questions** (2022–2026 pool) + **409 questions** (2026–2030 pool) with correct answers
 - **10 study sections** organized by topic (subelements T1–T0)
 - **Cram sheet** for last-minute review
 - **Practice test script** to simulate the real exam
@@ -25,11 +25,14 @@ Pass the FCC Technician class license exam. All questions, all answers, explaine
 
 The exam pulls from a **fixed public question pool** — every possible question and answer is published. This guide covers all of them.
 
-## Current Question Pool
+## Question Pools
 
-**2022–2026 pool** — effective July 1, 2022 through June 30, 2026.
+| Pool | Effective | Expires | Questions | Status |
+|------|-----------|---------|-----------|--------|
+| [2022–2026](pools/2022-2026/) | July 1, 2022 | June 30, 2026 | 411 | Expires soon |
+| [2026–2030](pools/2026-2030/) | July 1, 2026 | June 30, 2030 | 409 | Active July 2026 |
 
-The 2026–2030 pool takes effect July 1, 2026. If you're taking the exam after that date, check `pools/2026-2030/` for the updated pool.
+The **PWA study app** auto-selects the correct pool based on today's date, with a manual override if you want to study ahead.
 
 ## How to Study
 
