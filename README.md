@@ -144,7 +144,7 @@ The [`apps/study-app/`](apps/study-app/) directory contains a browser-based PWA 
 - **Offline capable** — works without internet after first load
 - **Installable** — add to Home Screen on mobile or install from desktop Chrome/Edge
 
-**[→ Open the Study App](apps/study-app/index.html)** (or via GitHub Pages at `apps/study-app/`)
+**[→ Open the Study App](https://isriam.github.io/technician-study-guide/apps/study-app/)** — works on phone, tablet, or desktop. Add to home screen for offline access.
 
 ## License
 
