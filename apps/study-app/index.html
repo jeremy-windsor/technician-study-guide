@@ -389,6 +389,8 @@ body {
 .test-qid { font-size: 12px; font-weight: 600; color: var(--accent); letter-spacing: 0.05em; }
 .test-question { font-size: 17px; font-weight: 600; line-height: 1.5; margin-top: 10px; color: var(--text); }
 
+.test-figure { margin-top: 14px; text-align: center; }
+.test-figure-img { max-width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); background: #fff; cursor: zoom-in; }
 .answer-options { display: flex; flex-direction: column; gap: 10px; }
 .answer-option {
   display: flex;
@@ -739,6 +741,9 @@ body {
       <div class="test-question-card">
         <div class="test-qid" id="test-qid">T1A01</div>
         <div class="test-question" id="test-question">Question text</div>
+        <div id="test-figure" style="display:none" class="test-figure">
+          <img id="test-figure-img" src="" alt="Circuit diagram" class="test-figure-img">
+        </div>
       </div>
       <div class="answer-options" id="answer-options"></div>
       <div class="test-nav">
@@ -1391,6 +1396,14 @@ function updateTimerDisplay() {
   el.classList.toggle('warning', testTimeLeft < 5 * 60);
 }
 
+function getFigureForQuestion(question) {
+  const text = question.toLowerCase();
+  if (text.includes('figure t-1')) return '../../figures/T-1.png';
+  if (text.includes('figure t-2')) return '../../figures/T-2.png';
+  if (text.includes('figure t-3')) return '../../figures/T-3.png';
+  return null;
+}
+
 function renderTestQuestion() {
   const q = testQuestions[testCurrentQ];
   const n = testCurrentQ + 1;
@@ -1404,19 +1417,31 @@ function renderTestQuestion() {
   document.getElementById('test-next-btn').textContent =
     testCurrentQ === 34 ? 'Submit →' : 'Next →';
 
+  // Show figure image if question references one
+  const figureEl = document.getElementById('test-figure');
+  const figureImg = document.getElementById('test-figure-img');
+  const figSrc = getFigureForQuestion(q.question);
+  if (figSrc) {
+    figureImg.src = figSrc;
+    figureEl.style.display = 'block';
+  } else {
+    figureEl.style.display = 'none';
+    figureImg.src = '';
+  }
+
   const letters = ['A', 'B', 'C', 'D'];
-  const revealed = testRevealed[testCurrentQ];
+  const revealed = testRevealed[testCurrentQ] === true;
   const selected = testAnswers[testCurrentQ];
 
   document.getElementById('answer-options').innerHTML = q.answers.map((a, i) => {
     let cls = '';
     if (revealed) {
       if (i === q.correct) cls = 'correct';
-      else if (i === selected) cls = 'wrong';
-    } else if (i === selected) {
+      else if (i === selected && i !== q.correct) cls = 'wrong';
+    } else if (typeof selected === 'number' && i === selected) {
       cls = 'selected';
     }
-    return `<button class="answer-option ${cls}" onclick="selectAnswer(${i})" ${revealed?'disabled':''}>
+    return `<button class="answer-option ${cls}" onclick="selectAnswer(${i})" ${revealed ? 'disabled' : ''}>
       <span class="answer-letter">${letters[i]}</span>
       <span>${a}</span>
     </button>`;
