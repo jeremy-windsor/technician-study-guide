@@ -131,6 +131,18 @@ All questions are from the official NCVEC Technician Class Question Pool, releas
 - **Current pool:** 2022–2026 (effective July 1, 2022 – June 30, 2026)
 - **Next pool:** 2026–2030 (effective July 1, 2026)
 
+## Interactive Study App 📱
+
+The [`apps/study-app/`](apps/study-app/) directory contains a browser-based PWA for active practice:
+
+- **Flashcard mode** — flip through all 411 questions with instant answer reveal
+- **Practice exam mode** — timed 35-question exams drawn randomly from the pool
+- **Progress tracking** — remembers which questions you've gotten wrong
+- **Offline capable** — works without internet after first load
+- **Installable** — add to Home Screen on mobile or install from desktop Chrome/Edge
+
+**[→ Open the Study App](apps/study-app/index.html)** (or via GitHub Pages at `apps/study-app/`)
+
 ## License
 
 Question pool content is public domain (NCVEC). Study guide explanations and scripts are MIT licensed.
