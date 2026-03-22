@@ -25,6 +25,23 @@ Pass the FCC Technician class license exam. All questions, all answers, explaine
 
 The exam pulls from a **fixed public question pool** — every possible question and answer is published. This guide covers all of them.
 
+## 📱 Study App (PWA)
+
+The fastest way to study — a browser-based app that works on your phone, tablet, or desktop. No install required.
+
+**[→ Open the Study App](https://jeremy-windsor.github.io/technician-study-guide/apps/study-app/)**
+
+| Feature | |
+|---------|---|
+| **Flashcard mode** | Flip through all questions with instant answer reveal |
+| **Practice exams** | Timed 35-question tests drawn randomly from the real pool |
+| **Progress tracking** | Remembers which questions you've missed — focuses on weak areas |
+| **Both pools** | Auto-selects 2022–2026 or 2026–2030 based on today's date (manual override available) |
+| **Offline capable** | Works without internet after first load |
+| **Installable** | Add to Home Screen on mobile, or install from Chrome/Edge on desktop |
+
+> 💡 **Tip:** Add it to your phone's home screen — it runs like a native app, works offline, and tracks your progress across sessions.
+
 ## Question Pools
 
 | Pool | Effective | Expires | Questions | Status |
@@ -133,18 +150,6 @@ All questions are from the official NCVEC Technician Class Question Pool, releas
 - **Source:** [ncvec.org](https://ncvec.org/index.php/amateur-question-pools)
 - **Current pool:** 2022–2026 (effective July 1, 2022 – June 30, 2026)
 - **Next pool:** 2026–2030 (effective July 1, 2026)
-
-## Interactive Study App 📱
-
-The [`apps/study-app/`](apps/study-app/) directory contains a browser-based PWA for active practice:
-
-- **Flashcard mode** — flip through all 411 questions with instant answer reveal
-- **Practice exam mode** — timed 35-question exams drawn randomly from the pool
-- **Progress tracking** — remembers which questions you've gotten wrong
-- **Offline capable** — works without internet after first load
-- **Installable** — add to Home Screen on mobile or install from desktop Chrome/Edge
-
-**[→ Open the Study App](https://isriam.github.io/technician-study-guide/apps/study-app/)** — works on phone, tablet, or desktop. Add to home screen for offline access.
 
 ## License
 
