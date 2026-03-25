@@ -359,7 +359,7 @@ body {
 
 /* Compensate for the fixed Next button so last answer option isn't clipped */
 @media (max-width: 600px) {
-  #page-flashcards.next-btn-visible {
+  #page-flashcard.next-btn-visible {
     padding-bottom: calc(72px + 52px + env(safe-area-inset-bottom, 0px));
   }
 }
@@ -1247,7 +1247,7 @@ function startSectionFlashcards(se) {
 function loadCard(idx) {
   clearFlashcardAdvanceTimer();
   document.getElementById('fc-wrong-next').style.display = 'none';
-  document.getElementById('page-flashcards').classList.remove('next-btn-visible');
+  document.getElementById('page-flashcard').classList.remove('next-btn-visible');
   if (idx >= fcDeck.length) {
     showFcDone();
     return;
@@ -1328,7 +1328,7 @@ function selectFlashcardAnswer(selectedIndex) {
   const wrongNext = document.getElementById('fc-wrong-next');
   wrongNext.style.display = 'flex';
   // Add padding so last answer option isn't hidden behind the fixed button
-  document.getElementById('page-flashcards').classList.add('next-btn-visible');
+  document.getElementById('page-flashcard').classList.add('next-btn-visible');
 }
 
 function revealAnswer() {
@@ -1339,7 +1339,7 @@ function revealAnswer() {
   // Show Next button after reveal so user isn't stuck
   document.getElementById('fc-wrong-next').style.display = 'flex';
   // Add padding so last answer option isn't hidden behind the fixed button
-  document.getElementById('page-flashcards').classList.add('next-btn-visible');
+  document.getElementById('page-flashcard').classList.add('next-btn-visible');
 }
 
 // Legacy alias kept for TTS logic
@@ -1354,7 +1354,7 @@ function prevCard() {
 
 function fcAdvanceNext() {
   document.getElementById('fc-wrong-next').style.display = 'none';
-  document.getElementById('page-flashcards').classList.remove('next-btn-visible');
+  document.getElementById('page-flashcard').classList.remove('next-btn-visible');
   fcIndex++;
   loadCard(fcIndex);
 }

@@ -1,5 +1,5 @@
 // Ham Radio Study PWA - Service Worker
-const CACHE_NAME = 'hamradio-v8';
+const CACHE_NAME = 'hamradio-v9';
 const ASSETS = [
   './',
   './index.html',
