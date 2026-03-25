@@ -340,20 +340,27 @@ body {
 @media (hover: hover) { .fc-tts-btn:hover { background: var(--border); } }
 .fc-tts-btn.speaking { color: var(--accent); }
 .fc-nav-row { display: flex; margin-top: 12px; }
-/* Sticky next button on mobile so it's always visible after wrong answer */
+/* Sticky next button on mobile — sits ABOVE the bottom nav bar */
 @media (max-width: 600px) {
   #fc-wrong-next {
     position: fixed;
-    bottom: 0;
+    /* nav bar is ~52px + safe-area-inset-bottom; sit directly on top of it */
+    bottom: calc(52px + env(safe-area-inset-bottom, 0px));
     left: 0;
     right: 0;
     margin-top: 0;
-    padding: 12px 16px;
-    padding-bottom: max(12px, env(safe-area-inset-bottom));
+    padding: 10px 16px;
     background: var(--bg);
     border-top: 1px solid var(--border);
-    z-index: 100;
+    z-index: 110; /* above nav z-index:100 */
     box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+  }
+}
+
+/* Compensate for the fixed Next button so last answer option isn't clipped */
+@media (max-width: 600px) {
+  #page-flashcards.next-btn-visible {
+    padding-bottom: calc(72px + 52px + env(safe-area-inset-bottom, 0px));
   }
 }
 
@@ -1240,6 +1247,7 @@ function startSectionFlashcards(se) {
 function loadCard(idx) {
   clearFlashcardAdvanceTimer();
   document.getElementById('fc-wrong-next').style.display = 'none';
+  document.getElementById('page-flashcards').classList.remove('next-btn-visible');
   if (idx >= fcDeck.length) {
     showFcDone();
     return;
@@ -1306,7 +1314,6 @@ function selectFlashcardAnswer(selectedIndex) {
   fcFlipped = true;
 
   const pickedCorrectly = showFlashcardFeedback(selectedIndex);
-  document.getElementById('fc-back-btn').disabled = true;
   checkBadge('first_flip');
 
   if (pickedCorrectly) {
@@ -1320,17 +1327,19 @@ function selectFlashcardAnswer(selectedIndex) {
   markCard(false, { advance: false });
   const wrongNext = document.getElementById('fc-wrong-next');
   wrongNext.style.display = 'flex';
-  wrongNext.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  // Add padding so last answer option isn't hidden behind the fixed button
+  document.getElementById('page-flashcards').classList.add('next-btn-visible');
 }
 
 function revealAnswer() {
   if (fcFlipped) return;
   fcFlipped = true;
   showFlashcardFeedback(fcDeck[fcIndex]?.correct);
-  document.getElementById('fc-back-btn').disabled = true;
   checkBadge('first_flip');
   // Show Next button after reveal so user isn't stuck
   document.getElementById('fc-wrong-next').style.display = 'flex';
+  // Add padding so last answer option isn't hidden behind the fixed button
+  document.getElementById('page-flashcards').classList.add('next-btn-visible');
 }
 
 // Legacy alias kept for TTS logic
@@ -1345,6 +1354,7 @@ function prevCard() {
 
 function fcAdvanceNext() {
   document.getElementById('fc-wrong-next').style.display = 'none';
+  document.getElementById('page-flashcards').classList.remove('next-btn-visible');
   fcIndex++;
   loadCard(fcIndex);
 }
