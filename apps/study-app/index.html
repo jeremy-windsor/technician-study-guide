@@ -128,15 +128,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
-  padding: 6px 4px;
+  gap: 2px;
+  padding: 6px 2px;
   color: var(--text2);
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
   transition: color var(--transition);
   min-height: 52px;
 }
-.nav-btn .nav-icon { font-size: 22px; line-height: 1; }
+.nav-btn .nav-icon { font-size: 20px; line-height: 1; }
 .nav-btn.active { color: var(--accent); }
 .nav-btn:active { opacity: 0.7; }
 
@@ -404,6 +404,47 @@ body {
 
 .test-figure { margin-top: 14px; text-align: center; }
 .test-figure-img { max-width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); background: #fff; cursor: zoom-in; }
+
+/* ===== SCHEMATIC FLASHCARDS ===== */
+.sch-figure-container { text-align: center; margin-bottom: 16px; position: relative; }
+.sch-figure-img {
+  max-width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border);
+  background: #fff; cursor: zoom-in; transition: transform 0.2s ease;
+}
+.sch-figure-label {
+  font-size: 12px; color: var(--text2); margin-top: 6px; font-weight: 500;
+}
+.sch-progress-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 14px 16px; display: flex; align-items: center; gap: 14px;
+}
+.sch-progress-stat { text-align: center; flex: 1; }
+.sch-progress-stat .stat-num { font-size: 22px; }
+.sch-progress-stat .stat-label { font-size: 11px; }
+.sch-figure-tabs { display: flex; gap: 8px; margin-bottom: 12px; }
+.sch-figure-tab {
+  flex: 1; padding: 10px 8px; border-radius: var(--radius-sm); border: 2px solid var(--border);
+  background: var(--surface); cursor: pointer; text-align: center; font-size: 13px; font-weight: 600;
+  font-family: var(--font); color: var(--text); transition: all var(--transition);
+  -webkit-tap-highlight-color: transparent; min-height: 44px;
+}
+.sch-figure-tab.active { border-color: var(--accent); background: rgba(233,69,96,0.05); color: var(--accent); }
+@media (hover: hover) { .sch-figure-tab:hover { border-color: var(--accent); } }
+
+/* Zoom overlay */
+.sch-zoom-overlay {
+  display: none; position: fixed; inset: 0; z-index: 200;
+  background: rgba(0,0,0,0.85); align-items: center; justify-content: center;
+  padding: 20px; cursor: zoom-out; -webkit-tap-highlight-color: transparent;
+}
+.sch-zoom-overlay.open { display: flex; }
+.sch-zoom-overlay img {
+  max-width: 100%; max-height: 90vh; border-radius: var(--radius-sm);
+  background: #fff; touch-action: pinch-zoom;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sch-figure-img { transition: none; }
+}
 .answer-options { display: flex; flex-direction: column; gap: 10px; }
 .answer-option {
   display: flex;
@@ -715,6 +756,14 @@ button:focus-visible, .nav-btn:focus-visible, .quick-btn:focus-visible,
         </div>
         <div class="quick-btn-arrow">›</div>
       </button>
+      <button class="quick-btn" data-action="show-page" data-page="schematic">
+        <div class="quick-btn-icon">🔧</div>
+        <div class="quick-btn-text">
+          <div class="quick-btn-title">Schematic Diagrams</div>
+          <div class="quick-btn-desc">Circuit diagrams · T6 figures</div>
+        </div>
+        <div class="quick-btn-arrow">›</div>
+      </button>
       <button class="quick-btn" data-action="show-page" data-page="sections">
         <div class="quick-btn-icon">📚</div>
         <div class="quick-btn-text">
@@ -787,6 +836,90 @@ button:focus-visible, .nav-btn:focus-visible, .quick-btn:focus-visible,
       <button class="btn btn-primary btn-full" data-action="restart-flashcards">Study Again</button>
       <button class="btn btn-secondary btn-full" data-action="show-flashcard-menu">Choose Different Section</button>
     </div>
+  </div>
+
+  <!-- SCHEMATIC FLASHCARD PAGE -->
+  <div id="page-schematic" class="page">
+    <!-- Mode selector / overview -->
+    <div id="sch-menu">
+      <div class="page-title">Schematic Diagrams</div>
+      <div class="page-sub">Study circuit diagram questions (T6A–T6D)</div>
+
+      <div class="sch-progress-card mt-4">
+        <div class="sch-progress-stat">
+          <div class="stat-num" id="sch-stat-total">0</div>
+          <div class="stat-label">Questions</div>
+        </div>
+        <div class="sch-progress-stat">
+          <div class="stat-num" id="sch-stat-mastered">0</div>
+          <div class="stat-label">Mastered</div>
+        </div>
+        <div class="sch-progress-stat">
+          <div class="stat-num" id="sch-stat-pct">0%</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <div class="label" style="margin-bottom:8px;">Select Figure</div>
+        <div class="sch-figure-tabs" id="sch-figure-tabs">
+          <button class="sch-figure-tab active" data-action="select-sch-figure" data-figure="all" data-keyboard-activate="true">All</button>
+          <button class="sch-figure-tab" data-action="select-sch-figure" data-figure="T-1" data-keyboard-activate="true">T-1</button>
+          <button class="sch-figure-tab" data-action="select-sch-figure" data-figure="T-2" data-keyboard-activate="true">T-2</button>
+          <button class="sch-figure-tab" data-action="select-sch-figure" data-figure="T-3" data-keyboard-activate="true">T-3</button>
+        </div>
+      </div>
+
+      <button class="btn btn-primary btn-full mt-4" data-action="start-schematic-flashcards">Start Studying</button>
+    </div>
+
+    <!-- Active schematic flashcard session -->
+    <div id="sch-session" style="display:none">
+      <div class="fc-header">
+        <button class="btn btn-secondary fc-header-back" id="sch-back-btn" data-action="sch-prev-card" disabled>← Back</button>
+        <div class="fc-header-info">
+          <div class="fc-counter"><span id="sch-current">1</span> / <span id="sch-total">0</span></div>
+          <div class="fc-section-label" id="sch-section-label">All Schematics</div>
+        </div>
+        <button class="btn btn-secondary" style="padding:8px 14px;font-size:13px;min-height:44px;" data-action="end-schematic-flashcards" aria-label="Exit schematic session">✕ Exit</button>
+      </div>
+
+      <div class="progress-bar fc-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Schematic flashcard progress" id="sch-bar-container">
+        <div class="progress-fill" id="sch-bar" style="width:0%"></div>
+      </div>
+
+      <div class="sch-figure-container">
+        <img id="sch-figure-img" class="sch-figure-img" src="" alt="Circuit schematic diagram" data-action="zoom-schematic">
+        <div class="sch-figure-label" id="sch-figure-label">Figure T-1</div>
+      </div>
+
+      <div class="fc-card" id="sch-card">
+        <div class="fc-qid" id="sch-qid">T6C02</div>
+        <div class="fc-question" id="sch-question">Loading…</div>
+        <div class="fc-options" id="sch-options"></div>
+      </div>
+
+      <div class="fc-tap-hint">Tap the diagram to zoom · Tap an answer to check</div>
+      <div class="fc-nav-row" id="sch-wrong-next" style="display:none">
+        <button class="btn btn-primary btn-full" data-action="sch-advance-next">Next →</button>
+      </div>
+    </div>
+
+    <!-- Done state -->
+    <div id="sch-done" style="display:none">
+      <div class="card" style="text-align:center">
+        <div style="font-size:48px;margin-bottom:12px">🎉</div>
+        <div class="page-title">Schematics Complete!</div>
+        <div class="page-sub mt-2" id="sch-done-stats"></div>
+      </div>
+      <button class="btn btn-primary btn-full" data-action="restart-schematic-flashcards">Study Again</button>
+      <button class="btn btn-secondary btn-full" data-action="show-schematic-menu">Back to Figures</button>
+    </div>
+  </div>
+
+  <!-- Zoom overlay for schematic images -->
+  <div class="sch-zoom-overlay" id="sch-zoom-overlay" data-action="close-sch-zoom" role="dialog" aria-label="Zoomed schematic diagram">
+    <img id="sch-zoom-img" src="" alt="Zoomed circuit schematic">
   </div>
 
   <!-- PRACTICE TEST PAGE -->
@@ -912,6 +1045,9 @@ button:focus-visible, .nav-btn:focus-visible, .quick-btn:focus-visible,
   </button>
   <button class="nav-btn" id="nav-test" data-action="show-page" data-page="test">
     <span class="nav-icon" aria-hidden="true">📝</span>Exam
+  </button>
+  <button class="nav-btn" id="nav-schematic" data-action="show-page" data-page="schematic">
+    <span class="nav-icon" aria-hidden="true">🔧</span>Diagrams
   </button>
   <button class="nav-btn" id="nav-sections" data-action="show-page" data-page="sections">
     <span class="nav-icon" aria-hidden="true">📚</span>Sections

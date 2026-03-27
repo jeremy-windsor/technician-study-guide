@@ -245,6 +245,7 @@ function showPage(page, skipMenu) {
   if (page === 'progress') renderProgress();
   if (page === 'sections') renderSections();
   if (page === 'flashcard' && !skipMenu) showFlashcardMenu();
+  if (page === 'schematic' && !skipMenu) showSchematicMenu();
   if (page === 'test' && !skipMenu) showTestStart();
 
   // Announce page change to screen readers
@@ -645,6 +646,263 @@ function restartFlashcards() {
 function endFlashcards() {
   clearFlashcardAdvanceTimer();
   showFlashcardMenu();
+}
+
+// ===== SCHEMATIC FLASHCARDS =====
+
+let schDeck = [];
+let schIndex = 0;
+let schFigureFilter = 'all';
+let schFlipped = false;
+let schSessionCorrect = 0;
+let schSessionWrong = 0;
+let schAdvanceTimer = null;
+
+function clearSchAdvanceTimer() {
+  if (!schAdvanceTimer) return;
+  clearTimeout(schAdvanceTimer);
+  schAdvanceTimer = null;
+}
+
+function getSchematicQuestions(figureFilter) {
+  return QUESTION_POOL.filter(q => {
+    const text = q.question.toLowerCase();
+    const hasFigure = text.includes('figure t-1') || text.includes('figure t-2') || text.includes('figure t-3');
+    if (!hasFigure) return false;
+    if (figureFilter === 'all') return true;
+    return text.includes('figure ' + figureFilter.toLowerCase());
+  });
+}
+
+function getSchFigureSrc(question) {
+  const text = question.toLowerCase();
+  if (text.includes('figure t-1')) return '../../figures/T-1.png';
+  if (text.includes('figure t-2')) return '../../figures/T-2.png';
+  if (text.includes('figure t-3')) return '../../figures/T-3.png';
+  return null;
+}
+
+function getSchFigureLabel(question) {
+  const text = question.toLowerCase();
+  if (text.includes('figure t-1')) return 'Figure T-1';
+  if (text.includes('figure t-2')) return 'Figure T-2';
+  if (text.includes('figure t-3')) return 'Figure T-3';
+  return '';
+}
+
+function showSchematicMenu() {
+  clearSchAdvanceTimer();
+  document.getElementById('sch-menu').style.display = 'block';
+  document.getElementById('sch-session').style.display = 'none';
+  document.getElementById('sch-done').style.display = 'none';
+
+  const allSchQs = getSchematicQuestions('all');
+  const mastered = allSchQs.filter(q => state.cards[q.id]?.mastered).length;
+  const totalCorrect = allSchQs.reduce((s, q) => s + (state.cards[q.id]?.correct || 0), 0);
+  const totalWrong = allSchQs.reduce((s, q) => s + (state.cards[q.id]?.wrong || 0), 0);
+  const accPct = (totalCorrect + totalWrong) > 0
+    ? Math.round(totalCorrect / (totalCorrect + totalWrong) * 100) : 0;
+
+  document.getElementById('sch-stat-total').textContent = allSchQs.length;
+  document.getElementById('sch-stat-mastered').textContent = mastered;
+  document.getElementById('sch-stat-pct').textContent = accPct + '%';
+}
+
+function selectSchFigure(el) {
+  if (!el) return;
+  const fig = el.dataset.figure;
+  document.querySelectorAll('.sch-figure-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  schFigureFilter = fig;
+}
+
+function buildSchDeck(figureFilter) {
+  let pool = getSchematicQuestions(figureFilter);
+
+  pool.sort((a, b) => {
+    const ca = state.cards[a.id];
+    const cb = state.cards[b.id];
+    const seenA = ca?.seen ? 1 : 0;
+    const seenB = cb?.seen ? 1 : 0;
+    if (seenA !== seenB) return seenA - seenB;
+    const errA = ca ? (ca.wrong || 0) / Math.max(1, (ca.correct || 0) + (ca.wrong || 0)) : 0;
+    const errB = cb ? (cb.wrong || 0) / Math.max(1, (cb.correct || 0) + (cb.wrong || 0)) : 0;
+    return errB - errA;
+  });
+
+  return pool;
+}
+
+function startSchematicFlashcards() {
+  clearSchAdvanceTimer();
+  schDeck = buildSchDeck(schFigureFilter);
+  if (schDeck.length === 0) return;
+  schIndex = 0;
+  schSessionCorrect = 0;
+  schSessionWrong = 0;
+  schFlipped = false;
+
+  document.getElementById('sch-menu').style.display = 'none';
+  document.getElementById('sch-session').style.display = 'block';
+  document.getElementById('sch-done').style.display = 'none';
+
+  document.getElementById('sch-total').textContent = schDeck.length;
+  document.getElementById('sch-section-label').textContent =
+    schFigureFilter === 'all' ? 'All Schematics' : 'Figure ' + schFigureFilter;
+
+  loadSchCard(0);
+  recordStudyDay();
+}
+
+function loadSchCard(idx) {
+  clearSchAdvanceTimer();
+  document.getElementById('sch-wrong-next').style.display = 'none';
+  if (idx >= schDeck.length) {
+    showSchDone();
+    return;
+  }
+  const q = schDeck[idx];
+  schFlipped = false;
+
+  const figSrc = getSchFigureSrc(q.question);
+  const figLabel = getSchFigureLabel(q.question);
+  document.getElementById('sch-figure-img').src = figSrc || '';
+  document.getElementById('sch-figure-img').style.display = figSrc ? 'block' : 'none';
+  document.getElementById('sch-figure-label').textContent = figLabel;
+
+  const letters = ['A', 'B', 'C', 'D'];
+  document.getElementById('sch-qid').textContent = q.id;
+  document.getElementById('sch-question').textContent = q.question;
+
+  document.getElementById('sch-options').innerHTML =
+    q.answers.map((a, i) =>
+      `<div class="fc-option" id="sch-opt-${i}" data-action="select-sch-answer" data-answer-index="${i}" data-keyboard-activate="true" role="button" tabindex="0">
+        <span class="fc-option-letter">${letters[i]}</span>
+        <span>${escapeHtml(a)}</span>
+      </div>`
+    ).join('');
+
+  document.getElementById('sch-current').textContent = idx + 1;
+  const pct = Math.round(idx / schDeck.length * 100);
+  document.getElementById('sch-bar').style.width = pct + '%';
+  const barContainer = document.getElementById('sch-bar-container');
+  if (barContainer) barContainer.setAttribute('aria-valuenow', pct);
+  document.getElementById('sch-back-btn').disabled = (idx === 0);
+
+  if (!state.cards[q.id]) state.cards[q.id] = {};
+  state.cards[q.id].seen = true;
+  saveState();
+}
+
+function showSchFeedback(selectedIndex) {
+  const q = schDeck[schIndex];
+  if (!q) return false;
+
+  q.answers.forEach((_, i) => {
+    const el = document.getElementById(`sch-opt-${i}`);
+    if (!el) return;
+    el.removeAttribute('data-action');
+    el.removeAttribute('data-answer-index');
+    el.removeAttribute('data-keyboard-activate');
+    el.setAttribute('aria-disabled', 'true');
+    el.tabIndex = -1;
+    if (i === q.correct) {
+      el.classList.add('fc-correct');
+    } else {
+      el.classList.add('fc-wrong');
+    }
+    if (selectedIndex !== q.correct && i === selectedIndex) {
+      el.classList.add('fc-selected-wrong');
+    }
+  });
+
+  return selectedIndex === q.correct;
+}
+
+function selectSchAnswer(selectedIndex) {
+  if (schFlipped) return;
+  schFlipped = true;
+
+  const pickedCorrectly = showSchFeedback(selectedIndex);
+  checkBadge('first_flip');
+
+  if (pickedCorrectly) {
+    announce('Correct! Moving to next question.');
+    schAdvanceTimer = setTimeout(() => {
+      schAdvanceTimer = null;
+      markSchCard(true);
+    }, 1200);
+    return;
+  }
+
+  announce('Incorrect. The correct answer is highlighted. Press Next to continue.');
+  markSchCard(false, { advance: false });
+  document.getElementById('sch-wrong-next').style.display = 'flex';
+}
+
+function markSchCard(correct, { advance = true } = {}) {
+  const q = schDeck[schIndex];
+  if (!state.cards[q.id]) state.cards[q.id] = {};
+  const c = state.cards[q.id];
+
+  if (correct) {
+    c.correct = (c.correct || 0) + 1;
+    schSessionCorrect++;
+    const total = (c.correct || 0) + (c.wrong || 0);
+    if (c.correct >= 3 && (c.wrong || 0) / total < 0.2) c.mastered = true;
+  } else {
+    c.wrong = (c.wrong || 0) + 1;
+    c.mastered = false;
+    schSessionWrong++;
+  }
+  saveState();
+  checkBadges();
+
+  if (!advance) return;
+  schIndex++;
+  loadSchCard(schIndex);
+}
+
+function schPrevCard() {
+  clearSchAdvanceTimer();
+  if (schIndex <= 0) return;
+  schIndex--;
+  loadSchCard(schIndex);
+}
+
+function schAdvanceNext() {
+  document.getElementById('sch-wrong-next').style.display = 'none';
+  schIndex++;
+  loadSchCard(schIndex);
+}
+
+function showSchDone() {
+  document.getElementById('sch-session').style.display = 'none';
+  document.getElementById('sch-done').style.display = 'flex';
+  document.getElementById('sch-done').style.flexDirection = 'column';
+  document.getElementById('sch-done').style.gap = '12px';
+
+  const total = schSessionCorrect + schSessionWrong;
+  const pct = total > 0 ? Math.round(schSessionCorrect / total * 100) : 0;
+  document.getElementById('sch-done-stats').innerHTML =
+    `<strong>${schSessionCorrect}</strong> correct, <strong>${schSessionWrong}</strong> learning, ${pct}% accuracy`;
+}
+
+function endSchematicFlashcards() {
+  clearSchAdvanceTimer();
+  showSchematicMenu();
+}
+
+function zoomSchematic() {
+  const src = document.getElementById('sch-figure-img').src;
+  if (!src) return;
+  const overlay = document.getElementById('sch-zoom-overlay');
+  document.getElementById('sch-zoom-img').src = src;
+  overlay.classList.add('open');
+}
+
+function closeSchZoom() {
+  document.getElementById('sch-zoom-overlay').classList.remove('open');
 }
 
 // ===== TTS =====
@@ -1256,6 +1514,36 @@ function handleAction(actionEl) {
     case 'select-flashcard-answer':
       selectFlashcardAnswer(Number(actionEl.dataset.answerIndex));
       return;
+    case 'select-sch-figure':
+      selectSchFigure(actionEl);
+      return;
+    case 'start-schematic-flashcards':
+      startSchematicFlashcards();
+      return;
+    case 'sch-prev-card':
+      schPrevCard();
+      return;
+    case 'end-schematic-flashcards':
+      endSchematicFlashcards();
+      return;
+    case 'sch-advance-next':
+      schAdvanceNext();
+      return;
+    case 'restart-schematic-flashcards':
+      startSchematicFlashcards();
+      return;
+    case 'show-schematic-menu':
+      showSchematicMenu();
+      return;
+    case 'select-sch-answer':
+      selectSchAnswer(Number(actionEl.dataset.answerIndex));
+      return;
+    case 'zoom-schematic':
+      zoomSchematic();
+      return;
+    case 'close-sch-zoom':
+      closeSchZoom();
+      return;
     case 'select-answer':
       selectAnswer(Number(actionEl.dataset.answerIndex));
       return;
@@ -1280,6 +1568,11 @@ function handleDocumentChange(event) {
 
 function handleDocumentKeydown(event) {
   if (event.key === 'Escape') {
+    const zoom = document.getElementById('sch-zoom-overlay');
+    if (zoom?.classList.contains('open')) {
+      closeSchZoom();
+      return;
+    }
     const modal = document.getElementById('reset-modal');
     if (modal?.classList.contains('open')) {
       closeModal('reset-modal');
