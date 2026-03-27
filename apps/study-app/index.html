@@ -23,7 +23,7 @@
   --surface: #ffffff;
   --border: #cbd5e1;
   --text: #1e293b;
-  --text2: #64748b;
+  --text2: #536379;
   --accent: #e94560;
   --accent2: #c2185b;
   --green: #22c55e;
@@ -314,7 +314,7 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 10px;
-  padding: 10px 12px;
+  padding: 12px 14px;
   border-radius: 10px;
   border: 1.5px solid var(--border);
   background: var(--bg);
@@ -323,6 +323,7 @@ body {
   cursor: pointer;
   transition: background 0.25s, border-color 0.25s, opacity 0.25s;
   -webkit-tap-highlight-color: transparent;
+  min-height: 44px;
 }
 /* After reveal */
 .fc-option.fc-correct { background: rgba(34,197,94,0.15); border-color: var(--green); }
@@ -443,9 +444,9 @@ body {
 .test-nav .btn { flex: 1; }
 
 .test-aux-actions { display: flex; gap: 8px; margin-top: 10px; }
-.btn-show-answer { background: transparent; color: var(--text2); border: 1px dashed var(--border); font-size: 13px; padding: 8px 12px; min-height: 36px; border-radius: var(--radius-sm); }
+.btn-show-answer { background: transparent; color: var(--text2); border: 1px dashed var(--border); font-size: 13px; padding: 10px 14px; min-height: 44px; border-radius: var(--radius-sm); }
 @media (hover: hover) { .btn-show-answer:hover { border-color: var(--yellow); color: var(--yellow); } }
-.btn-end-exam { background: transparent; color: var(--red); border: 1px solid var(--red); font-size: 13px; padding: 8px 12px; min-height: 36px; border-radius: var(--radius-sm); opacity: 0.7; }
+.btn-end-exam { background: transparent; color: var(--red); border: 1px solid var(--red); font-size: 13px; padding: 10px 14px; min-height: 44px; border-radius: var(--radius-sm); opacity: 0.7; }
 @media (hover: hover) { .btn-end-exam:hover { opacity: 1; background: rgba(239,68,68,0.06); } }
 .btn-show-answer:disabled, .btn-end-exam:disabled { opacity: 0.3; cursor: default; }
 
@@ -536,15 +537,28 @@ body {
   background: var(--surface);
   border: 1.5px solid var(--border);
   border-radius: 99px;
-  padding: 6px 14px;
+  padding: 10px 16px;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
   color: var(--text2);
   transition: all var(--transition);
   -webkit-tap-highlight-color: transparent;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 .chip.active { border-color: var(--accent); color: var(--accent); background: rgba(233,69,96,0.05); }
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 /* ===== MODAL ===== */
 .modal-overlay {
@@ -652,7 +666,7 @@ button:focus-visible, .nav-btn:focus-visible, .quick-btn:focus-visible,
         <div style="font-size:13px;font-weight:700;color:var(--text);">📅 Question Pool</div>
         <div style="font-size:12px;color:var(--text2);margin-top:2px;" id="pool-banner-label">2022–2026 pool active</div>
       </div>
-      <select id="pool-select" onchange="switchPool(this.value)" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-size:13px;color:var(--text);cursor:pointer;font-family:var(--font);">
+      <select id="pool-select" onchange="switchPool(this.value)" aria-label="Select question pool" style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:8px 12px;font-size:13px;color:var(--text);cursor:pointer;font-family:var(--font);min-height:44px;">
       </select>
     </div>
 
@@ -743,7 +757,7 @@ button:focus-visible, .nav-btn:focus-visible, .quick-btn:focus-visible,
         </div>
         <div class="fc-controls">
           <button class="fc-tts-btn" id="fc-tts-btn" onclick="speakQuestion()" title="Read question aloud" aria-label="Read question aloud">🔊</button>
-          <button class="btn btn-secondary" style="padding:8px 14px;font-size:13px;" onclick="endFlashcards()">✕ Exit</button>
+          <button class="btn btn-secondary" style="padding:8px 14px;font-size:13px;min-height:44px;" onclick="endFlashcards()" aria-label="Exit flashcard session">✕ Exit</button>
         </div>
       </div>
 
@@ -847,7 +861,7 @@ button:focus-visible, .nav-btn:focus-visible, .quick-btn:focus-visible,
         <div class="page-title">My Progress</div>
         <div class="page-sub">Track your exam readiness</div>
       </div>
-      <button class="btn btn-secondary" style="padding:8px 14px;font-size:13px;" onclick="confirmReset()">Reset</button>
+      <button class="btn btn-secondary" style="padding:8px 14px;font-size:13px;min-height:44px;" onclick="confirmReset()" aria-label="Reset all progress">Reset</button>
     </div>
 
     <!-- Readiness -->
@@ -1960,7 +1974,10 @@ let modalPrevFocus = null;
 
 function confirmReset() {
   modalPrevFocus = document.activeElement;
-  document.getElementById('reset-modal').classList.add('open');
+  const modal = document.getElementById('reset-modal');
+  modal.classList.add('open');
+  // Trap focus inside modal
+  modal.addEventListener('keydown', trapModalFocus);
   // Focus cancel button for safety
   setTimeout(() => {
     const cancelBtn = document.getElementById('reset-cancel-btn');
@@ -1968,8 +1985,24 @@ function confirmReset() {
   }, 100);
 }
 
+function trapModalFocus(e) {
+  if (e.key !== 'Tab') return;
+  const modal = document.getElementById('reset-modal');
+  const focusable = modal.querySelectorAll('button:not([disabled]), [tabindex]:not([tabindex="-1"])');
+  if (focusable.length === 0) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.shiftKey) {
+    if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+  } else {
+    if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+}
+
 function closeModal(id) {
-  document.getElementById(id).classList.remove('open');
+  const modal = document.getElementById(id);
+  modal.classList.remove('open');
+  modal.removeEventListener('keydown', trapModalFocus);
   if (modalPrevFocus) { modalPrevFocus.focus(); modalPrevFocus = null; }
 }
 
