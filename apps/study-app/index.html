@@ -678,6 +678,46 @@ body {
 .fc-figure { margin-top: 14px; text-align: center; }
 .fc-figure-img { max-width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); background: #fff; cursor: zoom-in; }
 
+/* ===== EXAM MODE COMPACT (MOBILE) ===== */
+#test-active .progress-bar {
+  height: 14px;
+}
+@media (max-width: 600px) {
+  #test-active {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  #test-active .test-question-card {
+    padding: 14px 16px;
+  }
+  #test-active .test-question {
+    font-size: 15px;
+    margin-top: 6px;
+  }
+  #test-active .answer-options {
+    gap: 6px;
+  }
+  #test-active .answer-option {
+    padding: 10px 12px;
+    gap: 10px;
+    font-size: 14px;
+  }
+  #test-active .answer-letter {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+  #test-active .test-nav .btn {
+    padding: 10px 16px;
+    min-height: 44px;
+  }
+  #test-active .test-aux-actions {
+    margin-top: 0;
+    padding-bottom: 16px;
+  }
+}
+
 /* ===== ACCESSIBILITY ===== */
 .skip-link {
   position: absolute;
@@ -989,8 +1029,11 @@ button:focus-visible, .nav-btn:focus-visible, .quick-btn:focus-visible,
         <div class="test-qnum">Question <span id="test-qnum">1</span> of 35</div>
         <div class="test-timer" id="test-timer">⏱ 26:00</div>
       </div>
-      <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Test progress" id="test-bar-container">
-        <div class="progress-fill blue" id="test-bar" style="width:0%"></div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <div class="progress-bar" style="flex:1;" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Test progress" id="test-bar-container">
+          <div class="progress-fill blue" id="test-bar" style="width:0%"></div>
+        </div>
+        <span id="test-bar-pct" style="font-size:12px;font-weight:700;color:var(--text2);min-width:32px;text-align:right;">0%</span>
       </div>
       <div class="test-question-card">
         <div class="test-qid" id="test-qid">T1A01</div>

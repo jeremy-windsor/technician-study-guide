@@ -1068,6 +1068,8 @@ function renderTestQuestion() {
   document.getElementById('test-bar').style.width = testPct + '%';
   const testBarContainer = document.getElementById('test-bar-container');
   if (testBarContainer) testBarContainer.setAttribute('aria-valuenow', testPct);
+  const testBarPctEl = document.getElementById('test-bar-pct');
+  if (testBarPctEl) testBarPctEl.textContent = testPct + '%';
 
   document.getElementById('test-prev-btn').disabled = testCurrentQ === 0;
   document.getElementById('test-next-btn').textContent =
