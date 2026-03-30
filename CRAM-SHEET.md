@@ -90,7 +90,9 @@ Read this the morning of your exam. Key facts, formulas, and numbers that show u
 | Third-party traffic | **Allowed with countries that have agreements** |
 | Prohibited transmissions | **Music, obscenity, false signals, encryption to hide meaning** |
 | Encryption allowed when | **Only for space station or radio control craft commands** |
-| When can you transmit without ID | **Only when controlling model craft** |
+| When can you transmit without ID | **Only when power is below 0.1 watt** (e.g., model craft) |
+| On-air test transmissions | **Must identify the transmitting station** |
+| License renewal window | **Up to 90 days before expiration** |
 | Operating another person's station | **Allowed — your privileges apply** |
 
 ## Propagation
@@ -101,6 +103,7 @@ Read this the morning of your exam. Key facts, formulas, and numbers that show u
 | **Sporadic E** | Surprise VHF skip via E-layer patches |
 | **Tropospheric ducting** | VHF/UHF bending in weather inversions |
 | **Meteor scatter** | Brief VHF reflections off meteor trails |
+| **RF velocity** | All radio frequencies travel at the same speed in free space (~300,000,000 m/s) |
 | **F-layer skip** | HF signals bounce off F-layer (10m and below) |
 
 ## Safety
@@ -126,6 +129,7 @@ Read this the morning of your exam. Key facts, formulas, and numbers that show u
 | **Transistor** | Amplifies or switches signals |
 | **Fuse** | Protects circuit by breaking on overcurrent |
 | **Regulator** | Maintains constant voltage |
+| **Ohmmeter** | Measures resistance by passing small current and measuring voltage |
 
 ## Modulation Types
 
@@ -137,9 +141,12 @@ Read this the morning of your exam. Key facts, formulas, and numbers that show u
 | **CW** | Morse code — most efficient, narrowest bandwidth |
 | **FT8** | Digital weak-signal mode — very popular |
 | **DMR** | Digital Mobile Radio — digital voice on FM channels |
+| **Talkgroup** | DMR identifier that organizes radio traffic into groups |
+| **Winlink** | Email over radio using amateur callsign-based addresses |
 
 ## Common Traps
 
+- **RACES vs ARES** — RACES requires civil defense agency certification; ARES is purely voluntary
 - **"All these choices are correct"** — usually wrong unless it really is all of them
 - **Power in watts vs. dBm** — exam always means watts unless it says otherwise
 - **Wavelength formula** — it's 300/MHz, not 300×MHz
