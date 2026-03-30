@@ -1391,7 +1391,7 @@ function transformQuestion(q) {
   const refs = refsMatch ? refsMatch[1] : null;
   const question = refsMatch ? q.question.slice(refsMatch[0].length) : q.question;
 
-  return { id: q.id, correct, refs, question, answers };
+  return { id: q.id, subelement: q.subelement, group: q.group, correct, refs, question, answers };
 }
 
 async function loadPool(pool) {
@@ -1540,7 +1540,13 @@ function handleAction(actionEl) {
       startSectionFlashcards(actionEl.dataset.section);
       return;
     case 'start-section-study':
-      startSectionStudy(actionEl.dataset.section);
+      showGroupPicker(actionEl.dataset.section);
+      return;
+    case 'start-group-study':
+      startSectionStudy(actionEl.dataset.section, actionEl.dataset.group || null);
+      return;
+    case 'group-back':
+      showPage('sections');
       return;
     case 'select-study-answer':
       selectStudyAnswer(Number(actionEl.dataset.answerIndex));
@@ -1552,7 +1558,7 @@ function handleAction(actionEl) {
       studyNext();
       return;
     case 'study-back':
-      showPage('sections');
+      showGroupPicker(studySection);
       return;
     case 'study-restart':
       studyRestart();
@@ -1731,17 +1737,83 @@ function startWeakAreas() {
   recordStudyDay();
 }
 
+// ===== GROUP PICKER =====
+
+let groupPickerSection = '';
+
+function showGroupPicker(se) {
+  groupPickerSection = se;
+  const seName = SUBELEMENT_NAMES[se] || se;
+  const shortDesc = seName.split('·')[1]?.trim();
+  document.getElementById('group-picker-title').textContent = shortDesc ? se + ' — ' + shortDesc : seName;
+
+  const allQs = QUESTION_POOL.filter(q => q.subelement === se);
+
+  // Build group list from questions
+  const groupMap = {};
+  allQs.forEach(q => {
+    if (!groupMap[q.group]) groupMap[q.group] = [];
+    groupMap[q.group].push(q);
+  });
+  const groups = Object.keys(groupMap).sort();
+
+  document.getElementById('group-picker-subtitle').textContent =
+    `${allQs.length} questions · ${groups.length} groups`;
+
+  const list = document.getElementById('group-list');
+  let html = '';
+
+  // "All Questions" card at top
+  const allMastered = allQs.filter(q => state.cards[q.id]?.mastered).length;
+  html += `<div class="group-card-all" data-action="start-group-study" data-section="${se}" data-keyboard-activate="true" tabindex="0" role="button" aria-label="All questions, ${allQs.length} questions">
+    <div class="group-card-left">
+      <div class="group-card-title">📚 All Questions</div>
+      <div class="group-card-stats">${allMastered}/${allQs.length} mastered</div>
+    </div>
+    <div class="group-card-count">${allQs.length} Qs</div>
+  </div>`;
+
+  // Individual group cards
+  html += groups.map(g => {
+    const qs = groupMap[g];
+    const mastered = qs.filter(q => state.cards[q.id]?.mastered).length;
+    const seen = qs.filter(q => state.cards[q.id]?.seen).length;
+    return `<div class="group-card" data-action="start-group-study" data-section="${se}" data-group="${g}" data-keyboard-activate="true" tabindex="0" role="button" aria-label="${g}, ${qs.length} questions, ${mastered} mastered">
+      <div class="group-card-left">
+        <div class="group-card-title">${g}</div>
+        <div class="group-card-stats">
+          <span><span class="dot dot-green"></span> ${mastered}</span>
+          <span><span class="dot dot-gray"></span> ${seen} seen</span>
+          <span><span class="dot dot-gray"></span> ${qs.length - seen} new</span>
+        </div>
+      </div>
+      <div class="group-card-count">${qs.length} Qs</div>
+    </div>`;
+  }).join('');
+
+  list.innerHTML = html;
+  showPage('group-picker', true);
+}
+
 // ===== SECTION STUDY MODE =====
 
 let studySection = '';
+let studyGroup = null;
 let studyQuestions = [];
 let studyIndex = 0;
 let studyAnswers = {}; // index → selected answer index
 
-function startSectionStudy(se) {
+function startSectionStudy(se, group) {
   studySection = se;
-  studyQuestions = QUESTION_POOL.filter(q => q.id.startsWith(se))
-    .sort((a, b) => a.id.localeCompare(b.id));
+  studyGroup = group || null;
+
+  if (group) {
+    studyQuestions = QUESTION_POOL.filter(q => q.group === group)
+      .sort((a, b) => a.id.localeCompare(b.id));
+  } else {
+    studyQuestions = QUESTION_POOL.filter(q => q.subelement === se)
+      .sort((a, b) => a.id.localeCompare(b.id));
+  }
   studyIndex = 0;
   studyAnswers = {};
 
@@ -1750,7 +1822,8 @@ function startSectionStudy(se) {
   // Set header info
   const seName = SUBELEMENT_NAMES[se] || se;
   const shortDesc = seName.split('·')[1]?.trim();
-  document.getElementById('study-section-title').textContent = shortDesc ? se + ' — ' + shortDesc : seName;
+  const title = group ? group : (shortDesc ? se + ' — ' + shortDesc : seName);
+  document.getElementById('study-section-title').textContent = title;
   document.getElementById('study-section-count').textContent = studyQuestions.length + ' questions';
 
   // Show active session, hide complete
