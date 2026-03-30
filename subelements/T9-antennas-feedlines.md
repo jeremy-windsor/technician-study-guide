@@ -8,7 +8,7 @@ A beam antenna is one that concentrates signals in one direction, like a flashli
 
 So what exactly is antenna gain? It's the increase in signal strength in a specified direction compared to a reference antenna. Gain doesn't create power from nothing — it concentrates the existing power in a preferred direction by taking from other directions. Think of squeezing a balloon: you get more in one spot by reducing coverage elsewhere. Gain is measured in dBi when compared to an isotropic antenna, or dBd when compared to a dipole.
 
-Now let's look at the simple dipole. A dipole oriented parallel to Earth's surface is a horizontally polarized antenna — the electric field of the radio wave is horizontal, matching the orientation of the antenna elements. The polarization of your antenna should match the polarization of the station you're communicating with for the best signal. A half-wave dipole radiates its strongest signal broadside to the antenna — that means perpendicular to the wire. Picture a donut shape around the wire: maximum radiation comes from the sides, with nulls off the ends. This is important for pointing your antenna toward the stations you want to reach.
+Now let's look at the simple dipole. The polarization of an antenna is described by the orientation of the electric field. A dipole oriented parallel to Earth's surface is a horizontally polarized antenna — the electric field of the radio wave is horizontal, matching the orientation of the antenna elements. The polarization of your antenna should match the polarization of the station you're communicating with for the best signal. A half-wave dipole radiates its strongest signal broadside to the antenna — that means perpendicular to the wire. Picture a donut shape around the wire: maximum radiation comes from the sides, with nulls off the ends. This is important for pointing your antenna toward the stations you want to reach.
 
 The resonant frequency of a dipole is determined by its length. Shortening a dipole increases its resonant frequency because frequency is inversely proportional to length. Conversely, making it longer lowers the frequency. Adding coils in series or capacitive loading to the ends electrically lengthens the antenna, also lowering its resonant frequency. Only physically shortening the antenna raises the frequency.
 
@@ -24,7 +24,7 @@ Using a handheld VHF transceiver with a flexible antenna inside a vehicle create
 
 Knowing the approximate physical size of antennas for different frequencies is practical knowledge you'll use when building or buying antennas.
 
-A quarter-wavelength vertical antenna for 146 megahertz is approximately 19 inches long. At 146 megahertz, a full wavelength is about 80 inches — roughly 2 meters. A quarter of that is about 20 inches, and with velocity factor adjustment it works out to approximately 19 inches. The formula is: length in inches equals 2808 divided by the frequency in megahertz.
+A 19-inch-long vertical antenna is often used on 2 meters because it is a resonant quarter-wave at that frequency. At 146 megahertz, a full wavelength is about 80 inches — roughly 2 meters. A quarter of that is about 20 inches, and with velocity factor adjustment it works out to approximately 19 inches. The formula is: length in inches equals 2808 divided by the frequency in megahertz.
 
 A half-wavelength 6-meter dipole antenna is approximately 112 inches long, which is about 9 and a third feet. The name "6 meters" refers to the full wavelength, and the dipole is half of that — about 3 meters or 118 inches, adjusted down to about 112 inches for velocity factor.
 
@@ -38,11 +38,11 @@ There's an important electrical difference between RG-58 and RG-213 coaxial cabl
 
 As the frequency of a signal passing through coaxial cable increases, the loss increases. This is why VHF and UHF stations need lower-loss cable than HF stations — at 440 megahertz, cheap cable like RG-58 can lose half your signal over a moderate run length. The characteristic impedance, however, stays the same regardless of frequency.
 
-For the lowest loss at VHF and UHF, air-insulated hardline is the best choice. Air is the best dielectric with the lowest loss, and the rigid copper construction minimizes conductor losses. It's expensive and difficult to install, but when loss matters most, it's the gold standard.
+For the lowest loss feed line, air-insulated hardline is the best choice. Air is the best dielectric with the lowest loss, and the rigid copper construction minimizes conductor losses. It's expensive and difficult to install, but when loss matters most, it's the gold standard.
 
 There are multiple sources of loss in coaxial feed line. Water intrusion into connectors is perhaps the worst — it dramatically increases loss and eventually corrodes the cable. High SWR also increases effective loss because power travels back and forth through the lossy cable multiple times. And each connector in the line adds a small amount of loss. All three of these are real sources of feed line loss.
 
-Let's talk connectors. PL-259 connectors and their SO-239 mates are the most common amateur radio connectors. They're commonly used at HF and VHF frequencies. They are not watertight, not suitable for microwave frequencies, and they use a threaded coupling — not bayonet style like a BNC connector.
+Let's talk connectors. PL-259 connectors and their SO-239 mates are the most common amateur radio connectors. They're commonly used at HF and VHF frequencies. They are not watertight, not suitable for microwave frequencies, and they use a threaded coupling — not bayonet style like a BNC connector. When used outdoors, all RF connector types — PL-259, Type N, BNC, and others — should be carefully taped or sealed for weather protection to prevent moisture intrusion, which dramatically increases signal loss.
 
 For frequencies above 400 megahertz, Type N connectors are most suitable. They maintain consistent impedance and low loss at UHF and microwave frequencies. Despite the name "UHF connector," the PL-259 and SO-239 actually perform poorly above 400 megahertz due to their non-constant impedance design. The Type N was specifically designed for precision RF work at higher frequencies.
 

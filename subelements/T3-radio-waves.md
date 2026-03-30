@@ -1,4 +1,4 @@
-# T3 — Radio Wave Propagation
+# T3 — Radio Wave Characteristics
 
 ## Radio Wave Characteristics
 
@@ -36,7 +36,7 @@ Knife-edge diffraction is another way signals can travel beyond obstructions. Wh
 
 A radio wave is made up of two components: an electric field and a magnetic field. These two fields are always at right angles to each other and both perpendicular to the direction of travel. This is fundamental electromagnetic theory.
 
-All radio waves travel at the speed of light in free space — approximately 300 million meters per second, or 300,000,000 meters per second. Every type of electromagnetic radiation, whether radio, light, or X-rays, travels at the same speed in a vacuum regardless of frequency.
+All radio waves travel at the speed of light in free space — approximately 300 million meters per second, or 300,000,000 meters per second. Every type of electromagnetic radiation, whether radio, light, or X-rays, travels at the same speed in a vacuum regardless of frequency. This means all radio frequencies travel at the same velocity in free space — a 2 meter VHF signal moves at exactly the same speed as a 10 meter HF signal or a 70 centimeter UHF signal. Frequency affects wavelength, not velocity.
 
 Wavelength and frequency have an inverse relationship — as frequency increases, wavelength gets shorter. More cycles per second means each cycle takes up less physical space. The formula for converting frequency to wavelength is simple: wavelength in meters equals 300 divided by frequency in megahertz. This is one of the most important formulas to know.
 
@@ -48,7 +48,7 @@ The radio spectrum is divided into named bands, and three of them come up freque
 
 ## Ionospheric Propagation
 
-The ionosphere is the region of the atmosphere that can refract or bend HF and VHF radio waves. Located between about 60 and 600 kilometers altitude, it contains ionized gases that can refract radio waves back to Earth, enabling long-distance communication.
+The ionosphere is the region of the atmosphere that can reflect HF radio waves. Located between about 60 and 600 kilometers altitude, it contains ionized gases that can refract radio waves back to Earth, enabling long-distance communication.
 
 HF communication's big advantage compared to VHF and higher frequencies is that long-distance ionospheric propagation is far more common on HF. Signals can bounce off the ionosphere for thousands of miles. VHF and UHF are mostly limited to line-of-sight. HF does have more atmospheric noise and static, and HF antennas are larger, not smaller.
 

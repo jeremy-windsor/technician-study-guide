@@ -56,11 +56,11 @@ If the voice pitch of a single-sideband signal seems too high or low, the contro
 
 Excessive microphone gain on SSB transmissions causes distorted transmitted audio. Too much mic gain creates splatter, where your signal spreads beyond its intended bandwidth. It won't cause frequency instability or change your SWR. The fix is simple — turn down the mic gain and speak at a normal level.
 
-When you tune an FM receiver above or below a signal's frequency, the result is distortion of the signal's audio. FM demodulation requires being tuned to the exact center frequency. Off-tuning means the discriminator can't properly decode the frequency modulation. Unlike SSB where off-tuning changes the voice pitch, FM just distorts.
+What does an FM signal sound like when received slightly off frequency? The audio becomes distorted. FM demodulation requires being tuned to the exact center frequency. Off-tuning means the discriminator can't properly decode the frequency modulation. Unlike SSB where off-tuning changes the voice pitch, FM just distorts.
 
 ## DMR and Digital Voice
 
-A DMR code plug contains access information for repeaters and talkgroups. It's a configuration file with repeater frequencies, color codes, talkgroup IDs, contact lists, and zone configurations. Think of it as a programming file that tells your radio how to access the DMR network. It doesn't contain codec software or CW identification information.
+A DMR "code plug" is configuration data loaded onto your radio to access repeaters and talkgroups. It contains repeater frequencies, color codes, talkgroup IDs, contact lists, and zone configurations. Think of it as a programming file that tells your radio how to access the DMR network. It doesn't contain codec software or CW identification information.
 
 A specific group of stations is selected on a digital voice transceiver by entering the group's identification code. Digital voice systems like DMR, D-STAR, and Fusion use identification codes such as talkgroup IDs or reflectors to select groups, not CTCSS tones. You program the group's code into your radio to join their channel.
 

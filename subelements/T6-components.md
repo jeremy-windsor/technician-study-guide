@@ -1,12 +1,10 @@
-# T6 — Electronic and Electrical Components
+# T6 — Electronic Components
 
 ## Resistors and Basic Components
 
 Let's get into the building blocks of electronic circuits. A resistor is the component that opposes the flow of current in a DC circuit. That's its entire job — resist current flow. Resistors work in both AC and DC circuits, but the exam specifically asks about DC.
 
 A potentiometer is a variable resistor with three terminals, commonly used as an adjustable volume control. Turning the knob changes the resistance, which changes the signal level passing through the circuit. The electrical parameter controlled by a potentiometer is resistance — that's all it does.
-
-A fuse is the component used to protect other circuit components from current overloads. It contains a thin wire that melts and opens the circuit when too much current flows, sacrificing itself to save your more expensive components from damage.
 
 An SPDT switch — that stands for Single Pole, Double Throw — switches a single circuit between one of two other circuits. "Single Pole" means one input, and "Double Throw" means two possible output positions. By contrast, a simple on-off switch is an SPST — Single Pole, Single Throw — which just opens or closes a single circuit. In figure T-2, component 3 is a single-pole single-throw switch.
 
@@ -40,7 +38,7 @@ A light-emitting diode, or LED, emits light when forward DC current flows throug
 
 A transistor can be used as an electronic switch or amplifier. A small signal on its input controls a larger current flow — this is the basis of all digital electronics and signal amplification. A transistor is the only common component that can provide power gain, using a small input signal to control a larger output signal powered by an external supply.
 
-The term that describes a device's ability to amplify a signal is gain — how much bigger the output signal is compared to the input.
+The term gain in amplifiers describes the increase in signal strength from input to output. Gain can refer to an increase in signal voltage, signal current, or signal power — all of these are valid ways to express amplifier gain.
 
 Transistors consist of three regions of semiconductor material. For bipolar junction transistors, or BJTs, the three electrodes are called the emitter, base, and collector. The arrangement is either NPN or PNP. A small current into the base controls a larger current flowing from collector to emitter.
 

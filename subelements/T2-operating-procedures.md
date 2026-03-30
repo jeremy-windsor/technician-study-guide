@@ -24,7 +24,7 @@ When answering someone who's calling CQ, say their call sign first, then yours. 
 
 If you want to indicate that you're listening on a repeater and available for a contact, say your call sign followed by the word "monitoring." That's the standard way to let people know you're there without calling CQ.
 
-CQ itself means "calling any station." It's an open invitation for anyone to respond. Despite various folk etymologies, it simply means "anyone out there?"
+CQ itself means "calling any station." It's an open invitation for anyone to respond. Despite various folk etymologies, it simply means "anyone out there?" An effective way to seek a call from any phone station when not using a repeater is to repeat "CQ" a few times, followed by "this is," and your call sign, then pause to listen; repeat as necessary.
 
 Before calling CQ, you should listen first to make sure no one else is using the frequency, ask if the frequency is in use, and verify that you're authorized to operate there. Don't just barge onto a frequency.
 
@@ -50,7 +50,9 @@ If you can hear a repeater's output but can't access it — meaning the repeater
 
 ## Digital Repeaters and DMR
 
-On DMR repeater systems, the color code functions similarly to CTCSS tones in analog systems. It establishes groups of users and prevents your radio from hearing traffic from other repeaters on the same frequency. Think of the DMR color code as the digital equivalent of a CTCSS tone.
+On DMR repeater systems, the digital color code is an access code which must be programmed into a DMR transmitter to access a specific repeater. It functions similarly to CTCSS tones in analog systems, preventing your radio from hearing traffic from other repeaters on the same frequency. Think of the DMR color code as the digital equivalent of a CTCSS tone.
+
+A "talkgroup" is an identifier used by DMR to organize radio traffic so that those who want to hear the group aren't bothered by other radio traffic. Think of talkgroups as virtual channels within a DMR repeater — multiple groups can share the same physical frequency but users only hear their selected talkgroup's traffic. This is one of the key advantages of DMR over analog repeaters.
 
 To join a digital repeater's talkgroup, you simply program your radio with the group's ID or code. No FCC registration or club membership needed — just the right code programmed into your radio.
 
@@ -70,7 +72,7 @@ There are several Q signals that come up on the Technician exam. QRM means you'r
 
 FCC rules always apply to amateur station operation, without exception. Not during emergencies, not during RACES operations, not during ARES operations. There is no scenario where you get a free pass from FCC regulations. However, in situations involving the immediate safety of human life or protection of property, amateur operators are permitted to operate outside the frequency privileges of their license class. That is the only exception to normal frequency restrictions.
 
-The Radio Amateur Civil Emergency Service, known as RACES, is an FCC Part 97 amateur radio service specifically for civil defense communications during national emergencies. It's defined in the FCC rules, not created by a club or international organization.
+The Radio Amateur Civil Emergency Service, known as RACES, is an FCC Part 97 amateur radio service specifically for civil defense communications during national emergencies. It's defined in the FCC rules, not created by a club or international organization. RACES requires certification by a civil defense agency — this is what distinguishes it from ARES, which is a purely voluntary organization with no civil defense certification requirement.
 
 The Amateur Radio Emergency Service, known as ARES, is a group of licensed amateurs who have voluntarily registered their qualifications and equipment for communications duty in the public service. It's a volunteer organization — not military, not a training program, and separate from RACES, though the two can work together.
 
@@ -83,6 +85,8 @@ When participating in a net, the standard practice is to transmit only when dire
 The word "traffic" in net operation refers to messages exchanged by net stations. Just like traffic on a road means vehicles moving, traffic on a net means messages being passed and relayed.
 
 Good traffic handling means passing messages exactly as received — verbatim, no changes. You don't editorialize, you don't decide whether a message is worthy of relay, and you don't share messages with the news media. You're a relay, not an editor.
+
+Winlink is the system that relays messages using email addresses based on amateur callsigns. It provides email over radio capability, allowing amateurs to send and receive email when internet access is unavailable — an essential tool for emergency communications.
 
 To ensure that voice messages containing unusual words are received correctly, spell the words using a standard phonetic alphabet — Alpha, Bravo, Charlie, and so on. Don't yell into the microphone; that just causes distortion and doesn't help clarity.
 

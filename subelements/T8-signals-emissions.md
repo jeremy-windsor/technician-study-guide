@@ -74,7 +74,7 @@ CW — continuous wave — is another name for Morse code transmission. The carr
 
 PSK stands for Phase Shift Keying, a digital modulation method that encodes data by shifting the phase of the carrier signal. PSK31 is a popular amateur digital mode using this technique.
 
-DMR — Digital Mobile Radio — uses a technique for time-multiplexing two digital voice signals on a single 12.5 kilohertz repeater channel. By alternating time slots, it doubles the capacity of each repeater channel. A talkgroup on a digital repeater is a way for groups of users to share a channel at different times without hearing other users on the channel. Think of it as a virtual sub-channel — multiple talkgroups share the same physical repeater frequency but are separated digitally.
+DMR — Digital Mobile Radio — uses a technique for time-multiplexing two digital voice signals on a single 12.5 kilohertz repeater channel. By alternating time slots, it doubles the capacity of each repeater channel.
 
 APRS — the Automatic Packet Reporting System — can transmit GPS position data, text messages, weather data, and more. Its primary application is providing real-time tactical digital communications in conjunction with a map showing the locations of stations. This makes it perfect for events like marathons, search and rescue, or severe weather spotting.
 

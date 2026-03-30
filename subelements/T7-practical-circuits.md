@@ -18,7 +18,7 @@ A transverter is a device that converts the RF input and output of a transceiver
 
 When you need more power, an RF power amplifier increases the transmitted output power from a transceiver. These are sometimes called linear amps. Voltage dividers reduce voltage, and impedance networks match impedances — neither one increases transmitted power.
 
-On the receiving side, an RF preamplifier is installed between the antenna and receiver to boost weak signals before they reach the receiver's front end. The "pre" in preamplifier means "before" — it amplifies before the receiver processes the signal.
+The Variable Frequency Oscillator, or VFO, circuit in a transceiver sets the receive and transmit frequency. It's the heart of frequency control — when you turn the tuning dial, you're adjusting the VFO.
 
 The SSB/CW-FM switch on a VHF power amplifier sets the amplifier for proper operation in the selected mode. SSB and CW require linear amplification, while FM can use more efficient non-linear amplification. This switch doesn't change the transmitted mode itself — it just optimizes the amplifier's bias and operating parameters for whichever mode you've selected.
 
@@ -30,7 +30,9 @@ If a broadcast AM or FM radio is receiving your amateur radio transmission unint
 
 There are three main causes of radio frequency interference: fundamental overload, which swamps nearby receivers; harmonics, which are multiples of your transmit frequency that land on other services; and spurious emissions, which are unintended signals from your transmitter. All three are sources of interference you should understand.
 
-A ferrite choke is the go-to fix for distorted audio caused by RF current on the shield of a microphone cable. You snap the ferrite bead onto the mic cable, and it blocks RF current from flowing on the cable shield, eliminating the RF pickup that was causing the distortion.
+High SWR is a common cause of low RF power output from a solid-state transceiver. Most modern rigs automatically reduce power to protect their output transistors when SWR is elevated, so a bad antenna match can drastically cut your actual radiated power.
+
+A ferrite choke is the go-to fix for distorted audio caused by RF current on the shield of a microphone cable. Adding a clip-on ferrite "choke" to the microphone cable prevents the transmitted signal from feeding back into the transmitter, eliminating distorted voice transmissions.
 
 When a non-amateur radio or TV receiver is experiencing fundamental overload from your amateur signal, the fix goes at the receiver, not the transmitter. Block the amateur signal with a filter at the antenna input of the affected receiver. This lets the desired broadcast signals through while rejecting your amateur signal.
 
@@ -44,11 +46,11 @@ For non-fiber optic cable TV interference caused by your amateur radio transmiss
 
 If you receive reports that your audio through an FM repeater is distorted or unintelligible, several things could be wrong. Your transmitter might be slightly off frequency, your batteries might be running low, or you might be in a bad location causing multipath and weak signal issues. Any of these can cause poor audio quality through a repeater.
 
-RF feedback in a transmitter is a specific problem where RF energy gets back into the audio circuits, creating a feedback loop. The symptom is reports of garbled, distorted, or unintelligible voice transmissions. The RF signal ends up modulating itself, which is different from SWR problems or frequency drift.
+RF feedback in a transmitter is a specific problem where RF energy gets back into the audio circuits, creating a feedback loop. The symptom is garbled, distorted, or unintelligible voice transmissions. The RF signal ends up modulating itself, which is different from SWR problems or frequency drift. To eliminate this, add a clip-on ferrite choke to the microphone cable — this blocks RF from feeding back into the transmitter's audio input.
 
 ## Antenna Measurements and Feed Lines
 
-A dummy load is a device that prevents transmitting signals over the air when you're making tests. It absorbs your transmitter's RF power as heat instead of radiating it, acting as a non-radiating substitute for an antenna. It consists of a non-inductive resistor, typically 50 ohms, mounted on a heat sink. The resistor must be non-inductive to present a pure resistance at RF frequencies.
+A dummy load is a device that prevents transmitting signals over the air when you're making tests. It absorbs your transmitter's RF power as heat instead of radiating it, acting as a non-radiating substitute for an antenna. A typical RF dummy load consists of a 50-ohm non-inductive resistor mounted on a heat sink. The resistor must be non-inductive to present a pure resistance at RF frequencies.
 
 An antenna analyzer is the tool used to determine if an antenna is resonant at the desired operating frequency. It measures impedance and SWR across a range of frequencies, showing you exactly where the antenna is resonant. It's the primary instrument for antenna testing and adjustment.
 
@@ -62,11 +64,11 @@ Power lost in a feed line is converted into heat through resistive losses in the
 
 Moisture contamination is the primary cause of coaxial cable failure. Water getting into coax dramatically increases loss and eventually corrodes the conductors. This is why weatherproofing connectors and using UV-resistant cable outdoors is critical. Speaking of which, the outer jacket of coaxial cable should be resistant to ultraviolet light because UV from sunlight degrades the jacket over time, causing it to crack and allow water to enter the cable.
 
-Air core coaxial cable actually has lower loss than foam or solid dielectric types, which is an advantage. However, it requires special techniques to prevent moisture from entering the cable because the interior is hollow. Pressurization or careful sealing is needed to keep water out.
+Foam-dielectric coaxial cable has an advantage over solid-dielectric cable — it has less loss per foot. The air pockets in the foam reduce the dielectric constant, lowering losses. Air-insulated hardline takes this even further with the lowest loss of all, but it requires special techniques to prevent moisture from entering the cable because the interior is hollow.
 
 ## Multimeters and Measurements
 
-Let's talk about the instruments you'll use to measure electrical quantities. A voltmeter measures electric potential — that is, voltage. An ammeter measures electric current. And an ohmmeter measures resistance. A multimeter combines all three functions into one instrument, measuring voltage, current, and resistance. It does not measure signal strength, noise, impedance, or reactance — those require specialized instruments.
+Let's talk about the instruments you'll use to measure electrical quantities. A voltmeter measures electric potential — that is, voltage. An ammeter measures electric current. And an ohmmeter measures resistance — it works by applying a small current through the component being tested and measuring the resulting voltage. From this voltage and the known current, the meter calculates resistance using Ohm's Law. A multimeter combines all three functions into one instrument, measuring voltage, current, and resistance. It does not measure signal strength, noise, impedance, or reactance — those require specialized instruments.
 
 How you connect a meter depends on what you're measuring. A voltmeter connects in parallel — across the component — to sense the voltage difference without significantly affecting circuit operation. An ammeter connects in series so that all the current flows through it. Connecting an ammeter in parallel would create a short circuit and likely blow the fuse or damage the meter. Remember: parallel for voltage, series for current.
 

@@ -12,9 +12,9 @@ The FCC encourages the use of a phonetic alphabet for station identification, bu
 
 Each person may hold only one operator and primary station license grant. One person equals one license. You don't need separate licenses for different bands or different locations.
 
-Your license is official when it appears in the FCC's Universal Licensing System database, known as ULS. The Certificate of Successful Completion of Examination is just proof you passed the test — it's not the license itself. And the NCVEC doesn't grant licenses; only the FCC does. You can begin transmitting as soon as your license shows up in the FCC's license database — not when you get the certificate, not when the ARRL shows it, and not when anything arrives in the mail.
+Your license is official when it appears in the FCC's Universal Licensing System database, known as ULS. After passing the exam, you receive official notification of your new license and call sign by email from the FCC with a link to download the license grant. The Certificate of Successful Completion of Examination is just proof you passed the test — it's not the license itself. And the NCVEC doesn't grant licenses; only the FCC does. You can begin transmitting as soon as your license shows up in the FCC's license database.
 
-The normal term for an FCC-issued amateur radio license is ten years. After that, you need to renew. If your license expires, you have a two-year grace period to renew it, but here's the catch — you cannot transmit during that grace period. You must wait until the renewal is actually processed. No transmitting with an expired license, even if you're still within the grace period.
+The normal term for an FCC-issued amateur radio license is ten years. An amateur radio license renewal may be requested up to 90 days before the expiration date. If your license expires, you have a two-year grace period to renew it, but here's the catch — you cannot transmit during that grace period. You must wait until the renewal is actually processed. No transmitting with an expired license, even if you're still within the grace period.
 
 The FCC requires you to maintain a correct email address on file with them. If they can't reach you by email, it could result in revocation of your station license or suspension of your operator license. This is serious — keep your FCC email current. You don't need a physical copy of your license at the station anymore, and amateur transmitters don't require type acceptance, but that email address is mandatory.
 
@@ -36,7 +36,7 @@ Frequency coordination for repeaters and auxiliary stations is handled by Volunt
 
 ## RACES
 
-The Radio Amateur Civil Emergency Service, known as RACES, is a radio service that uses amateur frequencies and amateur stations, operated by amateur operators who are certified by a civil defense organization as being enrolled in that organization. It covers all of these elements together — the frequencies, the stations, and the enrolled operators.
+The Radio Amateur Civil Emergency Service, known as RACES, is a radio service that uses amateur frequencies and amateur stations, operated by amateur operators who are certified by a civil defense organization as being enrolled in that organization. Besides an FCC-issued amateur operator license, RACES station control operators must have certification of current enrollment by a civil defense organization. This civil defense certification requirement is what sets RACES apart from other amateur operations.
 
 ## Interference Rules
 
@@ -50,7 +50,7 @@ Technicians can contact the International Space Station on VHF bands — no NASA
 
 The 6 meter band runs from 50 to 54 megahertz. The frequency 52.525 megahertz is the national FM simplex calling frequency on 6 meters. The 2 meter band runs from 144 to 148 megahertz, and 146.52 megahertz is the national FM simplex calling frequency on 2 meters — one of the most important frequencies to know for the Technician exam.
 
-The 219 to 220 megahertz segment of the 1.25 meter band is restricted to fixed digital message forwarding systems only. That's a unique restriction worth memorizing.
+Technicians are authorized to use digital modes such as FT8 on the 10 meter, 6 meter, and 2 meter bands — all of these include frequencies where Technicians can operate digital.
 
 The bottom 100 kilohertz of both the 6 meter band — that's 50.0 to 50.1 — and the 2 meter band — 144.0 to 144.1 — are CW only. This mirrors the HF convention of keeping CW at the bottom of each band.
 
@@ -70,7 +70,7 @@ When amateur radio is a secondary service in a band segment, primary users have 
 
 ## Transmitting From Other Locations
 
-An FCC-licensed amateur station may transmit from any vessel or craft located in international waters that is documented or registered in the United States. Operating in another country requires that country's permission — you can't just transmit anywhere because you hold an FCC license.
+An FCC-licensed amateur station may operate aboard a vessel or craft in international waters — you may operate from a US-documented vessel with the master's permission. Operating in another country requires that country's permission — you can't just transmit anywhere because you hold an FCC license.
 
 International communications must be incidental to the purposes of the Amateur Radio Service and remarks of a personal character. The key word is "personal" — conducting business over amateur radio is prohibited.
 
@@ -90,7 +90,7 @@ You may sell amateur radio equipment over the air, but only on an occasional bas
 
 Transmitting information in support of broadcasting, program production, or news gathering is normally prohibited. But when it's directly related to the immediate safety of human life or protection of property and no other means is available, you can assist.
 
-Repeaters, auxiliary stations, and space stations can automatically retransmit the signals of other amateur stations. Beacons and Earth stations cannot.
+An auxiliary station is a station that sends one-way transmissions between a remote repeater receiver and the main repeater transmitter — it's the link that connects a remote receive site back to the repeater. Repeaters, auxiliary stations, and space stations can automatically retransmit the signals of other amateur stations. Beacons and Earth stations cannot.
 
 The only time you can receive compensation for operating an amateur station is when the communication is incidental to classroom instruction at an educational institution. Teachers can operate amateur radio as part of their teaching duties.
 
@@ -100,13 +100,13 @@ You must transmit your assigned call sign at least every 10 minutes during a com
 
 When using tactical call signs like "Race Headquarters," you still must identify with your FCC call sign every 10 minutes and at the end of each communication. Tactical calls supplement your legal identification — they don't replace it.
 
-Station identification on phone must be in English. You can have conversations in any language, but your call sign identification must be in English. You can identify using either CW or phone emission — CW is always acceptable for station ID, even when you're operating phone.
+Station identification when using a phone emission must be in English. You can have conversations in any language, but your call sign identification must be in English. You can identify using either CW or phone emission — CW is always acceptable for station ID, even when you're operating phone.
 
 When indicating you're operating from a different call district, you can say "stroke," "slant," or "slash" before the district number — all three are acceptable ways to verbalize the separator.
 
-The only time you can transmit without identifying on the air is when controlling model craft — RC airplanes, boats, or cars. All other transmissions require station identification.
+The only time you can transmit without identifying on the air is when the transmitted power level is below 0.1 watt, such as when controlling model craft — RC airplanes, boats, or cars. All other transmissions require station identification.
 
-Even test transmissions require station identification. There's no time restriction and no need to notify the FCC for test transmissions — just identify your station.
+Even test transmissions require station identification — you must identify the transmitting station when making on-the-air test transmissions. There's no time restriction and no need to notify the FCC for test transmissions — just identify your station. This is a simple but important rule: every on-the-air transmission, including tests, must include proper station identification.
 
 ## Control Operators
 
@@ -118,7 +118,7 @@ A Technician cannot operate on Extra class frequency segments under normal circu
 
 When the control operator is not the station licensee, both the control operator and the station licensee share responsibility for proper operation of the station. Neither can pass the buck entirely to the other.
 
-The FCC presumes that the station licensee is the control operator unless documentation in the station records says otherwise. If something goes wrong, the licensee is on the hook by default.
+A control operator, as defined in Part 97, is an amateur operator designated by the licensee of a station to be responsible for transmissions and FCC rules compliance at that station. The FCC presumes that the station licensee is the control operator unless documentation in the station records says otherwise. If something goes wrong, the licensee is on the hook by default.
 
 The control point is the location where the control operator function is performed — where the operator actually sits and operates the station. It's not the antenna location, not the transmitter location, and not a mailing address.
 
@@ -128,7 +128,7 @@ Any amateur who is allowed to transmit on a satellite's uplink frequency can be 
 
 Repeater operation is the classic example of automatic control — the repeater operates without a control operator being physically present at the control point. Operating a station over the internet is remote control, where you're indirectly manipulating the station controls from a distant location. Controlling model aircraft or cars by amateur radio is telecommand.
 
-Remote control requires the control operator at the control point, which is the remote location; a control operator at all times; and indirect manipulation of the controls. The "remote" part means the control point is not at the transmitter's physical location.
+Any amateur station may be remotely controlled — there's no restriction limiting remote control to just repeaters or digital stations. Remote control requires the control operator at the control point, which is the remote location; a control operator at all times; and indirect manipulation of the controls. The "remote" part means the control point is not at the transmitter's physical location.
 
 ## Third-Party Communications and Repeaters
 

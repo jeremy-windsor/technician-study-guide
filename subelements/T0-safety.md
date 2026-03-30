@@ -1,4 +1,4 @@
-# T0 — Safety
+# T0 — Electrical and RF Safety
 
 ## Electrical and Power Safety
 
