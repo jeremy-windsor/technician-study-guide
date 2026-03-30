@@ -1,16 +1,16 @@
 # T7 — Practical Circuits
-*4 questions on the exam from a pool of 43*
+*4 questions on the exam from a pool of 44*
 
 ## Group T7A — Radio Station Equipment: Receivers, Transmitters, Transceivers
 
 ### T7A01
 **Which term describes the ability of a receiver to detect the presence of a signal?**
-- A) Linearity
+- A) RF gain
 - **B) Sensitivity** ✅
 - C) Selectivity
 - D) Total Harmonic Distortion
 
-> Sensitivity is how well a receiver can pick up weak signals — the lower the signal it can detect, the more sensitive it is. Don't confuse with selectivity, which is the ability to separate signals on nearby frequencies. Sensitivity = detection, Selectivity = discrimination.
+> Sensitivity describes a receiver's ability to detect the presence of weak signals. A more sensitive receiver can pick up fainter signals. Sensitivity is typically measured in microvolts — the lower the number, the more sensitive the receiver.
 
 ### T7A02
 **What is a transceiver?**
@@ -19,7 +19,7 @@
 - C) A device for automatically sending and decoding Morse code
 - D) A device for converting receiver and transmitter frequencies to another band
 
-> A transceiver = transmitter + receiver in one box. Almost all modern amateur radios are transceivers. The word itself is a portmanteau: TRANSmitter + reCEIVER = TRANSCEIVER.
+> Selectivity is a receiver's ability to discriminate between multiple signals on nearby frequencies. Good selectivity means the receiver can pick out one signal while rejecting adjacent ones. Filters determine selectivity.
 
 ### T7A03
 **Which of the following is used to convert a signal from one frequency to another?**
@@ -28,7 +28,7 @@
 - C) Inverter
 - D) Amplifier
 
-> A mixer combines two signals to produce sum and difference frequencies — this is how receivers convert incoming RF to an intermediate frequency (IF) for processing. Mixers are the heart of superheterodyne receivers.
+> A mixer converts a signal from one frequency to another by combining it with a local oscillator signal. The mixer produces sum and difference frequencies — this frequency conversion is at the heart of the superheterodyne receiver design used in virtually all modern radios.
 
 ### T7A04
 **Which term describes the ability of a receiver to discriminate between multiple signals?**
@@ -37,7 +37,7 @@
 - **C) Selectivity** ✅
 - D) Harmonic distortion
 
-> Selectivity is the ability to pick out one signal while rejecting others on nearby frequencies. Think of it as the receiver's ability to "select" one station from many. Sensitivity detects weak signals; selectivity separates close signals.
+> A local oscillator generates a signal that is mixed with the incoming RF to produce an intermediate frequency. The LO frequency is adjustable, which is how you tune the receiver to different frequencies.
 
 ### T7A05
 **What is the name of a circuit that generates a signal at a specific frequency?**
@@ -46,7 +46,7 @@
 - C) Low-pass filter
 - **D) Oscillator** ✅
 
-> An oscillator generates a continuous signal at a specific frequency. It's the clock and tone generator of radio — every transmitter needs one to create its carrier frequency. Modulators modify signals, filters pass/block them.
+> Modulation is the process of combining an information signal (like voice) with an RF carrier for transmission. Without modulation, you'd just transmit a blank carrier with no information content.
 
 ### T7A06
 **What device converts the RF input and output of a transceiver to another band?**
@@ -55,16 +55,16 @@
 - **C) Transverter** ✅
 - D) Phase converter
 
-> A transverter converts a transceiver's frequency to a different band — for example, letting an HF radio operate on VHF. The name combines TRANSceiver + conVERTER. Don't confuse with filters, which pass or block frequencies without converting them.
+> The PTT (Push-To-Talk) input switches the transceiver from receive to transmit when it is grounded. Press the mic button → PTT line grounds → radio transmits. Release → back to receive. It's the most basic control interface.
 
 ### T7A07
-**What is the function of a transceiver's PTT input?**
+**What is the function of a transceiver’s PTT input?**
 - A) Input for a key used to send CW
 - **B) Switches transceiver from receive to transmit when grounded** ✅
 - C) Provides a transmit tuning tone when grounded
 - D) Input for a preamplifier tuning tone
 
-> PTT = Push To Talk. When the PTT line is grounded (by pressing the mic button), the transceiver switches from receive mode to transmit mode. Releasing it returns to receive. This is the most basic transmit control on any radio.
+> A transverter converts the RF input and output of a transceiver to another band — for example, letting an HF radio operate on VHF or microwave frequencies. The name combines "transceiver" and "converter."
 
 ### T7A08
 **Which of the following describes combining speech with an RF carrier signal?**
@@ -73,34 +73,34 @@
 - **C) Modulation** ✅
 - D) Low-pass filtering
 
-> Modulation is the process of combining information (like voice) with an RF carrier signal for transmission. AM, FM, and SSB are all types of modulation. Without modulation, you'd just transmit a blank carrier with no information.
+> An oscillator generates a signal at a specific frequency. It's the core frequency-generating component in transmitters and receivers, creating the radio frequencies needed for communication.
 
 ### T7A09
-**What is the function of the SSB/CW-FM switch on a VHF power amplifier?**
+**What is the function of the switch which selects either SSB or CW-FM on some VHF power amplifiers?**
 - A) Change the mode of the transmitted signal
 - **B) Set the amplifier for proper operation in the selected mode** ✅
 - C) Change the frequency range of the amplifier to operate in the proper segment of the band
 - D) Reduce the received signal noise
 
-> This switch configures the amplifier's bias and operating parameters for the selected mode. SSB/CW requires linear amplification (Class AB), while FM can use more efficient non-linear amplification (Class C). It doesn't change the mode itself — just optimizes the amp for it.
+> The SSB/CW-FM switch on VHF power amplifiers sets the amplifier for proper operation in the selected mode. SSB and CW need linear amplification to preserve the signal's amplitude variations, while FM can use more efficient non-linear amplification.
 
 ### T7A10
-**What device increases the transmitted output power from a transceiver?**
-- A) A voltage divider
+**What can be added to the output of a transceiver to increase the transmitted output power?**
+- A) A potentiometer
 - **B) An RF power amplifier** ✅
-- C) An impedance network
+- C) An impedance multiplier
 - D) All these choices are correct
 
-> An RF power amplifier (or "linear amp") boosts the transceiver's output power. Voltage dividers reduce voltage, and impedance networks match impedances — neither increases transmitted power.
+> An RF power amplifier (or linear amplifier) can be added to the output of a transceiver to increase transmitted power. It boosts the transmitter's signal before it reaches the antenna.
 
 ### T7A11
-**Where is an RF preamplifier installed?**
-- **A) Between the antenna and receiver** ✅
-- B) At the output of the transmitter power amplifier
-- C) Between the transmitter and the antenna tuner
-- D) At the output of the receiver audio amplifier
+**What is the function of the Variable Frequency Oscillator (VFO) circuit in a transceiver?**
+- **A) Set the receive and transmit frequency** ✅
+- B) Provide automatic frequency control
+- C) Inject a variable frequency to allow CW reception
+- D) Generate and demodulate single sideband signals
 
-> An RF preamplifier goes between the antenna and receiver to boost weak signals before they reach the receiver's front end. Placing it anywhere else would be pointless or harmful. "Pre" means before — it amplifies before the receiver processes the signal.
+> The Variable Frequency Oscillator (VFO) circuit in a transceiver sets the receive and transmit frequency. By adjusting the VFO, you tune across the band. The VFO determines what frequency you're operating on — it's the tuning heart of the radio.
 
 ## Group T7B — Interference, Troubleshooting, and RF Feedback
 
@@ -111,7 +111,7 @@
 - C) Change to a higher power level
 - **D) Talk farther away from the microphone** ✅
 
-> Over-deviation means too much frequency swing in FM, caused by too much audio input. The fix is to talk farther from the mic to reduce audio level. Talking louder (answer A) would make it worse. Deviation is about audio level, not RF power or temperature.
+> If your FM handheld or mobile is over-deviating, you're talking too loudly or too close to the microphone. Back away from the mic and speak at a normal conversational level. Over-deviation causes distorted, hard-to-understand audio on the receiving end.
 
 ### T7B02
 **What would cause a broadcast AM or FM radio to receive an amateur radio transmission unintentionally?**
@@ -120,7 +120,7 @@
 - C) The audio amplifier of the transmitter is overloaded
 - D) The deviation of an FM transmitter is set too low
 
-> This is fundamental overload — the consumer receiver's front end can't reject strong nearby signals outside its intended band. The problem is with the receiver, not your transmitter. Consumer radios often have poor front-end filtering.
+> If a broadcast AM or FM radio is receiving your amateur transmissions, the problem is fundamental overload — the consumer receiver can't reject your strong nearby signal because it has poor front-end filtering. The issue is with their receiver, not your transmitter.
 
 ### T7B03
 **Which of the following can cause radio frequency interference?**
@@ -129,52 +129,52 @@
 - C) Spurious emissions
 - **D) All these choices are correct** ✅
 
-> All three cause RFI. Fundamental overload swamps nearby receivers, harmonics are multiples of your transmit frequency that land on other services, and spurious emissions are unintended signals from your transmitter. All are sources of interference.
+> If you hear a buzzy, distorted signal that varies with engine speed in a mobile installation, the problem is alternator whine (or ignition noise) getting into the radio. Proper bonding, filtering, and keeping power cables away from the antenna cable can fix this.
 
 ### T7B04
-**Which of the following could you use to cure distorted audio caused by RF current on the shield of a microphone cable?**
-- A) Band-pass filter
-- B) Low-pass filter
-- C) Preamplifier
-- **D) Ferrite choke** ✅
+**Which of the following might be the cause of low RF power output from a solid-state transceiver?**
+- A) Poor amplifier noise figure
+- B) Poor amplifier linearity
+- C) Low SWR
+- **D) High SWR** ✅
 
-> A ferrite choke (snap-on ferrite bead) placed on the mic cable blocks RF current from flowing on the cable shield, which eliminates the RF pickup causing distorted audio. Ferrite chokes are the go-to fix for RF getting into audio cables.
+> A high SWR can cause low RF power output from a solid-state transceiver. When the antenna system presents a poor match (high SWR), most modern radios automatically reduce power to protect their output transistors. Fix the antenna match to restore full power.
 
 ### T7B05
-**How can fundamental overload of a non-amateur radio or TV receiver by an amateur signal be reduced or eliminated?**
+**Which of the following might reduce interference by an amateur station to a non-amateur over-the-air radio receiver?**
 - **A) Block the amateur signal with a filter at the antenna input of the affected receiver** ✅
 - B) Block the interfering signal with a filter on the amateur transmitter
 - C) Switch the transmitter from FM to SSB
 - D) Switch the transmitter to a narrow-band mode
 
-> Fundamental overload is a receiver problem — the fix goes at the receiver, not the transmitter. A filter at the affected receiver's antenna input blocks the amateur signal while passing the desired broadcast signals.
+> To reduce interference to a non-amateur over-the-air radio receiver, you can install a filter at the receiver's antenna input. A filter that passes only the desired broadcast frequencies and rejects your amateur signal addresses the fundamental overload problem.
 
 ### T7B06
-**Which of the following actions should you take if a neighbor tells you that your station's transmissions are interfering with their radio or TV reception?**
+**Which of the following actions should you take if a neighbor tells you that your station’s transmissions are interfering with their radio or TV reception?**
 - **A) Make sure that your station is functioning properly and that it does not cause interference to your own radio or television when it is tuned to the same channel** ✅
 - B) Immediately turn off your transmitter and contact the nearest FCC office for assistance
 - C) Install a harmonic doubler on the output of your transmitter and tune it until the interference is eliminated
 - D) All these choices are correct
 
-> First step: verify your own station is clean by checking if it interferes with your own TV/radio on the same channel. If your equipment is clean, the problem is likely the neighbor's receiver. A "harmonic doubler" would create MORE interference — that's a trap answer.
+> If your neighbors experience TV interference when you transmit on 2 meters, the likely problem is poor TV receiver filtering — it can't reject your nearby VHF signal. A filter at the TV's antenna input usually solves the problem.
 
 ### T7B07
-**Which of the following can reduce overload of a VHF transceiver by a nearby commercial FM station?**
+**Which of the following can reduce interference to a 2-meter band transceiver from a nearby commercial FM station?**
 - A) Installing an RF preamplifier
 - B) Using double-shielded coaxial cable
 - C) Installing bypass capacitors on the microphone cable
 - **D) Installing a band-reject filter** ✅
 
-> A band-reject (notch) filter tuned to the commercial FM station's frequency blocks that specific signal while passing the desired VHF frequencies. A preamplifier would make overload worse by amplifying everything, including the interference.
+> A band-reject filter tuned to the interfering commercial FM frequency can reduce interference to a 2-meter transceiver from a nearby commercial FM station. The filter notches out the specific frequency causing the problem while passing your amateur signals.
 
 ### T7B08
-**What should you do if something in a neighbor's home is causing harmful interference to your amateur station?**
+**What should you do if something in a neighbor’s home is causing harmful interference to your amateur station?**
 - A) Work with your neighbor to identify the offending device
 - B) Politely inform your neighbor that FCC rules prohibit the use of devices that cause interference
 - C) Make sure your station meets the standards of good amateur practice
 - **D) All these choices are correct** ✅
 
-> All three approaches are appropriate. Work cooperatively, inform them about FCC rules (Part 15 devices must not cause harmful interference), and verify your own station is up to standard. Being diplomatic is key.
+> Common-mode current on a feed line means RF current is flowing on the outside of the coax shield. A ferrite choke on the feed line near the radio can suppress this. Common-mode current causes interference and can lead to RF in the shack.
 
 ### T7B09
 **What should be the first step to resolve non-fiber optic cable TV interference caused by your amateur radio transmission?**
@@ -183,25 +183,25 @@
 - C) Add a preamplifier to the TV antenna input
 - **D) Be sure all TV feed line coaxial connectors are installed properly** ✅
 
-> Before adding filters, check the basics — loose or corroded coax connectors on the cable TV system are a common cause of RF leakage and interference. Proper connections are always the first thing to verify. Fix the easy stuff first.
+> If your SWR readings are erratic, the most likely cause is a loose or corroded connector in your antenna system. Bad connections cause intermittent contact, which makes the SWR reading bounce around unpredictably.
 
 ### T7B10
 **What might be a problem if you receive a report that your audio signal through an FM repeater is distorted or unintelligible?**
 - A) Your transmitter is slightly off frequency
-- B) Your batteries are running low
+- B) You are speaking too loudly or too close to the microphone
 - C) You are in a bad location
 - **D) All these choices are correct** ✅
 
-> All of these can cause distorted audio through a repeater. Off-frequency transmission causes poor FM demodulation, low batteries cause weak/distorted transmissions, and a bad location causes multipath and weak signal issues.
+> If your FM repeater audio is distorted or unintelligible, you may be speaking too loudly or too close to the microphone, causing over-deviation. Back off the mic and speak at a normal conversational level.
 
 ### T7B11
-**What is a symptom of RF feedback in a transmitter or transceiver?**
-- A) Excessive SWR at the antenna connection
-- B) The transmitter will not stay on the desired frequency
-- **C) Reports of garbled, distorted, or unintelligible voice transmissions** ✅
-- D) Frequent blowing of power supply fuses
+**Which of the following can eliminate distorted voice transmissions?**
+- A) Adding extra feedline to the antenna to lower SWR
+- B) Turning the radio on and off to reset the computer-controlled circuitry
+- **C) Adding a clip-on ferrite “choke” to the microphone cable to prevent the transmitted signal from feeding back into the transmitter** ✅
+- D) Turning the squelch control fully clockwise to prevent the transmitted signal from triggering the squelch circuit
 
-> RF feedback occurs when RF energy from the transmitter gets back into the audio circuits, causing a feedback loop that garbles your voice. The RF signal modulates itself, creating distorted, unintelligible audio. This is different from SWR problems or frequency drift.
+> Adding a clip-on ferrite "choke" to the microphone cable can eliminate distorted voice transmissions caused by RF feedback. The ferrite prevents the transmitted RF signal from traveling back along the mic cable and feeding back into the transmitter's audio input.
 
 ## Group T7C — Antenna Measurements, Feed Lines, and Test Equipment
 
@@ -212,7 +212,7 @@
 - C) To improve the efficiency of an antenna
 - D) To improve the signal-to-noise ratio of a receiver
 
-> A dummy load absorbs your transmitter's RF power as heat instead of radiating it, letting you test and tune without putting signals on the air. It's a non-radiating substitute for an antenna — essential for testing without causing interference.
+> A dummy load is used in place of an antenna for testing a transmitter without radiating a signal. It absorbs the transmitter's power as heat, letting you test and tune without causing interference. Every well-equipped station should have one.
 
 ### T7C02
 **Which of the following is used to determine if an antenna is resonant at the desired operating frequency?**
@@ -221,16 +221,16 @@
 - C) A Q meter
 - D) A frequency counter
 
-> An antenna analyzer measures the impedance and SWR of an antenna across a range of frequencies, showing where it's resonant. It's the primary tool for antenna testing and adjustment. A frequency counter measures frequency, not antenna characteristics.
+> A field strength meter can be used to determine if an antenna is radiating. It measures the RF field near the antenna, confirming that the transmitter is actually putting out signal. A simple field strength indicator is an inexpensive but useful test tool.
 
 ### T7C03
-**What does a dummy load consist of?**
-- A) A high-gain amplifier and a TR switch
-- **B) A non-inductive resistor mounted on a heat sink** ✅
+**What does a typical RF dummy load consist of?**
+- A) A low-voltage power supply and an AC relay
+- **B) A 50-ohm non-inductive resistor mounted on a heat sink** ✅
 - C) A low-voltage power supply and a DC relay
-- D) A 50-ohm reactance used to terminate a transmission line
+- D) A 50-ohm inductive reactance mounted in a shielded enclosure
 
-> A dummy load is a non-inductive resistor (typically 50 ohms) on a heat sink, often immersed in oil for cooling. It must be non-inductive to present a pure resistance at RF frequencies. Note: answer D says "reactance" — a dummy load should have zero reactance.
+> A typical RF dummy load consists of a 50-ohm non-inductive resistor mounted on a heat sink. The non-inductive design ensures it presents a pure 50-ohm load at radio frequencies. The heat sink dissipates the power as heat.
 
 ### T7C04
 **What reading on an SWR meter indicates a perfect impedance match between the antenna and the feed line?**
@@ -239,16 +239,16 @@
 - **C) 1:1** ✅
 - D) Full Scale
 
-> An SWR of 1:1 means perfect match — all power goes to the antenna with no reflected power. Higher SWR numbers indicate increasing mismatch. An SWR of zero is impossible, and full scale would indicate a severe mismatch or open/short circuit.
+> An SWR meter measures the quality of the match between the antenna system and the transmitter. Low SWR (close to 1:1) means a good match — most of the power reaches the antenna. High SWR means power is being reflected back.
 
 ### T7C05
 **Why do most solid-state transmitters reduce output power as SWR increases beyond a certain level?**
-- **A) To protect the output amplifier transistors** ✅
+- **A) To protect the RF output amplifier transistors** ✅
 - B) To comply with FCC rules on spectral purity
 - C) Because power supplies cannot supply enough current at high SWR
 - D) To lower the SWR on the transmission line
 
-> High SWR means reflected power comes back to the transmitter, which can overheat and destroy the output transistors. Automatic power reduction (foldback) protects these expensive components. This is a built-in safety feature, not an FCC requirement.
+> Most solid-state transmitters automatically reduce output power as SWR increases to protect the RF output amplifier transistors. Excessive reflected power can overheat and destroy the output transistors. The fold-back circuit is a safety mechanism.
 
 ### T7C06
 **What does an SWR reading of 4:1 indicate?**
@@ -257,7 +257,7 @@
 - C) Gain of +4 dB
 - **D) Impedance mismatch** ✅
 
-> An SWR of 4:1 indicates a significant impedance mismatch between the feed line and antenna. A perfect match is 1:1; anything above about 2:1 warrants investigation. At 4:1, a substantial amount of power is being reflected back.
+> To measure the standing wave ratio (SWR) of your antenna system, you use an SWR meter connected between the transmitter and the antenna feed line. Transmit into it and read the SWR value on the meter.
 
 ### T7C07
 **What happens to power lost in a feed line?**
@@ -266,7 +266,7 @@
 - **C) It is converted into heat** ✅
 - D) It distorts the signal
 
-> Feed line loss converts RF power into heat through resistive losses in the conductor and dielectric. This is why lower-loss cable is important for long runs and higher frequencies. The power doesn't disappear — it just becomes waste heat.
+> Standing wave ratio (SWR) is a measure of how well the load impedance matches the transmission line's characteristic impedance. A perfect match gives 1:1 SWR. Higher SWR means more power is reflected back toward the transmitter.
 
 ### T7C08
 **Which instrument can be used to determine SWR?**
@@ -275,7 +275,7 @@
 - C) Iambic pentameter
 - **D) Directional wattmeter** ✅
 
-> A directional wattmeter measures both forward and reflected power, allowing you to calculate SWR. "Iambic pentameter" is a poetry meter, not a radio instrument — a classic trick answer. Voltmeters and ohmmeters can't measure SWR.
+> If you measure infinite SWR, it means there's an open circuit somewhere — likely a broken connector, cut feed line, or disconnected antenna. No power is being absorbed by the load, so everything is reflected back.
 
 ### T7C09
 **Which of the following causes failure of coaxial cables?**
@@ -284,25 +284,25 @@
 - C) Rapid fluctuation in transmitter output power
 - D) Operation at 100% duty cycle for an extended period
 
-> Water getting into coax is the #1 killer of feed lines. Moisture dramatically increases loss and eventually corrodes the conductors. This is why weatherproofing connectors and using UV-resistant jacket cable outdoors is critical.
+> The two most significant factors affecting the signal loss in a coaxial cable are cable length and operating frequency. Longer cables and higher frequencies both increase loss. Use the shortest practical run of the lowest-loss cable you can afford.
 
 ### T7C10
 **Why should the outer jacket of coaxial cable be resistant to ultraviolet light?**
-- A) Ultraviolet resistant jackets prevent harmonic radiation
-- B) Ultraviolet light can increase losses in the cable's jacket
+- A) Ultraviolet light can increase the resistance of the conductors
+- B) Ultraviolet light can increase losses in the cable’s jacket
 - C) Ultraviolet and RF signals can mix, causing interference
 - **D) Ultraviolet light can damage the jacket and allow water to enter the cable** ✅
 
-> UV from sunlight degrades the outer jacket over time, causing it to crack and allow water intrusion — which then destroys the cable from the inside. UV resistance is about physical protection, not electrical performance. The other answers are nonsensical.
+> Coaxial cable's outer jacket must be resistant to UV light because ultraviolet radiation degrades the jacket material, allowing moisture to enter the cable. Moisture inside coax dramatically increases signal loss and can destroy the cable.
 
 ### T7C11
-**What is a disadvantage of air core coaxial cable when compared to foam or solid dielectric types?**
-- A) It has more loss per foot
-- B) It cannot be used for VHF or UHF antennas
-- **C) It requires special techniques to prevent moisture in the cable** ✅
-- D) It cannot be used at below freezing temperatures
+**What is an advantage of foam-dielectric versus solid-dielectric coaxial cable?**
+- A) It is more resistant to moisture contamination
+- B) It has higher voltage breakdown
+- **C) It has less loss per foot** ✅
+- D) It has a better impedance match to 50 ohms
 
-> Air-dielectric coax has lower loss than foam or solid types (advantage!), but it's hollow — so keeping moisture out requires special pressurization or sealing techniques. Air core is actually excellent for VHF/UHF and works in all temperatures.
+> Foam-dielectric coaxial cable has less loss per foot compared to solid-dielectric types. The foam dielectric has a lower effective dielectric constant, which reduces signal loss. The trade-off is that foam cable is more susceptible to moisture contamination.
 
 ## Group T7D — Multimeters, Soldering, and Basic Measurements
 
@@ -310,10 +310,10 @@
 **Which instrument would you use to measure electric potential?**
 - A) An ammeter
 - **B) A voltmeter** ✅
-- C) A wavemeter
+- C) A potentiometer
 - D) An ohmmeter
 
-> Electric potential = voltage, and a voltmeter measures voltage. Ammeters measure current, ohmmeters measure resistance, and wavemeters measure frequency. Match the measurement to the meter: Volts = Voltmeter.
+> A voltmeter is used to measure electric potential (voltage). It's connected in parallel across the component or circuit you want to measure. A voltmeter should have high input impedance to avoid disturbing the circuit.
 
 ### T7D02
 **How is a voltmeter connected to a component to measure applied voltage?**
@@ -322,7 +322,7 @@
 - C) In quadrature
 - D) In phase
 
-> A voltmeter connects in parallel (across) the component being measured. This lets it sense the voltage difference across the component without significantly affecting circuit operation. An ammeter goes in series; a voltmeter goes in parallel.
+> An ammeter is used to measure electric current. It's connected in series with the circuit so the current flows through it. Ammeters have very low internal resistance to minimize their effect on the circuit.
 
 ### T7D03
 **When configured to measure current, how is a multimeter connected to a component?**
@@ -331,7 +331,7 @@
 - C) In quadrature
 - D) In phase
 
-> An ammeter (multimeter in current mode) connects in series so all the current flows through it. Connecting an ammeter in parallel would create a short circuit and likely blow the fuse or damage the meter. Series for current, parallel for voltage.
+> A multimeter combines the functions of a voltmeter, ammeter, and ohmmeter in one instrument. It can measure voltage, current, and resistance, making it the most versatile and commonly used test instrument in electronics.
 
 ### T7D04
 **Which instrument is used to measure electric current?**
@@ -340,7 +340,16 @@
 - C) A voltmeter
 - **D) An ammeter** ✅
 
-> An ammeter measures current (amperes). The name tells you: Amp-meter = ammeter. Ohmmeters measure resistance, voltmeters measure voltage, and electrometers measure very small currents or charges (not a standard answer).
+> An ohmmeter is used to measure resistance. To get an accurate reading, you must disconnect the component from the circuit — measuring resistance in-circuit gives false readings because other components provide parallel paths for current.
+
+### T7D05
+**How does an ohmmeter measure the resistance of a circuit or component?**
+- **A) By applying a small current and measuring the resulting voltage** ✅
+- B) By placing a variable resistor in parallel with the circuit
+- C) By placing a variable resistor in series with the circuit
+- D) By applying a variable voltage and measuring the resulting current change
+
+> An ohmmeter measures resistance by applying a small known current from its internal battery and measuring the resulting voltage across the component under test. Using Ohm's Law (R = E/I), the meter calculates and displays the resistance. This is why you need to disconnect the component — the meter's own current must be the only current flowing through it.
 
 ### T7D06
 **Which of the following can damage a multimeter?**
@@ -349,7 +358,7 @@
 - **C) Attempting to measure voltage when using the resistance setting** ✅
 - D) Not allowing it to warm up properly
 
-> Measuring voltage while set to resistance (ohms) can damage the meter because the resistance mode uses a small internal battery to measure — external voltage can overload and destroy the meter's circuitry. Always verify your meter is set to the correct function.
+> An antenna analyzer measures SWR, impedance, and resonant frequency of antenna systems. It's like a specialized combination of an SWR meter and impedance bridge, purpose-built for antenna work. Every serious antenna builder should have one.
 
 ### T7D07
 **Which of the following measurements are made using a multimeter?**
@@ -358,7 +367,7 @@
 - **C) Voltage and resistance** ✅
 - D) All these choices are correct
 
-> A standard multimeter measures voltage, current, and resistance (hence "multi"). It does NOT measure signal strength, noise, impedance, or reactance — those require specialized instruments like spectrum analyzers or impedance bridges.
+> The quality of a soldered joint is important because a poor solder connection creates resistance that impedes current flow and generates heat. Cold or cracked joints cause intermittent connections, noise, and equipment failures.
 
 ### T7D08
 **Which of the following types of solder should not be used for radio and electronic applications?**
@@ -367,16 +376,16 @@
 - C) Rosin-core solder
 - D) Tin-copper solder
 
-> Acid-core solder is for plumbing, not electronics. The acid flux is corrosive and will damage electronic components and circuit boards over time. Always use rosin-core solder for electronics work. This is a critical practical knowledge question.
+> Before soldering, clean the surfaces and apply flux to ensure a good connection. Flux removes oxide layers and helps solder flow properly onto the joint surfaces. Without proper preparation, you'll get cold joints.
 
 ### T7D09
 **What is the characteristic appearance of a cold tin-lead solder joint?**
 - A) Dark black spots
 - B) A bright or shiny surface
 - **C) A rough or lumpy surface** ✅
-- D) Excessive solder
+- D) A greenish tinge
 
-> A cold solder joint looks rough, lumpy, or grainy — it indicates the solder didn't flow properly and may have a poor electrical connection. A good solder joint is smooth, shiny, and concave. If it looks like a tiny mountain instead of a smooth dome, reheat it.
+> A cold tin-lead solder joint has a rough, grainy, or dull gray appearance. Good solder joints are smooth and shiny. If your joint looks grainy or dull, reheat it with the soldering iron and let it flow properly.
 
 ### T7D10
 **What reading indicates that an ohmmeter is connected across a large, discharged capacitor?**
@@ -385,7 +394,7 @@
 - C) Steady full-scale reading
 - D) Alternating between open and short circuit
 
-> When an ohmmeter is connected across a discharged capacitor, the meter's internal battery charges the cap. Initially the resistance reads low (current flowing), then increases as the capacitor charges and current decreases. This is a useful diagnostic technique.
+> Short-circuit protection is a desirable feature in a power supply because it prevents damage to both the supply and connected equipment if a wiring fault creates a short. Without it, a short circuit can cause fire, component destruction, or blown fuses.
 
 ### T7D11
 **Which of the following precautions should be taken when measuring in-circuit resistance with an ohmmeter?**
@@ -394,4 +403,4 @@
 - C) Ensure that the circuit is grounded
 - D) Ensure that the circuit is operating at the correct frequency
 
-> Always turn off power before measuring resistance. The ohmmeter uses its own internal battery to measure — external voltage from a powered circuit will give false readings and can damage the meter. Power off first, then measure.
+> A "deck" is the equivalent of a "pole" in an idealized switch. A double-pole, double-throw (DPDT) switch has two independent circuits, each with two positions — it's like two SPDT switches mechanically linked together.

@@ -1,20 +1,20 @@
-# T0 — Safety
+# T0 — Electrical and RF Safety
 *3 questions on the exam from a pool of 36*
 
 ## Group T0A — Electrical and Power Safety
 
 ### T0A01
-**Which of the following is a safety hazard of a 12-volt storage battery?**
-- A) Touching both terminals with the hands can cause electrical shock
+**Which of the following is a safety hazard of a 12-volt storage battery that lacks internal protection circuitry?**
+- A) Touching both terminals with your hands can cause electrical shock
 - **B) Shorting the terminals can cause burns, fire, or an explosion** ✅
 - C) RF emissions from a nearby transmitter can cause the electrolyte to emit poison gas
 - D) All these choices are correct
 
-> While 12 volts won't shock you through your hands (dry skin resistance is too high), shorting the terminals of a car battery can deliver hundreds of amps, melting wires, causing burns, and potentially igniting hydrogen gas produced during charging. The danger is the massive current, not the voltage.
+> While 12 volts won't shock you through dry skin (your body's resistance is too high), a 12-volt battery without internal protection can deliver hundreds of amps if shorted, melting wires, causing burns, and potentially igniting hydrogen gas. The danger is massive current, not voltage.
 
 ### T0A02
-**What health hazard is presented by electrical current flowing through the body?**
-- A) It may cause injury by heating tissue
+**What health hazard is posed by electrical current flowing through the body?**
+- A) It may cause injury by heating body tissue
 - B) It may disrupt the electrical functions of cells
 - C) It may cause involuntary muscle contractions
 - **D) All these choices are correct** ✅
@@ -22,19 +22,19 @@
 > Electrical current through the body causes all three hazards: tissue heating (burns), disruption of cellular electrical functions (cardiac arrest, nerve damage), and involuntary muscle contractions (which can prevent you from letting go of the source). Even small currents through the heart can be fatal.
 
 ### T0A03
-**In the United States, what circuit does black wire insulation indicate in a three-wire 120 V cable?**
+**In the United States, what circuit does black wire insulation indicate in a three-wire 120 V AC cable?**
 - A) Neutral
 - **B) Hot** ✅
 - C) Equipment ground
-- D) Black insulation is never used
+- D) Negative
 
-> In US wiring: Black = Hot (dangerous), White = Neutral, Green or bare = Ground. Memorize this — the black wire carries the full 120V potential and is the most dangerous conductor. This is standard NEC (National Electrical Code) color coding.
+> In US wiring: Black = Hot (dangerous), White = Neutral, Green or bare = Ground. The black wire carries the full 120V AC potential and is the most dangerous conductor. This is standard NEC (National Electrical Code) color coding. Memorize it.
 
 ### T0A04
 **What is the purpose of a fuse in an electrical circuit?**
 - A) To prevent power supply ripple from damaging a component
-- **B) To remove power in case of overload** ✅
-- C) To limit current to prevent shocks
+- **B) To remove power in case of an overload** ✅
+- C) To limit current and prevent shocks
 - D) All these choices are correct
 
 > A fuse opens (blows) when current exceeds its rating, disconnecting the circuit to prevent fire and equipment damage from overloads. It protects wiring and equipment — it does NOT prevent shock (the current needed to kill you is far below a typical fuse rating).
@@ -44,7 +44,7 @@
 - A) The larger fuse would be likely to blow because it is rated for higher current
 - B) The power supply ripple would greatly increase
 - **C) Excessive current could cause a fire** ✅
-- D) All these choices are correct
+- D) Voltage drop in the higher current fuse could result in excessively low voltage to the device
 
 > A 20-amp fuse would allow four times the designed current to flow through wiring rated for only 5 amps. The wires overheat and can start a fire before the fuse ever blows. Always replace fuses with the same rating — never larger. This is a fundamental fire safety rule.
 
@@ -52,16 +52,16 @@
 **What is a good way to guard against electrical shock at your station?**
 - A) Use three-wire cords and plugs for all AC powered equipment
 - B) Connect all AC powered station equipment to a common safety ground
-- C) Install mechanical interlocks in high-voltage circuits
+- C) Ensure all capacitors used for high-voltage DC are fully discharged before working inside equipment
 - **D) All these choices are correct** ✅
 
-> All three are essential safety practices. Three-wire plugs provide equipment grounding, a common safety ground prevents dangerous voltage differences between equipment, and interlocks prevent access to high-voltage circuits when energized. Layered safety is the best approach.
+> All three are essential safety practices. Three-wire plugs provide equipment grounding, a common safety ground prevents dangerous voltage differences between equipment, and ensuring high-voltage capacitors are discharged before opening equipment prevents lethal shocks. Layered safety is the best approach.
 
 ### T0A07
 **Where should a lightning arrester be installed in a coaxial feed line?**
 - A) At the output connector of a transceiver
 - B) At the antenna feed point
-- C) At the ac power service panel
+- C) At the AC power service panel
 - **D) On a grounded panel near where feed lines enter the building** ✅
 
 > Lightning arresters go where the feed line enters the building, mounted on a grounded panel. This stops lightning energy at the building entry point before it can enter your shack. Placing it at the radio or antenna wouldn't protect the building wiring and equipment between those points.
@@ -82,16 +82,16 @@
 - **C) Bond them together with heavy wire or conductive strap** ✅
 - D) Tune them for resonance on the lowest frequency of operation
 
-> All ground rods must be bonded together to create a single ground system with no voltage differences between rods. Separate, unbonded grounds can have dangerous voltage differences during a lightning strike. Bond everything together — electrical panel ground, radio ground, tower ground — into one unified system.
+> All ground rods must be bonded together to create a single ground system with no voltage differences between rods. During a lightning strike, separate unbonded grounds can have dangerous voltage differences. Bond everything together — electrical panel ground, radio ground, tower ground — into one unified system.
 
 ### T0A10
-**What hazard is caused by charging or discharging a battery too quickly?**
+**What hazard exists when rapidly charging or discharging an unprotected battery?**
 - **A) Overheating or out-gassing** ✅
 - B) Excess output ripple
-- C) Half-wave rectification
-- D) Inverse memory effect
+- C) Electric shock
+- D) Overvoltage
 
-> Rapid charging or discharging generates excessive heat and can cause batteries to vent hydrogen gas (out-gassing). In sealed batteries, this pressure buildup can cause the battery to rupture or explode. Lead-acid and lithium batteries are both susceptible to this hazard. Always use appropriate charge rates.
+> Rapidly charging or discharging a battery without built-in protection generates excessive heat and can cause the battery to vent gas (out-gassing). In sealed batteries, this pressure buildup can cause rupture or explosion. Lead-acid and lithium batteries are both susceptible. Always use appropriate charge rates and batteries with proper protection.
 
 ### T0A11
 **What hazard exists in a power supply immediately after turning it off?**
@@ -105,7 +105,7 @@
 ### T0A12
 **Which of the following precautions should be taken when measuring high voltages with a voltmeter?**
 - A) Ensure that the voltmeter has very low impedance
-- **B) Ensure that the voltmeter and leads are rated for use at the voltages to be measured** ✅
+- **B) Ensure that the voltmeter and its leads are rated for use at the voltages being measured** ✅
 - C) Ensure that the circuit is grounded through the voltmeter
 - D) Ensure that the voltmeter is set to the correct frequency
 
@@ -163,7 +163,7 @@
 - A) Add the height of the antenna to the height of the power line and multiply by a factor of 1.5
 - B) The height of the power line above ground
 - C) 1/2 wavelength at the operating frequency
-- **D) Enough so that if the antenna falls, no part of it can come closer than 10 feet to the power wires** ✅
+- **D) Enough so that if the antenna falls, no part of it can come within 10 feet of the power wires** ✅
 
 > The rule is clear: if the antenna falls in any direction, no part should be able to come within 10 feet of power lines. This accounts for the antenna's full height and reach when it falls. Power line contact kills — maintain clearance even in a worst-case scenario.
 
@@ -180,19 +180,19 @@
 **Which is a proper grounding method for a tower?**
 - A) A single four-foot ground rod, driven into the ground no more than 12 inches from the base
 - B) A ferrite-core RF choke connected between the tower and ground
-- C) A connection between the tower base and a cold water pipe
+- C) A connection between the tower base and a cold-water pipe
 - **D) Separate eight-foot ground rods for each tower leg, bonded to the tower and each other** ✅
 
-> Proper tower grounding requires separate 8-foot ground rods at each leg, all bonded together and to the tower. Four-foot rods are too short, single rods are insufficient, ferrite chokes are for RF not lightning, and cold water pipes alone aren't adequate for tower grounding.
+> Proper tower grounding requires separate 8-foot ground rods at each leg, all bonded together and to the tower. Four-foot rods are too short, single rods are insufficient, ferrite chokes are for RF not lightning, and a cold-water pipe alone isn't adequate for tower grounding.
 
 ### T0B09
 **Why should you avoid attaching an antenna to a utility pole?**
 - A) The antenna will not work properly because of induced voltages
-- B) The 60 Hz radiations from the feed line may increase the SWR
+- B) The antenna may unbalance the power transformer, causing power fluctuations
 - **C) The antenna could contact high-voltage power lines** ✅
 - D) All these choices are correct
 
-> Utility poles carry high-voltage power lines. Attaching an antenna creates the risk of contact with those lines — during installation, wind, ice loading, or structural failure. This is potentially fatal. The other answers about induced voltages and 60 Hz radiation affecting SWR are nonsensical distractors.
+> Utility poles carry high-voltage power lines. Attaching an antenna creates the risk of contact with those lines — during installation, wind, ice loading, or structural failure. This is potentially fatal. The other answers about unbalancing power transformers and SWR effects are nonsensical distractors.
 
 ### T0B10
 **Which of the following is true when installing grounding conductors used for lightning protection?**
@@ -224,13 +224,13 @@
 > Radio waves are non-ionizing radiation — they don't have enough energy to knock electrons from atoms or break chemical bonds. Gamma and alpha radiation are ionizing and can cause cellular damage and cancer. RF radiation can cause heating but not the DNA damage associated with ionizing radiation.
 
 ### T0C02
-**At which of the following frequencies does maximum permissible exposure have the lowest value?**
+**Which of the following bands has the lowest maximum permissible exposure for RF safety?**
 - A) 3.5 MHz
 - **B) 50 MHz** ✅
 - C) 440 MHz
 - D) 1296 MHz
 
-> The human body absorbs RF energy most efficiently in the 30-300 MHz range, with peak absorption near 50 MHz (close to whole-body resonance). Because more energy is absorbed, the maximum permissible exposure (MPE) limit is lowest at 50 MHz. This is a critical safety fact.
+> The human body absorbs RF energy most efficiently in the 30–300 MHz range, with peak absorption near 50 MHz (close to whole-body resonance). Because more energy is absorbed, the maximum permissible exposure (MPE) limit is lowest at 50 MHz. This is a critical safety fact.
 
 ### T0C03
 **How does the allowable power density for RF safety change if duty cycle changes from 100 percent to 50 percent?**
@@ -272,10 +272,10 @@
 **What hazard is created by touching an antenna during a transmission?**
 - A) Electrocution
 - **B) RF burn to skin** ✅
-- C) Radiation poisoning
+- C) Exposure to ionizing radiation
 - D) All these choices are correct
 
-> Touching a transmitting antenna causes RF burns — localized tissue heating at the contact point. This is different from electrocution (DC/AC shock) and radiation poisoning (ionizing radiation). RF burns can be severe and deep, damaging tissue beneath the skin surface.
+> Touching a transmitting antenna causes RF burns — localized tissue heating at the contact point. This is different from electrocution (DC/AC shock) and exposure to ionizing radiation (which causes DNA damage). RF burns can be severe and deep, damaging tissue beneath the skin surface.
 
 ### T0C08
 **Which of the following actions can reduce exposure to RF radiation?**
@@ -291,9 +291,9 @@
 - A) By informing the FCC of any changes made in your station
 - **B) By re-evaluating the station whenever an item in the transmitter or antenna system is changed** ✅
 - C) By making sure your antennas have low SWR
-- D) All these choices are correct
+- D) By using only Underwriter Laboratories approved transmitting equipment
 
-> Any change to your transmitter power, antenna type, height, or location could change the RF exposure profile. Re-evaluate compliance whenever the system changes. Low SWR helps efficiency but doesn't directly determine RF safety compliance, and the FCC doesn't require notification of station changes.
+> Any change to your transmitter power, antenna type, height, or location could change the RF exposure profile. Re-evaluate compliance whenever the system changes. Low SWR helps efficiency but doesn't directly determine RF safety compliance, and just using UL-approved equipment doesn't guarantee safe exposure levels.
 
 ### T0C10
 **Why is duty cycle one of the factors used to determine safe RF radiation exposure levels?**
@@ -306,12 +306,12 @@
 
 ### T0C11
 **What is the definition of duty cycle during the averaging time for RF exposure?**
-- A) The difference between the lowest power output and the highest power output of a transmitter
-- B) The difference between the PEP and average power output of a transmitter
+- A) The difference between the lowest and highest power output of a transmitter
+- B) The difference between the PEP and the average power output of a transmitter
 - **C) The percentage of time that a transmitter is transmitting** ✅
 - D) The percentage of time that a transmitter is not transmitting
 
-> Duty cycle is the percentage of time the transmitter is actively transmitting during the averaging period. CW has roughly 40-50% duty cycle, SSB voice about 20-40%, and FM is near 100% when the PTT is pressed. Note: it's the time transmitting, not the time NOT transmitting — watch for that trap.
+> Duty cycle is the percentage of time the transmitter is actively transmitting during the averaging period. CW has roughly 40–50% duty cycle, SSB voice about 20–40%, and FM is near 100% when the PTT is pressed. Note: it's the time transmitting, not the time NOT transmitting — watch for that trap.
 
 ### T0C12
 **How does RF radiation differ from ionizing radiation (radioactivity)?**

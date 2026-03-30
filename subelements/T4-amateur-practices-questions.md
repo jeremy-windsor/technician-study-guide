@@ -1,43 +1,43 @@
 # T4 — Amateur Radio Practices
-*2 questions on the exam from a pool of 24*
+*2 questions on the exam from a pool of 23*
 
 ## Group T4A — Station setup; connecting a transceiver; power source; connecting digital equipment; RF grounding
 
 ### T4A01
-**Which of the following is an appropriate power supply rating for a typical 50 watt output mobile FM transceiver?**
+**Which of the following is an appropriate power supply rating for a typical 50-watt output mobile FM transceiver?**
 - A) 24.0 volts at 4 amperes
 - B) 13.8 volts at 4 amperes
 - C) 24.0 volts at 12 amperes
 - **D) 13.8 volts at 12 amperes** ✅
 
-> Mobile transceivers run on 13.8 volts DC (standard automotive voltage). A 50-watt radio draws roughly 10+ amps on transmit, so a 12-amp supply is appropriate. 4 amps is way too little, and 24 volts is the wrong voltage for standard mobile radios.
+> A typical 50-watt output mobile FM transceiver needs a power supply rated for at least 13.8 VDC at 12 amps or more. At 50 watts of RF output, the radio draws several amps from the DC supply. Using a supply with too low a current rating can cause voltage drops and unreliable operation.
 
 ### T4A02
 **Which of the following should be considered when selecting an accessory SWR meter?**
 - **A) The frequency and power level at which the measurements will be made** ✅
 - B) The distance that the meter will be located from the antenna
-- C) The types of modulation being used at the station
-- D) All these choices are correct
+- C) The maximum SWR anticipated on the transmission line
+- D) The ability of the meter to compensate for a poor transmission line match to the antenna
 
-> SWR meters must be rated for the frequency range and power level you're using. An HF SWR meter won't work properly at UHF, and a QRP meter can't handle 100 watts. Distance from the antenna and modulation type aren't significant factors.
+> When selecting an SWR meter, make sure it covers the frequency range you're using and has the appropriate power rating. An SWR meter designed for HF won't necessarily work accurately at VHF or UHF. Frequency range coverage is the key consideration.
 
 ### T4A03
-**Why are short, heavy-gauge wires used for a transceiver's DC power connection?**
+**Why are short, heavy-gauge wires used for a transceiver’s DC power connection?**
 - **A) To minimize voltage drop when transmitting** ✅
-- B) To provide a good counterpoise for the antenna
+- B) To provide a close match to the power supply output impedance
 - C) To avoid RF interference
-- D) All these choices are correct
+- D) To minimize radiative losses in the power cable
 
-> Heavy-gauge, short wires minimize resistance, which minimizes voltage drop under the high current draw during transmission. A 50-watt radio pulling 10+ amps through thin, long wires would suffer significant voltage loss, causing reduced power output or radio malfunction.
+> Short, heavy-gauge wires minimize voltage drop between the power supply and the transceiver. Long or thin wires have higher resistance, causing voltage to drop under load, which can make the radio malfunction or reduce output power. Keep the power cables short and thick.
 
 ### T4A04
-**How are the transceiver audio input and output connected in a station configured to operate using FT8?**
+**How are the audio input and output of a transceiver connected in a station configured to operate using FT8?**
 - A) To a computer running a terminal program and connected to a terminal node controller unit
-- **B) To the audio input and output of a computer running WSJT-X software** ✅
+- **B) To the audio output and input of a computer running FT8 software** ✅
 - C) To an FT8 conversion unit, a keyboard, and a computer monitor
 - D) To a computer connected to the FT8converter.com website
 
-> FT8 uses WSJT-X software on a computer. The radio's audio output connects to the computer's audio input (so the computer can decode), and the computer's audio output connects to the radio's audio input (so the computer can transmit). There's no special "FT8 conversion unit."
+> For FT8 operation, the transceiver's audio input and output are connected to the audio output and input of a computer running FT8 software (like WSJT-X). The computer generates and decodes the FT8 signals through the audio interface. Modern setups often use a USB audio interface built into the radio.
 
 ### T4A05
 **Where should an RF power meter be installed?**
@@ -46,7 +46,7 @@
 - C) In parallel with the push-to-talk line and the antenna
 - D) In the power supply cable, as close as possible to the radio
 
-> RF power meters go in series in the feed line between the transmitter and antenna — that's where the RF power flows. Not at the power supply (that measures DC), and not in parallel with anything.
+> Most modern transceivers connect to a computer through a USB cable for both audio and control. This single connection handles CAT control (frequency, mode), audio in/out for digital modes, and often PTT control. It's much simpler than the multiple cables older setups required.
 
 ### T4A06
 **What signals are used in a computer-radio interface for digital mode operation?**
@@ -55,25 +55,25 @@
 - **C) Receive audio, transmit audio, and transmitter keying** ✅
 - D) NMEA GPS location and DC power
 
-> A digital mode interface needs three things: receive audio (from radio to computer), transmit audio (from computer to radio), and a PTT/keying signal (to tell the radio when to transmit). That's it — audio in, audio out, and a key line.
+> An RF power meter installed between the transmitter and antenna monitors the output power level. It tells you exactly how much power is going to the antenna, which is useful for adjusting power levels and troubleshooting.
 
 ### T4A07
-**Which of the following connections is made between a computer and a transceiver to use computer software when operating digital modes?**
-- A) Computer "line out" to transceiver push-to-talk
-- B) Computer "line in" to transceiver push-to-talk
-- **C) Computer "line in" to transceiver speaker connector** ✅
-- D) Computer "line out" to transceiver speaker connector
+**Which of the following is one of the connections required between a computer and a transceiver to operate digital modes?**
+- A) Computer “line out” to transceiver push-to-talk
+- B) Computer “line in” to transceiver push-to-talk
+- **C) Computer “line in” to transceiver speaker connector** ✅
+- D) Computer “line out” to transceiver speaker connector
 
-> The computer's "line in" (audio input) connects to the transceiver's speaker/audio output. This allows the computer to hear what the radio receives. Think about it: the radio speaks, the computer listens — speaker to line-in.
+> To operate digital modes, one essential connection between the computer and transceiver is an audio interface (speaker/microphone connections or a USB audio codec). This carries the digital mode audio signals between the computer software and the radio.
 
 ### T4A08
 **Which of the following conductors is preferred for bonding at RF?**
 - A) Copper braid removed from coaxial cable
-- B) Steel wire
+- B) Copper-clad steel wire
 - C) Twisted-pair cable
 - **D) Flat copper strap** ✅
 
-> Flat copper strap is preferred for RF bonding because it has the most surface area relative to its size. At RF frequencies, current flows mostly on the surface (skin effect), so more surface = lower impedance. Round wire and braid have less surface area for their weight.
+> Flat copper strap is the preferred conductor for RF bonding because it has low inductance at radio frequencies due to its wide, flat shape. Copper-clad steel wire, braided wire, and steel wire all have higher inductance than flat strap.
 
 ### T4A09
 **How can you determine the length of time that equipment can be powered from a battery?**
@@ -82,25 +82,25 @@
 - C) Multiply the watts per hour consumed by the equipment by the battery power rating
 - D) Multiply the square of the current rating of the battery by the input resistance of the equipment
 
-> Battery life = Amp-hours ÷ Average current draw. A 10 Ah battery powering equipment drawing 2A average = 5 hours. Use average current (not peak), and use amp-hours (not watt-hours) divided by current.
+> Transmit/receive (T/R) switching at the antenna connector of a modern transceiver is performed by electronic switching circuits. These solid-state switches are fast and reliable, replacing the mechanical relays used in older equipment.
 
 ### T4A10
-**What function is performed with a transceiver and a digital mode hot spot?**
-- **A) Communication using digital voice or data systems via the internet** ✅
-- B) FT8 digital communications via AFSK
+**What function does a digital mode hotspot perform for nearby transceivers?**
+- **A) Communication with a digital voice or data network** ✅
+- B) FT8 digital communications via AFSK using a smartphone connected to the internet
 - C) RTTY encoding and decoding without a computer
 - D) High-speed digital communications for meteor scatter
 
-> A digital hotspot connects your handheld DMR/D-STAR/Fusion radio to the internet, giving you access to digital voice networks worldwide. It's a tiny, low-power device that acts as your personal digital repeater gateway to internet-linked systems.
+> A digital mode hotspot provides nearby transceivers with communication access to a digital voice or data network. It acts as a personal low-power gateway, connecting your DMR, D-STAR, or Fusion radio to the internet-linked digital network through your home internet connection.
 
 ### T4A11
 **Where should the negative power return of a mobile transceiver be connected in a vehicle?**
-- **A) At the 12 volt battery chassis ground** ✅
-- B) At the antenna mount
+- **A) At the 12-volt battery chassis ground** ✅
+- B) To the shell of the power connector
 - C) To any metal part of the vehicle
-- D) Through the transceiver's mounting bracket
+- D) Through the transceiver’s mounting bracket
 
-> Connect the negative lead directly to the battery's chassis ground point — the most direct, low-resistance path. Don't use random metal parts, the antenna mount, or the mounting bracket. Poor grounding causes noise, voltage drops, and RF interference.
+> The negative power return of a mobile transceiver should be connected at the 12-volt battery chassis ground — the same point where the battery's negative terminal connects to the vehicle chassis. This ensures a clean, low-resistance ground connection and prevents ground loops.
 
 ### T4A12
 **What is an electronic keyer?**
@@ -109,9 +109,7 @@
 - **C) A device that assists in manual sending of Morse code** ✅
 - D) An interlock to prevent unauthorized use of a radio
 
-> An electronic keyer helps send Morse code by generating properly timed dots and dashes when you squeeze a paddle. It makes CW sending easier and more consistent than a straight key. It's not an antenna switch (that's a T/R switch) and not VOX.
-
----
+> The correct answer is C) A device that assists in manual sending of Morse code.
 
 ## Group T4B — Operating controls; tuning; use of filters; squelch; AGC; repeater access; DMR operation
 
@@ -120,18 +118,18 @@
 - A) Frequency instability
 - **B) Distorted transmitted audio** ✅
 - C) Increased SWR
-- D) All these choices are correct
+- D) Sideband inversion
 
-> Too much mic gain causes audio distortion and splatter (your signal spreads beyond its intended bandwidth). It won't cause frequency instability or change your SWR. The fix is simple: turn down the mic gain and speak normally.
+> Excessive microphone gain on SSB transmissions causes distorted audio and excessive bandwidth, potentially causing splatter into adjacent frequencies. The signal becomes over-modulated, and other stations will hear garbled, distorted audio. Keep the mic gain set properly — more is not better.
 
 ### T4B02
-**Which of the following can be used to enter a transceiver's operating frequency?**
+**Which of the following can be used to enter a transceiver’s operating frequency?**
 - **A) The keypad or VFO knob** ✅
 - B) The CTCSS or DTMF encoder
 - C) The Automatic Frequency Control
 - D) All these choices are correct
 
-> You set frequency using the keypad (direct entry) or VFO knob (tuning dial). CTCSS and DTMF are tone systems, and AFC automatically tracks frequency drift — neither is used to set the operating frequency.
+> For clear FM voice through a repeater, speak across the microphone rather than directly into it, at a normal conversational volume. Talking too close or too loud causes over-deviation. Think of it like a phone call — natural voice, not a shouting match.
 
 ### T4B03
 **How is squelch adjusted so that a weak FM signal can be heard?**
@@ -140,25 +138,25 @@
 - C) Turn on the anti-squelch function
 - D) Enable squelch enhancement
 
-> To hear weak signals, open the squelch all the way so audio is always on (you'll hear noise between signals). This ensures you don't miss weak transmissions that fall below the squelch threshold. Volume level doesn't affect squelch.
+> Multi-use transceivers can communicate on both amateur and non-amateur frequencies like FRS and GMRS. However, type acceptance rules still apply — you can only transmit on frequencies where your radio is approved and you're licensed.
 
 ### T4B04
-**What is a way to enable quick access to a favorite frequency or channel on your transceiver?**
-- A) Enable the frequency offset
-- **B) Store it in a memory channel** ✅
-- C) Enable the VOX
-- D) Use the scan mode to select the desired frequency
+**What does an FM signal sound like when received slightly off frequency?**
+- A) The audio increases in pitch
+- B) The audio decrease in pitch
+- C) There is no effect except for reduction in amplitude
+- **D) The audio becomes distorted** ✅
 
-> Memory channels store your favorite frequencies for one-touch recall. Frequency offset is for repeater operation, VOX is voice-activated transmit, and scan mode cycles through frequencies — none of those quickly select a specific frequency.
+> When an FM signal is received slightly off frequency, the audio becomes distorted. FM receivers are designed for signals at the exact center frequency — even a small offset causes the discriminator to produce distorted audio. This is why accurate frequency setting matters for FM.
 
 ### T4B05
 **What does the scanning function of an FM transceiver do?**
 - A) Checks incoming signal deviation
 - B) Prevents interference to nearby repeaters
 - **C) Tunes through a range of frequencies to check for activity** ✅
-- D) Checks for messages left on a digital bulletin board
+- D) Tunes through a range of frequencies to determine the antenna’s resonant frequency
 
-> The scan function steps through frequencies or memory channels looking for signals. When it finds activity (a signal breaking squelch), it stops so you can listen. It's like a radio version of channel surfing.
+> The scanning function on an FM transceiver automatically tunes through a set of programmed frequencies (or across a band segment), pausing when it detects a signal. It's like a radio version of channel surfing — the radio searches for activity so you don't have to manually check each frequency.
 
 ### T4B06
 **Which of the following controls could be used if the voice pitch of a single-sideband signal returning to your CQ call seems too high or low?**
@@ -167,34 +165,34 @@
 - C) The tone squelch
 - **D) The RIT or Clarifier** ✅
 
-> The RIT (Receiver Incremental Tuning) or Clarifier adjusts your receive frequency slightly without changing your transmit frequency. This corrects voice pitch issues on SSB caused by the other station being slightly off frequency. AGC controls signal level, not pitch.
+> An AGC circuit (Automatic Gain Control) adjusts the receiver's gain automatically to maintain a steady audio output level despite varying signal strengths. Without AGC, strong signals would blast your ears while weak ones would be barely audible.
 
 ### T4B07
-**What does a DMR "code plug" contain?**
-- A) Your call sign in CW for automatic identification
-- **B) Access information for repeaters and talkgroups** ✅
-- C) The codec for digitizing audio
-- D) The DMR software version
+**What is a DMR “code plug”?**
+- A) An adapter cable used to connect a DMR radio to a computer for internet access
+- **B) Configuration data loaded onto your radio to access repeaters and talkgroups** ✅
+- C) An upgrade to DMR programming software provided by the radio manufacturer to accommodate new radio models
+- D) A Coder-Decoder (CODEC) that converts analog voice data to DMR digital data and vice versa
 
-> A DMR code plug is a configuration file containing repeater frequencies, color codes, talkgroup IDs, contact lists, and zone configurations. It's essentially a programming file that tells your radio how to access the DMR network. It doesn't contain codec software or CW ID info.
+> A DMR code plug is configuration data loaded onto your radio to access repeaters and talkgroups. It contains the frequencies, color codes, talkgroup IDs, and other settings needed to use DMR repeaters in your area. Think of it as a programming profile for your digital radio.
 
 ### T4B08
-**What is the advantage of having multiple receive bandwidth choices on a multimode transceiver?**
-- A) Permits monitoring several modes at once by selecting a separate filter for each mode
+**What is the advantage of having a choice of receiver filter bandwidths in a multimode transceiver?**
+- A) Permits monitoring several modes simultaneously by selecting a separate filter for each mode
 - **B) Permits noise or interference reduction by selecting a bandwidth matching the mode** ✅
 - C) Increases the number of frequencies that can be stored in memory
 - D) Increases the amount of offset between receive and transmit frequencies
 
-> Matching your receiver bandwidth to the signal mode reduces noise and adjacent-signal interference. CW needs only ~500 Hz, SSB needs ~2.4 kHz, FM needs ~15 kHz. A narrower filter passes less noise. It doesn't affect memory channels or offset.
+> Having a choice of receiver filter bandwidths lets you select the best filter for the mode you're operating. A narrow filter for CW rejects adjacent signals, while a wider filter passes the full bandwidth of an SSB or FM signal. The right filter improves readability and reduces interference.
 
 ### T4B09
-**How is a specific group of stations selected on a digital voice transceiver?**
+**How is a specific group of stations selected on a DMR digital voice transceiver?**
 - A) By retrieving the frequencies from transceiver memory
-- B) By enabling the group's CTCSS tone
-- **C) By entering the group's identification code** ✅
-- D) By activating automatic identification
+- B) By enabling the group’s CTCSS tone
+- **C) By entering the group’s identification code** ✅
+- D) By inserting a five-pin, pre-programmed code plug
 
-> Digital voice systems (DMR, D-STAR, Fusion) use identification codes (talkgroup IDs, reflectors) to select groups, not CTCSS tones (which are analog). You program the group's code into your radio to join their channel.
+> On a DMR digital voice transceiver, you select a specific group of stations by choosing the appropriate talkgroup. Talkgroups are programmed into the radio via the code plug, and selecting one determines which group of users you hear and can talk to.
 
 ### T4B10
 **Which of the following receiver filter bandwidths provides the best signal-to-noise ratio for SSB reception?**
@@ -203,7 +201,7 @@
 - **C) 2400 Hz** ✅
 - D) 5000 Hz
 
-> 2400 Hz (2.4 kHz) matches the bandwidth of an SSB voice signal. A 500 Hz filter would cut off voice audio, and a 5000 Hz filter would pass unnecessary noise. Match the filter to the signal for optimal signal-to-noise ratio.
+> DMR repeaters can handle two conversations simultaneously using two time slots — they divide each frequency into alternating time slices. This is called TDMA (Time Division Multiple Access), and it effectively doubles the capacity of each frequency.
 
 ### T4B11
 **Which of the following must be programmed into a D-STAR digital transceiver before transmitting?**
@@ -212,13 +210,4 @@
 - C) The codec type being used
 - D) All these choices are correct
 
-> D-STAR requires your call sign programmed into the radio because it's embedded in the digital data stream — the system uses it for routing and identification. Power and codec are set automatically or by other means.
-
-### T4B12
-**What is the result of tuning an FM receiver above or below a signal's frequency?**
-- A) Change in audio pitch
-- B) Sideband inversion
-- C) Generation of a heterodyne tone
-- **D) Distortion of the signal's audio** ✅
-
-> FM demodulation requires being tuned to the exact center frequency. Off-tuning causes audio distortion because the discriminator can't properly decode the frequency-modulated signal. Unlike SSB, where off-tuning changes pitch, FM just distorts.
+> If you're listening to a station that sounds distorted and changing the volume doesn't help, try adjusting the squelch or using a different receive filter bandwidth. The problem is likely in the RF or demodulation stage, not the audio amplifier.

@@ -1,5 +1,5 @@
-# T6 — Electronic and Electrical Components
-*4 questions on the exam from a pool of 47*
+# T6 — Electronic Components
+*4 questions on the exam from a pool of 46*
 
 ## Group T6A — Basic Electronic Components and Their Functions
 
@@ -10,7 +10,7 @@
 - C) Inverter
 - D) Transformer
 
-> A resistor's entire purpose is to oppose (resist) the flow of current. The key word is "DC circuit" — inductors oppose changes in current in AC circuits, but resistors oppose current flow in both AC and DC. Remember: Resistor = Resistance = opposes current.
+> A resistor opposes the flow of current in a circuit. Resistance is measured in ohms, and resistors are used to control current levels, divide voltages, and set operating points in circuits. They convert electrical energy to heat.
 
 ### T6A02
 **What type of component is often used as an adjustable volume control?**
@@ -19,7 +19,7 @@
 - **C) Potentiometer** ✅
 - D) Transformer
 
-> A potentiometer ("pot") is a variable resistor with three terminals, commonly used as a volume knob. Turning the knob changes the resistance, which changes the signal level. Don't confuse it with a fixed resistor — volume controls need to be adjustable.
+> Electrolytic capacitors are typically polarized — they must be connected with the correct polarity or they can be damaged or even explode. Paper, ceramic, and mica capacitors are generally non-polarized and can be connected either way.
 
 ### T6A03
 **What electrical parameter is controlled by a potentiometer?**
@@ -28,16 +28,16 @@
 - C) Capacitance
 - D) Field strength
 
-> A potentiometer is a type of variable resistor. It controls resistance — that's all it does. The name comes from "potential" (voltage) and "meter" (measure), since varying resistance allows you to vary voltage in a circuit.
+> A battery is a combination of two or more cells that produces electrical energy from chemical reactions. A single cell produces a fixed voltage (like 1.5V for alkaline), and batteries combine multiple cells to produce higher voltages.
 
 ### T6A04
 **What electrical component stores energy in an electric field?**
-- A) Varistor
+- A) Resistor
 - **B) Capacitor** ✅
 - C) Inductor
 - D) Diode
 
-> Capacitors store energy in an electric field between their plates. Key memory trick: Capacitor = electric field, Inductor = magnetic field. These two are often confused on the exam — keep them straight.
+> A capacitor stores energy in an electric field between its plates. When voltage is applied, charge builds up on the plates, storing energy. Capacitors are used for filtering, coupling, timing, and energy storage throughout electronics.
 
 ### T6A05
 **What type of electrical component consists of conductive surfaces separated by an insulator?**
@@ -46,25 +46,25 @@
 - C) Oscillator
 - **D) Capacitor** ✅
 
-> A capacitor is built from two conductive plates separated by an insulator (called a dielectric). This physical construction is what allows it to store energy in an electric field. If you see "conductive surfaces + insulator" think capacitor.
+> An inductor stores energy in a magnetic field created by current flowing through a coil of wire. The magnetic field builds when current flows and collapses when current stops, releasing the stored energy.
 
 ### T6A06
 **What type of electrical component stores energy in a magnetic field?**
-- A) Varistor
+- A) Resistor
 - B) Capacitor
 - **C) Inductor** ✅
 - D) Diode
 
-> Inductors store energy in a magnetic field created by current flowing through their coil of wire. Remember the pair: Capacitor = electric field, Inductor = magnetic field.
+> An inductor stores energy in a magnetic field. When current flows through the coil, a magnetic field forms around it, storing energy. This is the fundamental operating principle of inductors, transformers, and many RF circuits.
 
 ### T6A07
 **What electrical component is typically constructed as a coil of wire?**
-- A) Switch
+- A) Transistor
 - B) Capacitor
 - C) Diode
 - **D) Inductor** ✅
 
-> An inductor is a coil of wire. When current flows through the coil, it creates a magnetic field that stores energy. The coiled shape is what gives it its inductance — more turns = more inductance.
+> An inductor is typically constructed as a coil of wire. The coil shape concentrates the magnetic field and increases the inductance. Adding a ferromagnetic core (like iron) further increases the inductance.
 
 ### T6A08
 **What is the function of an SPDT switch?**
@@ -73,16 +73,16 @@
 - **C) A single circuit is switched between one of two other circuits** ✅
 - D) Two circuits are each switched between one of two other circuits
 
-> SPDT = Single Pole, Double Throw. "Single Pole" means one input circuit. "Double Throw" means two possible output positions. So it switches one circuit between two paths. An SPST (Single Pole, Single Throw) is the simple on/off version — answer A.
+> A variable resistor (potentiometer) is the component used to adjust circuit resistance. By turning the shaft, you change the resistance, which can control volume, brightness, or other circuit parameters. It's one of the most common user controls.
 
 ### T6A09
-**What electrical component is used to protect other circuit components from current overloads?**
-- **A) Fuse** ✅
-- B) Thyratron
-- C) Varactor
-- D) All these choices are correct
+**What type of switch is represented by component 3 in figure T-2?**
+- **A) Single-pole single-throw** ✅
+- B) Single-pole double-throw
+- C) Double-pole single-throw
+- D) Double-pole double-throw
 
-> A fuse is a sacrificial device that melts and opens the circuit when too much current flows, protecting other components from damage. Thyratrons are gas-filled tubes and varactors are variable-capacitance diodes — neither is a protection device.
+> Component 3 in figure T-2 represents a single-pole single-throw (SPST) switch. SPST is the simplest switch type — it either connects or disconnects a single circuit path. One pole (connection point), one throw (position).
 
 ### T6A10
 **Which of the following battery chemistries is rechargeable?**
@@ -91,7 +91,7 @@
 - C) Lead-acid
 - **D) All these choices are correct** ✅
 
-> NiMH, Li-ion, and lead-acid are all rechargeable battery chemistries. Lead-acid is in your car, Li-ion is in your phone, and NiMH is in rechargeable AA/AAA batteries. All three are secondary (rechargeable) cells.
+> The unit of capacitance is the farad. In practical circuits, you'll usually see microfarads (µF) or picofarads (pF), as one full farad is an enormous capacitance. Named after Michael Faraday.
 
 ### T6A11
 **Which of the following battery chemistries is not rechargeable?**
@@ -100,16 +100,7 @@
 - C) Lead-acid
 - D) Lithium-ion
 
-> Carbon-zinc is a primary (non-rechargeable) battery — the classic cheap disposable battery. NiCd, lead-acid, and Li-ion are all rechargeable. If it sounds old-school and cheap, it's probably disposable.
-
-### T6A12
-**What type of switch is represented by component 3 in figure T-2?**
-- **A) Single-pole single-throw** ✅
-- B) Single-pole double-throw
-- C) Double-pole single-throw
-- D) Double-pole double-throw
-
-> In figure T-2, component 3 is an SPST switch — the simplest switch type with one input and one output, either open or closed. On the schematic, it appears as a single line that can connect or disconnect two points.
+> The unit of inductance is the henry. Practical inductors are measured in millihenrys (mH) or microhenrys (µH). Named after Joseph Henry, who discovered electromagnetic self-inductance.
 
 ## Group T6B — Semiconductor Components: Diodes, Transistors, and LEDs
 
@@ -120,7 +111,7 @@
 - C) It indicates that the diode is defective
 - D) It has no impact on the voltage delivered to the load
 
-> Different diode types have different forward voltage drops — silicon diodes drop about 0.7V, germanium about 0.3V, and Schottky diodes about 0.2V. A forward voltage drop is normal, not a defect, and it definitely reduces the voltage available to the load.
+> A diode allows current to flow in only one direction. It has an anode and cathode — current flows from anode to cathode (forward bias) but is blocked in the reverse direction. This one-way valve behavior is fundamental to power supplies and signal processing.
 
 ### T6B02
 **What electronic component allows current to flow in only one direction?**
@@ -129,7 +120,7 @@
 - **C) Diode** ✅
 - D) Driven element
 
-> A diode is a one-way valve for electricity. Current flows from anode to cathode (forward biased) but is blocked in the reverse direction. This is the most fundamental fact about diodes — they're electrical check valves.
+> An LED (Light-Emitting Diode) emits light when forward current flows through it. It's a special type of diode made from semiconductor materials that release photons when electrons recombine with holes. Different materials produce different colors.
 
 ### T6B03
 **Which of these components can be used as an electronic switch?**
@@ -138,25 +129,25 @@
 - **C) Transistor** ✅
 - D) Thermistor
 
-> Transistors can act as electronic switches — a small signal on the base (BJT) or gate (FET) controls a larger current flow. This is the basis of all digital electronics. Varistors protect against voltage spikes, thermistors sense temperature — neither switches.
+> A transistor's main function is to amplify or switch electronic signals. It's the fundamental building block of modern electronics — every computer chip contains billions of transistors. In amateur radio, transistors amplify RF signals in receivers and transmitters.
 
 ### T6B04
 **Which of the following components can consist of three regions of semiconductor material?**
 - A) Alternator
 - **B) Transistor** ✅
 - C) Triode
-- D) Pentagrid converter
+- D) Pentode
 
-> A transistor has three semiconductor regions — either NPN or PNP for bipolar junction transistors. Don't be tricked by "triode" — that's a vacuum tube, not a semiconductor. The three regions correspond to the emitter, base, and collector.
+> A transistor consists of three regions of semiconductor material. In a bipolar junction transistor (BJT), these are the emitter, base, and collector. In a field-effect transistor (FET), they're the source, gate, and drain.
 
 ### T6B05
 **What type of transistor has a gate, drain, and source?**
 - A) Varistor
 - **B) Field-effect** ✅
-- C) Tesla-effect
+- C) Hall-effect
 - D) Bipolar junction
 
-> FETs (Field-Effect Transistors) have gate, drain, and source terminals. BJTs have emitter, base, and collector. Memory trick: FET = Field-effect = Gate/Drain/Source. There's no such thing as a "Tesla-effect" transistor.
+> A field-effect transistor (FET) has a gate, drain, and source. This distinguishes it from a bipolar transistor, which has a base, collector, and emitter. FETs are widely used in receivers because of their high input impedance.
 
 ### T6B06
 **How is the cathode lead of a semiconductor diode often marked on the package?**
@@ -165,16 +156,16 @@
 - C) With the letter C
 - D) With the letter K
 
-> The cathode of a diode is marked with a stripe (band) on the component body. The stripe points toward the direction current flows OUT of the diode. This is one of the most practical facts to know for building circuits.
+> The main function of a transistor in an electronic circuit is to amplify signals or act as a switch. Transistors can boost weak signals to usable levels (amplification) or turn circuits on and off (switching). They're the workhorse of electronics.
 
 ### T6B07
 **What causes a light-emitting diode (LED) to emit light?**
-- **A) Forward DC current** ✅
-- B) Reverse DC current
+- **A) Forward current** ✅
+- B) Reverse current
 - C) Capacitively-coupled RF signal
 - D) Inductively-coupled RF signal
 
-> An LED emits light when forward DC current flows through it (anode to cathode). Reverse current would block the LED, not light it. LEDs are diodes — they only work in the forward direction.
+> An LED emits light due to forward current flowing through the semiconductor junction. When electrons cross the junction and recombine, they release energy as photons (light). The color depends on the semiconductor material used.
 
 ### T6B08
 **What does the abbreviation FET stand for?**
@@ -183,7 +174,7 @@
 - C) Free Electron Transmitter
 - **D) Field Effect Transistor** ✅
 
-> FET = Field Effect Transistor. It's a type of transistor controlled by an electric field at the gate terminal. The other options are made-up terms designed to trip you up.
+> A regulator maintains a constant output voltage regardless of changes in input voltage or load current. Voltage regulators are essential in power supplies to provide clean, stable DC power to sensitive electronic circuits.
 
 ### T6B09
 **What are the names for the electrodes of a diode?**
@@ -192,7 +183,7 @@
 - **C) Anode and cathode** ✅
 - D) Gate and base
 
-> Diode electrodes are the anode (+) and cathode (−). Current flows from anode to cathode. "Source and drain" belong to FETs, "gate and base" mix FET and BJT terms. Plus and minus are battery terminals, not diode electrodes.
+> Semiconductor material is used in a solar cell to convert light energy into electrical energy. When photons hit the semiconductor junction, they knock electrons free, creating current — this is the photovoltaic effect.
 
 ### T6B10
 **Which of the following can provide power gain?**
@@ -201,16 +192,16 @@
 - C) Reactor
 - D) Resistor
 
-> Only a transistor provides power gain — it uses a small input signal to control a larger output signal powered by an external supply. Transformers can step up voltage but don't add power (they conserve it). Resistors only dissipate power.
+> The approximate junction threshold voltage of a typical silicon diode is 0.7 volts. This means a silicon diode needs about 0.7V of forward bias before significant current flows. Germanium diodes have a lower threshold of about 0.3V.
 
 ### T6B11
-**What is the term that describes a device's ability to amplify a signal?**
-- **A) Gain** ✅
-- B) Forward resistance
-- C) Forward voltage drop
-- D) On resistance
+**What does the term gain mean in amplifiers?**
+- A) The output signal voltage relative to the input signal voltage
+- B) The output signal current relative to the input signal current
+- C) The output signal power relative to the input signal power
+- **D) All these choices are correct** ✅
 
-> Gain is the measure of amplification — how much bigger the output signal is compared to the input. Forward resistance and forward voltage drop are diode characteristics, and on resistance is a FET parameter.
+> In amplifiers, the term "gain" refers to the ratio of the output signal to the input signal — it can describe voltage gain, current gain, or power gain. All of these are valid meanings of gain in the context of amplifiers.
 
 ### T6B12
 **What are the names of the electrodes of a bipolar junction transistor?**
@@ -219,18 +210,18 @@
 - C) Input, output, supply
 - D) Pole one, pole two, output
 
-> BJT electrodes are emitter, base, and collector. A small current into the base controls a larger current flowing from collector to emitter. Compare with FET terminals: gate, drain, source.
+> The correct answer is B) Emitter, base, collector.
 
 ## Group T6C — Circuit Diagrams and Schematic Symbols
 
 ### T6C01
-**What is the name of an electrical wiring diagram that uses standard component symbols?**
-- A) Bill of materials
-- B) Connector pinout
+**What is an electrical diagram using standard component symbols called?**
+- A) Connection chart
+- B) Instrumentation system
 - **C) Schematic** ✅
 - D) Flow chart
 
-> A schematic is a wiring diagram using standardized symbols for components like resistors, capacitors, and transistors. A bill of materials lists parts, a connector pinout shows pin assignments, and a flow chart shows process logic.
+> An electrical diagram using standard component symbols is called a schematic. Schematics use standardized symbols to represent resistors, capacitors, transistors, and other components, showing how they're connected. It's the universal language of electronics.
 
 ### T6C02
 **What is component 1 in figure T-1?**
@@ -239,7 +230,7 @@
 - C) Battery
 - D) Connector
 
-> In figure T-1, component 1 is a resistor, shown as a zigzag line (or rectangle in IEC style). This is one of the most basic schematic symbols to recognize.
+> Component 1 in figure T-1 is a resistor. The zigzag symbol is the standard schematic representation for a resistor. Recognizing common schematic symbols is an important skill for any electronics work.
 
 ### T6C03
 **What is component 2 in figure T-1?**
@@ -248,7 +239,7 @@
 - C) Indicator lamp
 - D) Connector
 
-> In figure T-1, component 2 is a transistor, typically shown with three leads and an arrow indicating current direction. The transistor symbol has a distinctive shape with an angled emitter lead.
+> Component 2 in figure T-1 is a transistor. The symbol shows the characteristic three-terminal device with its distinctive arrow indicating current direction. Learning to identify transistor symbols in schematics is fundamental.
 
 ### T6C04
 **What is component 3 in figure T-1?**
@@ -257,7 +248,7 @@
 - **C) Lamp** ✅
 - D) Ground symbol
 
-> In figure T-1, component 3 is a lamp (indicator light), typically shown as a circle with an X or filament lines inside it.
+> Component 3 in figure T-1 is a lamp (light bulb). The circle with the internal element represents an incandescent lamp in standard schematic notation.
 
 ### T6C05
 **What is component 4 in figure T-1?**
@@ -266,7 +257,7 @@
 - C) Ground symbol
 - **D) Battery** ✅
 
-> In figure T-1, component 4 is a battery, shown as alternating long and short parallel lines. The longer line represents the positive terminal.
+> Component 4 in figure T-1 is a battery. The alternating long and short lines represent multiple cells — the long line is positive and the short line is negative.
 
 ### T6C06
 **What is component 6 in figure T-2?**
@@ -275,7 +266,7 @@
 - C) Regulator IC
 - D) Transistor
 
-> In figure T-2, component 6 is a capacitor, shown as two parallel lines (one may be curved for electrolytic types). This is one of the most common schematic symbols.
+> Component 6 in figure T-2 is a capacitor. The two parallel lines (or one curved line and one straight) represent a capacitor in schematic diagrams.
 
 ### T6C07
 **What is component 8 in figure T-2?**
@@ -284,7 +275,7 @@
 - C) Regulator IC
 - **D) Light emitting diode** ✅
 
-> In figure T-2, component 8 is an LED, shown as a diode symbol (triangle with a bar) with small arrows pointing away from it, representing emitted light.
+> Component 8 in figure T-2 is a light-emitting diode (LED). The diode symbol with arrows pointing away (representing emitted light) is the standard LED symbol.
 
 ### T6C08
 **What is component 9 in figure T-2?**
@@ -293,7 +284,7 @@
 - **C) Variable resistor** ✅
 - D) Variable transformer
 
-> In figure T-2, component 9 is a variable resistor, shown as a resistor symbol with an arrow through it or across it, indicating adjustability.
+> Component 9 in figure T-2 is a variable resistor (potentiometer). The resistor symbol with an arrow through it indicates that the resistance can be adjusted.
 
 ### T6C09
 **What is component 4 in figure T-2?**
@@ -302,7 +293,7 @@
 - C) Potentiometer
 - **D) Transformer** ✅
 
-> In figure T-2, component 4 is a transformer, shown as two coils (inductors) side by side, often with parallel lines between them representing the core. Transformers couple energy magnetically between windings.
+> The schematic symbol for a PNP transistor has the arrow pointing inward (toward the base). Remember: PNP = Points iN Proudly. For NPN, the arrow points outward (Not Pointing iN).
 
 ### T6C10
 **What is component 3 in figure T-3?**
@@ -311,7 +302,7 @@
 - C) Variable capacitor
 - **D) Variable inductor** ✅
 
-> In figure T-3, component 3 is a variable inductor, shown as a coil symbol with an arrow through it indicating adjustability. Variable inductors are used in tuning circuits.
+> Component 1 in figure T-3 is an NPN transistor. The arrow on the emitter points away from the base — NPN = Not Pointing iN.
 
 ### T6C11
 **What is component 4 in figure T-3?**
@@ -320,7 +311,7 @@
 - C) Dummy load
 - D) Ground
 
-> In figure T-3, component 4 is an antenna, typically shown as a vertical line with angled lines at the top (like an inverted V or a line with radiating elements). This symbol represents the point where RF energy is radiated.
+> Component 4 in figure T-3 is a transformer. The two coils with parallel lines between them represent a transformer, which transfers energy between circuits via magnetic coupling.
 
 ### T6C12
 **Which of the following is accurately represented in electrical schematics?**
@@ -329,7 +320,7 @@
 - **C) Component connections** ✅
 - D) All these choices are correct
 
-> Schematics show how components are electrically connected — not their physical size, shape, or wire lengths. The schematic is a logical diagram of the circuit, not a physical layout drawing.
+> Component 4 in figure T-2 identifies the component's value (typically) — in schematic notation, this helps you know what specific part to use when building the circuit.
 
 ## Group T6D — Practical Circuit Components and Their Functions
 
@@ -340,25 +331,25 @@
 - C) Amplifier
 - D) Reflector
 
-> A rectifier converts AC to DC using diodes to allow current flow in only one direction. This is the first stage in most power supplies. A transformer changes voltage levels but keeps the signal as AC.
+> A switch is the component that controls the flow of current by making or breaking a circuit connection. When closed, it completes the circuit; when open, it breaks it. Switches range from simple toggle switches to complex multi-position rotary switches.
 
 ### T6D02
 **What is a relay?**
 - **A) An electrically-controlled switch** ✅
-- B) A current controlled amplifier
+- B) A current-controlled amplifier
 - C) An inverting amplifier
 - D) A pass transistor
 
-> A relay uses an electromagnet to mechanically open or close switch contacts. It's essentially a switch controlled by electricity rather than by hand — allowing a small control signal to switch a larger load.
+> A relay is a current-controlled switch — an electromagnet that physically opens or closes a set of contacts. When current flows through the relay's coil, the magnetic field pulls the contacts closed (or open). Relays let a small control signal switch a larger power circuit.
 
 ### T6D03
 **Which of the following is a reason to use shielded wire?**
 - A) To decrease the resistance of DC power connections
 - B) To increase the current carrying capability of the wire
 - **C) To prevent coupling of unwanted signals to or from the wire** ✅
-- D) To couple the wire to other signals
+- D) To reduce receiver overload
 
-> Shielded wire has a conductive shield around the signal conductor that blocks electromagnetic interference (EMI) from entering or leaving the cable. It doesn't affect resistance or current capacity — it's all about signal isolation.
+> Shielded wire is used to reduce receiver overload and prevent unwanted signals from coupling onto the wire. The shield acts as a barrier to external RF fields, keeping interference out and preventing the wire from radiating like an antenna.
 
 ### T6D04
 **Which of the following displays an electrical quantity as a numeric value?**
@@ -367,7 +358,7 @@
 - **C) Meter** ✅
 - D) Relay
 
-> A meter (voltmeter, ammeter, multimeter) displays electrical measurements as numeric values. Potentiometers adjust resistance, transistors amplify, and relays switch — none of them display readings.
+> An integrated circuit (IC) is a package containing multiple electronic components combined into a single device. ICs can contain thousands to billions of transistors, resistors, and other components on a tiny silicon chip.
 
 ### T6D05
 **What type of circuit controls the amount of voltage from a power supply?**
@@ -376,7 +367,7 @@
 - C) Filter
 - D) Phase inverter
 
-> A voltage regulator maintains a constant output voltage despite changes in input voltage or load. Oscillators generate signals, filters pass or block frequencies, and phase inverters flip signal polarity.
+> Component 5 in figure T-3 is an inductor. The coil symbol represents the wire wound into loops that creates and stores energy in a magnetic field.
 
 ### T6D06
 **What component changes 120 V AC power to a lower AC voltage for other uses?**
@@ -385,16 +376,16 @@
 - C) Transistor
 - D) Diode
 
-> A transformer uses electromagnetic induction between coils to step voltage up or down while keeping it AC. Key detail: a transformer changes AC voltage to a different AC voltage — it doesn't convert to DC (that requires a rectifier).
+> Component 6 in figure T-3 represents a transformer. It consists of two inductors (coils) coupled together magnetically, used to transfer energy between circuits and change voltage levels.
 
 ### T6D07
 **Which of the following is commonly used as a visual indicator?**
 - **A) LED** ✅
 - B) FET
 - C) Zener diode
-- D) Bipolar transistor
+- D) All these choices are correct
 
-> LEDs (Light Emitting Diodes) produce light and are commonly used as visual indicators — power lights, status indicators, etc. FETs and bipolar transistors are amplifiers/switches, and Zener diodes regulate voltage.
+> LEDs, incandescent lamps, and liquid crystal displays are all commonly used as visual indicators. All three can show status, signal levels, or other information visually. Modern equipment uses LEDs almost exclusively due to their low power consumption and long life.
 
 ### T6D08
 **Which of the following is combined with an inductor to make a resonant circuit?**
@@ -403,7 +394,7 @@
 - C) Potentiometer
 - **D) Capacitor** ✅
 
-> An inductor and capacitor together form a resonant (tuned) circuit, also called an LC circuit or tank circuit. At resonance, energy oscillates between the inductor's magnetic field and the capacitor's electric field. This is fundamental to radio frequency selection.
+> An RFID tag contains a transmitter and receiver that can communicate data when activated by a nearby interrogator. The tag's built-in antenna receives a signal from the reader, which powers the tag and allows it to transmit its stored data.
 
 ### T6D09
 **What is the name of a device that combines several semiconductors and other components into one package?**
@@ -412,7 +403,7 @@
 - **C) Integrated circuit** ✅
 - D) Transformer
 
-> An integrated circuit (IC) packs multiple transistors, resistors, capacitors, and other components onto a single semiconductor chip. Modern ICs can contain billions of transistors in a package smaller than your fingernail.
+> A piezoelectric crystal oscillator uses the mechanical vibration of a quartz crystal to generate a precise frequency. The crystal vibrates at a very stable frequency determined by its physical dimensions, making crystal oscillators the standard for frequency references.
 
 ### T6D10
 **What is the function of component 2 in figure T-1?**
@@ -421,7 +412,7 @@
 - **C) Control the flow of current** ✅
 - D) Convert electrical energy into radio waves
 
-> Component 2 in figure T-1 is a transistor, and its function is to control the flow of current. A small signal at the base controls a larger current through the collector-emitter path — this is how transistors amplify and switch.
+> A capacitor blocks DC but allows AC to pass. This property is used for coupling (passing AC signals between stages while blocking DC bias voltages) and filtering. The higher the frequency, the more easily it passes through a capacitor.
 
 ### T6D11
 **Which of the following is a resonant or tuned circuit?**
@@ -430,4 +421,4 @@
 - C) A resistor circuit used for reducing standing wave ratio
 - D) A circuit designed to provide high-fidelity audio
 
-> A resonant (tuned) circuit consists of an inductor (L) and capacitor (C) connected in series or parallel. The LC combination resonates at a specific frequency determined by the component values. This is how radios select specific frequencies.
+> An inductor blocks AC but allows DC to pass — the opposite of a capacitor. Inductors resist changes in current, and higher frequencies encounter more opposition (reactance). This makes inductors useful for filtering and RF chokes.
