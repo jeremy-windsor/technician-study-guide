@@ -19,7 +19,7 @@
 - C) Watt-hours
 - D) Amperes
 
-> Voltage is the electrical term for the electromotive force (EMF) that pushes current through a circuit. It's measured in volts and is sometimes described as "electrical pressure." Without voltage, no current flows.
+> Electrical power is measured in watts. Power is the rate at which energy is used or produced in a circuit — it's what heats your resistors and lights your LEDs. Don't confuse watts (power) with volts (electrical pressure), watt-hours (energy over time), or amperes (current flow). Watts = power, period.
 
 ### T5A03
 **What is the term for the flow of electrons in an electric circuit?**
