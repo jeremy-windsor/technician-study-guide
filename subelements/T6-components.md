@@ -46,7 +46,7 @@ Field-effect transistors, or FETs, have a gate, drain, and source. The abbreviat
 
 ## Schematic Symbols
 
-A schematic is an electrical wiring diagram that uses standard component symbols. It shows how components are electrically connected — not their physical size, shape, or wire lengths. The schematic is a logical diagram, not a physical layout.
+A schematic is an electrical wiring diagram that uses standard component symbols. It shows the component connections — how parts are electrically connected — not their physical size, shape, or wire lengths. The schematic is a logical diagram, not a physical layout.
 
 In figure T-1, you'll find four key components. Component 1 is a resistor, shown as a zigzag line. Component 2 is a transistor, with three leads and an arrow indicating current direction. Its function is to control the flow of current. Component 3 is a lamp or indicator light, shown as a circle with lines inside it. And component 4 is a battery, shown as alternating long and short parallel lines where the longer line represents the positive terminal.
 

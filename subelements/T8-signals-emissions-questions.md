@@ -10,7 +10,7 @@
 - **C) Single sideband** ✅
 - D) Phase shift keying (PSK)
 
-> FM (Frequency Modulation) is commonly used for VHF and UHF voice repeaters. FM provides clean, noise-free audio when the signal is above the receiver's threshold, making it ideal for local VHF/UHF communications.
+> The correct choice here is Single sideband.
 
 ### T8A02
 **What type of modulation is commonly used for VHF packet radio transmissions?**
@@ -19,7 +19,7 @@
 - C) AM
 - D) PSK
 
-> USB (Upper Sideband) is normally used for VHF and UHF SSB communications. By convention, USB is used above 10 MHz, including all VHF and UHF SSB work. LSB is used below 10 MHz on HF.
+> The correct choice here is FM or PM.
 
 ### T8A03
 **Which type of voice mode is often used for long-distance (weak signal) contacts on the VHF and UHF bands?**
@@ -28,7 +28,7 @@
 - **C) SSB** ✅
 - D) PM
 
-> SSB is the voice mode most commonly used for long-distance HF contacts. SSB is more efficient than AM or FM for weak-signal work — it concentrates all the power in one sideband and uses less bandwidth.
+> The correct answer is C) SSB.
 
 ### T8A04
 **Which type of modulation is commonly used for VHF and UHF voice repeaters?**
@@ -37,7 +37,7 @@
 - C) PSK
 - **D) FM or PM** ✅
 
-> An FM signal has a constant carrier amplitude because the information is carried in frequency variations, not amplitude changes. This constant amplitude makes FM resistant to noise (which typically affects amplitude) but means it uses more bandwidth.
+> The correct answer is D) FM or PM.
 
 ### T8A05
 **Which of the following signal types has the narrowest bandwidth?**
@@ -100,7 +100,7 @@
 - C) 1000 Hz
 - D) 15 kHz
 
-> The approximate maximum bandwidth of a single-sideband voice signal is about 3 kHz. This is determined by the audio frequency range (roughly 300 Hz to 2700 Hz) that passes through the SSB filter.
+> The correct answer is 150 Hz.
 
 ### T8A12
 **Which of the following is a disadvantage of FM compared with single sideband?**
@@ -109,7 +109,7 @@
 - C) FM signals are harder to tune
 - D) FM signals are more susceptible to high SWR
 
-> A disadvantage of FM compared to SSB is that FM signals use more bandwidth, which means only a limited number of FM signals can fit in a given frequency range. SSB's narrower bandwidth allows more signals in the same spectrum.
+> The correct choice here is Only one signal can be received at a time.
 
 ## Group T8B — Satellite Operations
 
@@ -120,7 +120,7 @@
 - **C) Health and status of the satellite** ✅
 - D) All these choices are correct
 
-> The ITU amateur satellite designation for a transponder or repeater with a 2-meter uplink and 70-centimeter downlink is V/U mode. V = VHF (2 meters) for uplink, U = UHF (70 cm) for downlink. The uplink band is listed first.
+> The correct answer is C) Health and status of the satellite.
 
 ### T8B02
 **What is the impact of using excessive effective radiated power on a satellite uplink?**
@@ -129,7 +129,7 @@
 - C) Overloading the satellite batteries
 - D) Possibility of rebooting the satellite control computer
 
-> To access a satellite repeater, you need to use Doppler shift correction because the satellite's motion causes the apparent frequency to shift. As the satellite approaches, the frequency appears higher; as it moves away, it appears lower.
+> The correct answer is Blocking access by other users.
 
 ### T8B03
 **Which of the following are provided by satellite tracking programs?**
@@ -138,7 +138,7 @@
 - C) The apparent frequency of the satellite transmission, including effects of Doppler shift
 - **D) All these choices are correct** ✅
 
-> Tracking satellites requires knowing the Keplerian orbital elements — a set of numbers that describe the satellite's orbit (shape, tilt, position). These are updated regularly and loaded into tracking software.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T8B04
 **What mode of transmission is commonly used by amateur radio satellites?**
@@ -147,7 +147,7 @@
 - C) CW/data
 - **D) All these choices are correct** ✅
 
-> An FM-only radio can access amateur satellites that have FM repeaters on board. Several amateur satellites carry FM transponders, making them accessible with basic handheld radios and simple antennas.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T8B05
 **What is a satellite beacon?**
@@ -156,7 +156,7 @@
 - C) A reflective surface on the satellite
 - **D) A transmission from a satellite that contains status information** ✅
 
-> A satellite beacon transmits a continuous signal on a specific frequency, allowing ground stations to determine the satellite's signal strength and Doppler shift. Beacons are useful for tracking and testing.
+> The correct answer is A transmission from a satellite that contains status information.
 
 ### T8B06
 **Which of the following are inputs to a satellite tracking program?**
@@ -165,7 +165,7 @@
 - C) The last observed time of zero Doppler shift
 - D) All these choices are correct
 
-> To get a good signal through a satellite transponder, you should use the minimum power needed — just enough so your downlink signal is about the same strength as the satellite's beacon. Excessive power can overload the transponder and interfere with other users.
+> The correct choice here is The Keplerian elements.
 
 ### T8B07
 **What is Doppler shift in reference to satellite communications?**
@@ -174,7 +174,7 @@
 - **C) An observed change in signal frequency caused by relative motion between the satellite and Earth station** ✅
 - D) A special digital communications mode for some satellites
 
-> Spin fading on a satellite signal is caused by rotation of the satellite and its antennas. As the satellite rotates, its antenna alternately points toward and away from the ground station, causing periodic signal strength variations.
+> The correct answer is An observed change in signal frequency caused by relative motion between the satellite and Earth station.
 
 ### T8B08
 **What does it mean if a satellite is operating in U/V mode?**
@@ -183,7 +183,7 @@
 - C) The satellite operates using ultraviolet frequencies
 - D) The satellite frequencies are usually variable
 
-> U/V mode means the uplink is in the 70-centimeter (UHF) band and the downlink is in the 2-meter (VHF) band. The uplink frequency is listed first, followed by the downlink frequency.
+> The satellite uplink is in the 70-centimeter band and the downlink is in the 2-meter band is the correct term or definition for this question.
 
 ### T8B09
 **What causes spin fading of satellite signals?**
@@ -192,7 +192,7 @@
 - C) Doppler shift of the received signal
 - D) Interfering signals within the satellite uplink band
 
-> A good way to determine if an amateur satellite is operational is to check amateur satellite tracking websites or the AMSAT news pages. These resources provide current status information, including which satellites are active.
+> The correct answer is B) Rotation of the satellite and its antennas.
 
 ### T8B10
 **What does the term LEO mean in reference to communication satellites?**
@@ -230,7 +230,7 @@
 - **C) Radio direction finding** ✅
 - D) Phase locking
 
-> An internet gateway is the term for an amateur radio station connected to the internet that allows communication between stations using radio and stations using VoIP (Voice over Internet Protocol).
+> The correct choice here is Radio direction finding.
 
 ### T8C02
 **Which of these items would be useful for a hidden transmitter hunt?**
@@ -284,7 +284,7 @@
 - C) A technique for measuring the modulation quality of a transmitter using remote sites monitored via the internet
 - **D) A method of delivering voice communications over the internet using digital techniques** ✅
 
-> To find the location of a repeater, you can use a repeater directory or a club website. These resources list repeater frequencies, locations, access tones, and other details for repeaters in your area.
+> The correct answer is A method of delivering voice communications over the internet using digital techniques.
 
 ### T8C08
 **What is the Internet Radio Linking Project (IRLP)?**
@@ -302,7 +302,7 @@
 - C) DMR
 - **D) EchoLink** ✅
 
-> To find stations to contact on a specific band, you can check a DX cluster, which is a network that reports real-time information about stations that are active on different bands and frequencies.
+> The correct choice here is EchoLink.
 
 ### T8C10
 **What is required before using the EchoLink system?**
@@ -320,7 +320,7 @@
 - C) A digipeater
 - D) A beacon
 
-> An amateur radio phone patch connects a radio circuit to the public telephone network, allowing a radio operator to make or receive telephone calls through their radio station.
+> The correct answer is A gateway.
 
 ## Group T8D — Digital Modes, APRS, and Data Communications
 
@@ -331,7 +331,7 @@
 - C) FT8
 - **D) All these choices are correct** ✅
 
-> DMR (Digital Mobile Radio) is the digital voice standard that divides a single 12.5 kHz channel into two time slots using TDMA. This allows two simultaneous conversations on one frequency — effectively doubling the channel capacity.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T8D02
 **What is FT8?**
@@ -349,7 +349,7 @@
 - C) Weather data
 - **D) All these choices are correct** ✅
 
-> An ideally shaped SSB phone signal occupies approximately 3 kHz of bandwidth. This relatively narrow bandwidth is one of SSB's key advantages over FM for long-distance communication.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T8D04
 **What is meant by the term "NTSC?"**
@@ -385,7 +385,7 @@
 - C) An automatic computer logging technique for hands-off logging when communicating while operating a vehicle
 - D) A digital technique for transmitting on two repeater inputs simultaneously for automatic error correction
 
-> Winlink is a worldwide radio email system that uses amateur radio frequencies to send and receive email. It bridges the gap between radio and internet email, especially useful when internet access is unavailable.
+> The correct choice here is A technique for time-multiplexing two digital voice signals on a single 12.5 kHz repeater channel.
 
 ### T8D08
 **Which of the following is included in packet radio transmissions?**
@@ -412,7 +412,7 @@
 - C) Meteor scatter
 - **D) All these choices are correct** ✅
 
-> The typical bandwidth of a PSK31 signal is approximately 31 Hz — extremely narrow. This is one of the narrowest digital modes, allowing many PSK31 signals to fit in the bandwidth of a single SSB voice signal.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T8D11
 **What is the role of ARQ in a transmission system?**

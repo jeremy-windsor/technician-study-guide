@@ -19,7 +19,7 @@
 - C) A device for automatically sending and decoding Morse code
 - D) A device for converting receiver and transmitter frequencies to another band
 
-> Selectivity is a receiver's ability to discriminate between multiple signals on nearby frequencies. Good selectivity means the receiver can pick out one signal while rejecting adjacent ones. Filters determine selectivity.
+> The correct answer is A device that combines a receiver and transmitter.
 
 ### T7A03
 **Which of the following is used to convert a signal from one frequency to another?**
@@ -37,7 +37,7 @@
 - **C) Selectivity** ✅
 - D) Harmonic distortion
 
-> A local oscillator generates a signal that is mixed with the incoming RF to produce an intermediate frequency. The LO frequency is adjustable, which is how you tune the receiver to different frequencies.
+> Selectivity is the correct term or definition for this question.
 
 ### T7A05
 **What is the name of a circuit that generates a signal at a specific frequency?**
@@ -46,7 +46,7 @@
 - C) Low-pass filter
 - **D) Oscillator** ✅
 
-> Modulation is the process of combining an information signal (like voice) with an RF carrier for transmission. Without modulation, you'd just transmit a blank carrier with no information content.
+> The correct answer is Oscillator.
 
 ### T7A06
 **What device converts the RF input and output of a transceiver to another band?**
@@ -55,7 +55,7 @@
 - **C) Transverter** ✅
 - D) Phase converter
 
-> The PTT (Push-To-Talk) input switches the transceiver from receive to transmit when it is grounded. Press the mic button → PTT line grounds → radio transmits. Release → back to receive. It's the most basic control interface.
+> The correct answer is C) Transverter.
 
 ### T7A07
 **What is the function of a transceiver’s PTT input?**
@@ -64,7 +64,7 @@
 - C) Provides a transmit tuning tone when grounded
 - D) Input for a preamplifier tuning tone
 
-> A transverter converts the RF input and output of a transceiver to another band — for example, letting an HF radio operate on VHF or microwave frequencies. The name combines "transceiver" and "converter."
+> The correct answer is Switches transceiver from receive to transmit when grounded.
 
 ### T7A08
 **Which of the following describes combining speech with an RF carrier signal?**
@@ -73,7 +73,7 @@
 - **C) Modulation** ✅
 - D) Low-pass filtering
 
-> An oscillator generates a signal at a specific frequency. It's the core frequency-generating component in transmitters and receivers, creating the radio frequencies needed for communication.
+> The correct choice here is Modulation.
 
 ### T7A09
 **What is the function of the switch which selects either SSB or CW-FM on some VHF power amplifiers?**
@@ -129,7 +129,7 @@
 - C) Spurious emissions
 - **D) All these choices are correct** ✅
 
-> If you hear a buzzy, distorted signal that varies with engine speed in a mobile installation, the problem is alternator whine (or ignition noise) getting into the radio. Proper bonding, filtering, and keeping power cables away from the antenna cable can fix this.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T7B04
 **Which of the following might be the cause of low RF power output from a solid-state transceiver?**
@@ -156,7 +156,7 @@
 - C) Install a harmonic doubler on the output of your transmitter and tune it until the interference is eliminated
 - D) All these choices are correct
 
-> If your neighbors experience TV interference when you transmit on 2 meters, the likely problem is poor TV receiver filtering — it can't reject your nearby VHF signal. A filter at the TV's antenna input usually solves the problem.
+> The correct choice here is Make sure that your station is functioning properly and that it does not cause interference to your own radio or television when it is tuned to the same channel.
 
 ### T7B07
 **Which of the following can reduce interference to a 2-meter band transceiver from a nearby commercial FM station?**
@@ -174,7 +174,7 @@
 - C) Make sure your station meets the standards of good amateur practice
 - **D) All these choices are correct** ✅
 
-> Common-mode current on a feed line means RF current is flowing on the outside of the coax shield. A ferrite choke on the feed line near the radio can suppress this. Common-mode current causes interference and can lead to RF in the shack.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T7B09
 **What should be the first step to resolve non-fiber optic cable TV interference caused by your amateur radio transmission?**
@@ -183,7 +183,7 @@
 - C) Add a preamplifier to the TV antenna input
 - **D) Be sure all TV feed line coaxial connectors are installed properly** ✅
 
-> If your SWR readings are erratic, the most likely cause is a loose or corroded connector in your antenna system. Bad connections cause intermittent contact, which makes the SWR reading bounce around unpredictably.
+> The correct answer is D) Be sure all TV feed line coaxial connectors are installed properly.
 
 ### T7B10
 **What might be a problem if you receive a report that your audio signal through an FM repeater is distorted or unintelligible?**
@@ -192,7 +192,7 @@
 - C) You are in a bad location
 - **D) All these choices are correct** ✅
 
-> If your FM repeater audio is distorted or unintelligible, you may be speaking too loudly or too close to the microphone, causing over-deviation. Back off the mic and speak at a normal conversational level.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T7B11
 **Which of the following can eliminate distorted voice transmissions?**
@@ -221,7 +221,7 @@
 - C) A Q meter
 - D) A frequency counter
 
-> A field strength meter can be used to determine if an antenna is radiating. It measures the RF field near the antenna, confirming that the transmitter is actually putting out signal. A simple field strength indicator is an inexpensive but useful test tool.
+> The correct choice here is An antenna analyzer.
 
 ### T7C03
 **What does a typical RF dummy load consist of?**
@@ -239,7 +239,7 @@
 - **C) 1:1** ✅
 - D) Full Scale
 
-> An SWR meter measures the quality of the match between the antenna system and the transmitter. Low SWR (close to 1:1) means a good match — most of the power reaches the antenna. High SWR means power is being reflected back.
+> The correct answer is C) 1:1.
 
 ### T7C05
 **Why do most solid-state transmitters reduce output power as SWR increases beyond a certain level?**
@@ -257,7 +257,7 @@
 - C) Gain of +4 dB
 - **D) Impedance mismatch** ✅
 
-> To measure the standing wave ratio (SWR) of your antenna system, you use an SWR meter connected between the transmitter and the antenna feed line. Transmit into it and read the SWR value on the meter.
+> Impedance mismatch is the correct term or definition for this question.
 
 ### T7C07
 **What happens to power lost in a feed line?**
@@ -266,7 +266,7 @@
 - **C) It is converted into heat** ✅
 - D) It distorts the signal
 
-> Standing wave ratio (SWR) is a measure of how well the load impedance matches the transmission line's characteristic impedance. A perfect match gives 1:1 SWR. Higher SWR means more power is reflected back toward the transmitter.
+> The correct answer is C) It is converted into heat.
 
 ### T7C08
 **Which instrument can be used to determine SWR?**
@@ -275,7 +275,7 @@
 - C) Iambic pentameter
 - **D) Directional wattmeter** ✅
 
-> If you measure infinite SWR, it means there's an open circuit somewhere — likely a broken connector, cut feed line, or disconnected antenna. No power is being absorbed by the load, so everything is reflected back.
+> The correct answer is D) Directional wattmeter.
 
 ### T7C09
 **Which of the following causes failure of coaxial cables?**
@@ -284,7 +284,7 @@
 - C) Rapid fluctuation in transmitter output power
 - D) Operation at 100% duty cycle for an extended period
 
-> The two most significant factors affecting the signal loss in a coaxial cable are cable length and operating frequency. Longer cables and higher frequencies both increase loss. Use the shortest practical run of the lowest-loss cable you can afford.
+> The correct choice here is Moisture contamination.
 
 ### T7C10
 **Why should the outer jacket of coaxial cable be resistant to ultraviolet light?**
@@ -322,7 +322,7 @@
 - C) In quadrature
 - D) In phase
 
-> An ammeter is used to measure electric current. It's connected in series with the circuit so the current flows through it. Ammeters have very low internal resistance to minimize their effect on the circuit.
+> In parallel is the correct measurement method, tool, or precaution here.
 
 ### T7D03
 **When configured to measure current, how is a multimeter connected to a component?**
@@ -331,7 +331,7 @@
 - C) In quadrature
 - D) In phase
 
-> A multimeter combines the functions of a voltmeter, ammeter, and ohmmeter in one instrument. It can measure voltage, current, and resistance, making it the most versatile and commonly used test instrument in electronics.
+> In series is the correct measurement method, tool, or precaution here.
 
 ### T7D04
 **Which instrument is used to measure electric current?**
@@ -340,7 +340,7 @@
 - C) A voltmeter
 - **D) An ammeter** ✅
 
-> An ohmmeter is used to measure resistance. To get an accurate reading, you must disconnect the component from the circuit — measuring resistance in-circuit gives false readings because other components provide parallel paths for current.
+> An ammeter is the correct measurement method, tool, or precaution here.
 
 ### T7D05
 **How does an ohmmeter measure the resistance of a circuit or component?**
@@ -358,7 +358,7 @@
 - **C) Attempting to measure voltage when using the resistance setting** ✅
 - D) Not allowing it to warm up properly
 
-> An antenna analyzer measures SWR, impedance, and resonant frequency of antenna systems. It's like a specialized combination of an SWR meter and impedance bridge, purpose-built for antenna work. Every serious antenna builder should have one.
+> Attempting to measure voltage when using the resistance setting is the correct measurement method, tool, or precaution here.
 
 ### T7D07
 **Which of the following measurements are made using a multimeter?**
@@ -367,7 +367,7 @@
 - **C) Voltage and resistance** ✅
 - D) All these choices are correct
 
-> The quality of a soldered joint is important because a poor solder connection creates resistance that impedes current flow and generates heat. Cold or cracked joints cause intermittent connections, noise, and equipment failures.
+> Voltage and resistance is the correct measurement method, tool, or precaution here.
 
 ### T7D08
 **Which of the following types of solder should not be used for radio and electronic applications?**
@@ -376,7 +376,7 @@
 - C) Rosin-core solder
 - D) Tin-copper solder
 
-> Before soldering, clean the surfaces and apply flux to ensure a good connection. Flux removes oxide layers and helps solder flow properly onto the joint surfaces. Without proper preparation, you'll get cold joints.
+> Acid-core solder is the correct measurement method, tool, or precaution here.
 
 ### T7D09
 **What is the characteristic appearance of a cold tin-lead solder joint?**
@@ -394,7 +394,7 @@
 - C) Steady full-scale reading
 - D) Alternating between open and short circuit
 
-> Short-circuit protection is a desirable feature in a power supply because it prevents damage to both the supply and connected equipment if a wiring fault creates a short. Without it, a short circuit can cause fire, component destruction, or blown fuses.
+> Increasing resistance with time is the correct measurement method, tool, or precaution here.
 
 ### T7D11
 **Which of the following precautions should be taken when measuring in-circuit resistance with an ohmmeter?**
@@ -403,4 +403,4 @@
 - C) Ensure that the circuit is grounded
 - D) Ensure that the circuit is operating at the correct frequency
 
-> A "deck" is the equivalent of a "pole" in an idealized switch. A double-pole, double-throw (DPDT) switch has two independent circuits, each with two positions — it's like two SPDT switches mechanically linked together.
+> Ensure that the circuit is not powered is the correct measurement method, tool, or precaution here.

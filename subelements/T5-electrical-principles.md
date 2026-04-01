@@ -2,7 +2,7 @@
 
 ## Fundamental Units and Concepts
 
-Let's build a solid foundation in electrical principles, starting with the basic units you'll need to know. Electrical current — the actual flow of electrons through a conductor — is measured in amperes, often shortened to amps. Voltage is the electrical force that pushes those electrons through the circuit, like pressure in a water pipe. Resistance, measured in ohms, is what opposes the flow of current. And power, which is the rate at which electrical energy is used, is measured in watts.
+Let's build a solid foundation in electrical principles, starting with the basic units you'll need to know. Electrical current — the actual flow of electrons through a conductor — is measured in amperes, often shortened to amps. Voltage is the electrical force that pushes those electrons through the circuit, like pressure in a water pipe. More precisely, it's a difference in voltage — a potential difference — that causes electrons to flow. Resistance, measured in ohms, is what opposes the flow of current. And power, which is the rate at which electrical energy is used, is measured in watts.
 
 Here's an easy way to think about it. Voltage is the pressure, current is the flow, resistance is the restriction, and power is how fast energy gets consumed. A 100-watt light bulb uses energy twice as fast as a 50-watt bulb — that's all power means.
 

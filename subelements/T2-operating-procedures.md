@@ -22,7 +22,7 @@ When you want to call another station on a repeater and you know their call sign
 
 When answering someone who's calling CQ, say their call sign first, then yours. This tells them who you're responding to and who you are. Their call first, then yours.
 
-If you want to indicate that you're listening on a repeater and available for a contact, say your call sign followed by the word "monitoring." That's the standard way to let people know you're there without calling CQ.
+If you want to indicate that you're listening on a repeater and available for a contact, say your call sign followed by the word "listening." That's the customary way to let people know you're there without calling CQ.
 
 CQ itself means "calling any station." It's an open invitation for anyone to respond. Despite various folk etymologies, it simply means "anyone out there?" An effective way to seek a call from any phone station when not using a repeater is to repeat "CQ" a few times, followed by "this is," and your call sign, then pause to listen; repeat as necessary.
 
@@ -58,7 +58,7 @@ To join a digital repeater's talkgroup, you simply program your radio with the g
 
 ## Audio Quality
 
-If your FM transmission audio is distorted on voice peaks, you're probably talking too loudly and over-deviating the signal. The fix is to back off from the microphone. This is the opposite of what people instinctively do — they tend to talk louder when they think they're not getting through. Transmit power level doesn't cause audio distortion; speaking too loudly does.
+If your FM transmission audio drops out on voice peaks, you're probably talking too loudly and over-deviating the signal. The fix is to back off from the microphone. This is the opposite of what people instinctively do — they tend to talk louder when they think they're not getting through. Transmit power level doesn't cause this symptom; speaking too loudly does.
 
 ## Frequency Conflicts
 
@@ -82,7 +82,7 @@ A Net Control Station, or NCS, calls the net to order and directs communications
 
 When participating in a net, the standard practice is to transmit only when directed by the Net Control Station — unless you're reporting an emergency. The NCS controls who speaks and when.
 
-The word "traffic" in net operation refers to messages exchanged by net stations. Just like traffic on a road means vehicles moving, traffic on a net means messages being passed and relayed.
+The word "traffic" in net operation refers to formal messages exchanged by net stations. Just like traffic on a road means vehicles moving, traffic on a net means formal messages being passed and relayed.
 
 Good traffic handling means passing messages exactly as received — verbatim, no changes. You don't editorialize, you don't decide whether a message is worthy of relay, and you don't share messages with the news media. You're a relay, not an editor.
 

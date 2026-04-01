@@ -19,7 +19,7 @@
 - **C) Potentiometer** ✅
 - D) Transformer
 
-> Electrolytic capacitors are typically polarized — they must be connected with the correct polarity or they can be damaged or even explode. Paper, ceramic, and mica capacitors are generally non-polarized and can be connected either way.
+> The correct choice here is Potentiometer.
 
 ### T6A03
 **What electrical parameter is controlled by a potentiometer?**
@@ -28,7 +28,7 @@
 - C) Capacitance
 - D) Field strength
 
-> A battery is a combination of two or more cells that produces electrical energy from chemical reactions. A single cell produces a fixed voltage (like 1.5V for alkaline), and batteries combine multiple cells to produce higher voltages.
+> The correct answer is B) Resistance.
 
 ### T6A04
 **What electrical component stores energy in an electric field?**
@@ -46,7 +46,7 @@
 - C) Oscillator
 - **D) Capacitor** ✅
 
-> An inductor stores energy in a magnetic field created by current flowing through a coil of wire. The magnetic field builds when current flows and collapses when current stops, releasing the stored energy.
+> The correct choice here is Capacitor.
 
 ### T6A06
 **What type of electrical component stores energy in a magnetic field?**
@@ -73,7 +73,7 @@
 - **C) A single circuit is switched between one of two other circuits** ✅
 - D) Two circuits are each switched between one of two other circuits
 
-> A variable resistor (potentiometer) is the component used to adjust circuit resistance. By turning the shaft, you change the resistance, which can control volume, brightness, or other circuit parameters. It's one of the most common user controls.
+> The correct answer is A single circuit is switched between one of two other circuits.
 
 ### T6A09
 **What type of switch is represented by component 3 in figure T-2?**
@@ -91,7 +91,7 @@
 - C) Lead-acid
 - **D) All these choices are correct** ✅
 
-> The unit of capacitance is the farad. In practical circuits, you'll usually see microfarads (µF) or picofarads (pF), as one full farad is an enormous capacitance. Named after Michael Faraday.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T6A11
 **Which of the following battery chemistries is not rechargeable?**
@@ -100,7 +100,7 @@
 - C) Lead-acid
 - D) Lithium-ion
 
-> The unit of inductance is the henry. Practical inductors are measured in millihenrys (mH) or microhenrys (µH). Named after Joseph Henry, who discovered electromagnetic self-inductance.
+> The correct choice here is Carbon-zinc.
 
 ## Group T6B — Semiconductor Components: Diodes, Transistors, and LEDs
 
@@ -111,7 +111,7 @@
 - C) It indicates that the diode is defective
 - D) It has no impact on the voltage delivered to the load
 
-> A diode allows current to flow in only one direction. It has an anode and cathode — current flows from anode to cathode (forward bias) but is blocked in the reverse direction. This one-way valve behavior is fundamental to power supplies and signal processing.
+> The correct answer is A) It is lower in some diode types than in others.
 
 ### T6B02
 **What electronic component allows current to flow in only one direction?**
@@ -120,7 +120,7 @@
 - **C) Diode** ✅
 - D) Driven element
 
-> An LED (Light-Emitting Diode) emits light when forward current flows through it. It's a special type of diode made from semiconductor materials that release photons when electrons recombine with holes. Different materials produce different colors.
+> The correct answer is C) Diode.
 
 ### T6B03
 **Which of these components can be used as an electronic switch?**
@@ -156,7 +156,7 @@
 - C) With the letter C
 - D) With the letter K
 
-> The main function of a transistor in an electronic circuit is to amplify signals or act as a switch. Transistors can boost weak signals to usable levels (amplification) or turn circuits on and off (switching). They're the workhorse of electronics.
+> The correct answer is With a stripe.
 
 ### T6B07
 **What causes a light-emitting diode (LED) to emit light?**
@@ -174,7 +174,7 @@
 - C) Free Electron Transmitter
 - **D) Field Effect Transistor** ✅
 
-> A regulator maintains a constant output voltage regardless of changes in input voltage or load current. Voltage regulators are essential in power supplies to provide clean, stable DC power to sensitive electronic circuits.
+> Field Effect Transistor is the correct term or definition for this question.
 
 ### T6B09
 **What are the names for the electrodes of a diode?**
@@ -183,7 +183,7 @@
 - **C) Anode and cathode** ✅
 - D) Gate and base
 
-> Semiconductor material is used in a solar cell to convert light energy into electrical energy. When photons hit the semiconductor junction, they knock electrons free, creating current — this is the photovoltaic effect.
+> The correct answer is Anode and cathode.
 
 ### T6B10
 **Which of the following can provide power gain?**
@@ -192,7 +192,7 @@
 - C) Reactor
 - D) Resistor
 
-> The approximate junction threshold voltage of a typical silicon diode is 0.7 volts. This means a silicon diode needs about 0.7V of forward bias before significant current flows. Germanium diodes have a lower threshold of about 0.3V.
+> The correct choice here is Transistor.
 
 ### T6B11
 **What does the term gain mean in amplifiers?**
@@ -210,7 +210,7 @@
 - C) Input, output, supply
 - D) Pole one, pole two, output
 
-> The correct answer is B) Emitter, base, collector.
+> The three electrodes of a bipolar junction transistor are the emitter, base, and collector. The base controls current flow between the emitter and collector. A small current into the base allows a much larger current to flow from collector to emitter — that's how transistors amplify.
 
 ## Group T6C — Circuit Diagrams and Schematic Symbols
 
@@ -293,7 +293,7 @@
 - C) Potentiometer
 - **D) Transformer** ✅
 
-> The schematic symbol for a PNP transistor has the arrow pointing inward (toward the base). Remember: PNP = Points iN Proudly. For NPN, the arrow points outward (Not Pointing iN).
+> Transformer is the component or connection shown in the referenced figure.
 
 ### T6C10
 **What is component 3 in figure T-3?**
@@ -302,7 +302,7 @@
 - C) Variable capacitor
 - **D) Variable inductor** ✅
 
-> Component 1 in figure T-3 is an NPN transistor. The arrow on the emitter points away from the base — NPN = Not Pointing iN.
+> Variable inductor is the component or connection shown in the referenced figure.
 
 ### T6C11
 **What is component 4 in figure T-3?**
@@ -311,7 +311,7 @@
 - C) Dummy load
 - D) Ground
 
-> Component 4 in figure T-3 is a transformer. The two coils with parallel lines between them represent a transformer, which transfers energy between circuits via magnetic coupling.
+> Antenna is the component or connection shown in the referenced figure.
 
 ### T6C12
 **Which of the following is accurately represented in electrical schematics?**
@@ -320,7 +320,7 @@
 - **C) Component connections** ✅
 - D) All these choices are correct
 
-> Component 4 in figure T-2 identifies the component's value (typically) — in schematic notation, this helps you know what specific part to use when building the circuit.
+> Component connections is the component or connection shown in the referenced figure.
 
 ## Group T6D — Practical Circuit Components and Their Functions
 
@@ -331,7 +331,7 @@
 - C) Amplifier
 - D) Reflector
 
-> A switch is the component that controls the flow of current by making or breaking a circuit connection. When closed, it completes the circuit; when open, it breaks it. Switches range from simple toggle switches to complex multi-position rotary switches.
+> The correct choice here is Rectifier.
 
 ### T6D02
 **What is a relay?**
@@ -358,7 +358,7 @@
 - **C) Meter** ✅
 - D) Relay
 
-> An integrated circuit (IC) is a package containing multiple electronic components combined into a single device. ICs can contain thousands to billions of transistors, resistors, and other components on a tiny silicon chip.
+> The correct choice here is Meter.
 
 ### T6D05
 **What type of circuit controls the amount of voltage from a power supply?**
@@ -367,7 +367,7 @@
 - C) Filter
 - D) Phase inverter
 
-> Component 5 in figure T-3 is an inductor. The coil symbol represents the wire wound into loops that creates and stores energy in a magnetic field.
+> The correct choice here is Regulator.
 
 ### T6D06
 **What component changes 120 V AC power to a lower AC voltage for other uses?**
@@ -394,7 +394,7 @@
 - C) Potentiometer
 - **D) Capacitor** ✅
 
-> An RFID tag contains a transmitter and receiver that can communicate data when activated by a nearby interrogator. The tag's built-in antenna receives a signal from the reader, which powers the tag and allows it to transmit its stored data.
+> The correct choice here is Capacitor.
 
 ### T6D09
 **What is the name of a device that combines several semiconductors and other components into one package?**
@@ -403,7 +403,7 @@
 - **C) Integrated circuit** ✅
 - D) Transformer
 
-> A piezoelectric crystal oscillator uses the mechanical vibration of a quartz crystal to generate a precise frequency. The crystal vibrates at a very stable frequency determined by its physical dimensions, making crystal oscillators the standard for frequency references.
+> The correct answer is Integrated circuit.
 
 ### T6D10
 **What is the function of component 2 in figure T-1?**
@@ -412,7 +412,7 @@
 - **C) Control the flow of current** ✅
 - D) Convert electrical energy into radio waves
 
-> A capacitor blocks DC but allows AC to pass. This property is used for coupling (passing AC signals between stages while blocking DC bias voltages) and filtering. The higher the frequency, the more easily it passes through a capacitor.
+> The correct answer is Control the flow of current.
 
 ### T6D11
 **Which of the following is a resonant or tuned circuit?**
@@ -421,4 +421,4 @@
 - C) A resistor circuit used for reducing standing wave ratio
 - D) A circuit designed to provide high-fidelity audio
 
-> An inductor blocks AC but allows DC to pass — the opposite of a capacitor. Inductors resist changes in current, and higher frequencies encounter more opposition (reactance). This makes inductors useful for filtering and RF chokes.
+> The correct choice here is An inductor and a capacitor in series or parallel.

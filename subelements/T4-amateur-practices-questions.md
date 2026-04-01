@@ -46,7 +46,7 @@
 - C) In parallel with the push-to-talk line and the antenna
 - D) In the power supply cable, as close as possible to the radio
 
-> Most modern transceivers connect to a computer through a USB cable for both audio and control. This single connection handles CAT control (frequency, mode), audio in/out for digital modes, and often PTT control. It's much simpler than the multiple cables older setups required.
+> The correct answer is In the feed line, between the transmitter and antenna.
 
 ### T4A06
 **What signals are used in a computer-radio interface for digital mode operation?**
@@ -55,7 +55,7 @@
 - **C) Receive audio, transmit audio, and transmitter keying** ✅
 - D) NMEA GPS location and DC power
 
-> An RF power meter installed between the transmitter and antenna monitors the output power level. It tells you exactly how much power is going to the antenna, which is useful for adjusting power levels and troubleshooting.
+> The correct answer is C) Receive audio, transmit audio, and transmitter keying.
 
 ### T4A07
 **Which of the following is one of the connections required between a computer and a transceiver to operate digital modes?**
@@ -82,7 +82,7 @@
 - C) Multiply the watts per hour consumed by the equipment by the battery power rating
 - D) Multiply the square of the current rating of the battery by the input resistance of the equipment
 
-> Transmit/receive (T/R) switching at the antenna connector of a modern transceiver is performed by electronic switching circuits. These solid-state switches are fast and reliable, replacing the mechanical relays used in older equipment.
+> The correct answer is Divide the battery ampere-hour rating by the average current draw of the equipment.
 
 ### T4A10
 **What function does a digital mode hotspot perform for nearby transceivers?**
@@ -109,7 +109,7 @@
 - **C) A device that assists in manual sending of Morse code** ✅
 - D) An interlock to prevent unauthorized use of a radio
 
-> The correct answer is C) A device that assists in manual sending of Morse code.
+> An electronic keyer is a device that assists in manual sending of Morse code. It automatically generates properly timed dots and dashes when you press a paddle — you control the characters, but the keyer handles the precise timing. This makes CW sending faster, more consistent, and less tiring than using a straight key.
 
 ## Group T4B — Operating controls; tuning; use of filters; squelch; AGC; repeater access; DMR operation
 
@@ -129,7 +129,7 @@
 - C) The Automatic Frequency Control
 - D) All these choices are correct
 
-> For clear FM voice through a repeater, speak across the microphone rather than directly into it, at a normal conversational volume. Talking too close or too loud causes over-deviation. Think of it like a phone call — natural voice, not a shouting match.
+> The correct choice here is The keypad or VFO knob.
 
 ### T4B03
 **How is squelch adjusted so that a weak FM signal can be heard?**
@@ -138,7 +138,7 @@
 - C) Turn on the anti-squelch function
 - D) Enable squelch enhancement
 
-> Multi-use transceivers can communicate on both amateur and non-amateur frequencies like FRS and GMRS. However, type acceptance rules still apply — you can only transmit on frequencies where your radio is approved and you're licensed.
+> The correct answer is Set the squelch threshold so that receiver output audio is on all the time.
 
 ### T4B04
 **What does an FM signal sound like when received slightly off frequency?**
@@ -165,7 +165,7 @@
 - C) The tone squelch
 - **D) The RIT or Clarifier** ✅
 
-> An AGC circuit (Automatic Gain Control) adjusts the receiver's gain automatically to maintain a steady audio output level despite varying signal strengths. Without AGC, strong signals would blast your ears while weak ones would be barely audible.
+> The correct choice here is The RIT or Clarifier.
 
 ### T4B07
 **What is a DMR “code plug”?**
@@ -201,7 +201,7 @@
 - **C) 2400 Hz** ✅
 - D) 5000 Hz
 
-> DMR repeaters can handle two conversations simultaneously using two time slots — they divide each frequency into alternating time slices. This is called TDMA (Time Division Multiple Access), and it effectively doubles the capacity of each frequency.
+> The correct choice here is 2400 Hz.
 
 ### T4B11
 **Which of the following must be programmed into a D-STAR digital transceiver before transmitting?**
@@ -210,4 +210,4 @@
 - C) The codec type being used
 - D) All these choices are correct
 
-> If you're listening to a station that sounds distorted and changing the volume doesn't help, try adjusting the squelch or using a different receive filter bandwidth. The problem is likely in the RF or demodulation stage, not the audio amplifier.
+> The correct choice here is Your call sign.

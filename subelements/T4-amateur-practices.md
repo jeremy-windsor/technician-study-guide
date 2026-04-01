@@ -22,7 +22,7 @@ For RF bonding, flat copper strap is the preferred conductor. At radio frequenci
 
 ## Digital Mode Setup
 
-For FT8 operation, the transceiver's audio input and output connect to the audio input and output of a computer running WSJT-X software. The radio's audio output goes to the computer's audio input so the computer can decode received signals, and the computer's audio output goes to the radio's audio input so it can generate transmit signals. There's no special FT8 conversion unit or website needed.
+For FT8 operation, the transceiver's audio input and output connect to the audio input and output of a computer running FT8 software such as WSJT-X. The radio's audio output goes to the computer's audio input so the computer can decode received signals, and the computer's audio output goes to the radio's audio input so it can generate transmit signals. There's no special FT8 conversion unit or website needed.
 
 A computer-radio interface for digital mode operation uses three key signals: receive audio from the radio to the computer, transmit audio from the computer to the radio, and a transmitter keying signal to tell the radio when to transmit. That's audio in, audio out, and a key line.
 
@@ -48,7 +48,7 @@ Squelch is adjusted to hear a weak FM signal by setting the squelch threshold so
 
 Having multiple receive bandwidth choices on a multimode transceiver lets you reduce noise or interference by selecting a bandwidth that matches the mode you're using. CW needs only about 500 hertz of bandwidth, SSB needs about 2400 hertz, and FM needs about 15 kilohertz. A narrower filter passes less noise, improving your signal-to-noise ratio.
 
-The best filter bandwidth for SSB reception is 2400 hertz. This matches the bandwidth of an SSB voice signal. A 500-hertz filter would cut off too much voice audio, and a 5000-hertz filter would pass unnecessary noise. Match the filter to the signal for the best results.
+The best filter bandwidth for SSB reception is 2400 hertz. That's slightly narrower than the roughly 3 kHz occupied by an SSB voice signal, which gives a good balance between passing intelligible voice audio and rejecting extra noise. A 500-hertz filter would cut off too much voice audio, and a 5000-hertz filter would pass unnecessary noise. Match the filter to the signal for the best results.
 
 ## SSB and FM Operation
 

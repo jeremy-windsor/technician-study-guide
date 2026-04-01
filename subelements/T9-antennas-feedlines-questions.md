@@ -19,7 +19,7 @@
 - C) Installing a spring in the base of a mobile vertical antenna to make it more flexible
 - D) Strengthening the radiating elements of a beam antenna to better resist wind damage
 
-> An isotropic antenna is a theoretical reference point that radiates equally in all directions. It's used as a baseline for measuring antenna gain (dBi). No real antenna is truly isotropic, but it's a useful mathematical concept.
+> The correct choice here is Electrically lengthening by inserting inductors in radiating elements.
 
 ### T9A03
 **How is the polarization of an antenna described?**
@@ -46,7 +46,7 @@
 - **C) Shortening it** ✅
 - D) Adding capacitive loading to the ends of the radiating wires
 
-> A half-wave dipole is approximately 468/frequency(MHz) feet long. This classic formula accounts for the end effect that makes a real dipole slightly shorter than the free-space half wavelength. It's one of the most commonly built amateur antennas.
+> The correct choice here is Shortening it.
 
 ### T9A06
 **Which of the following types of antennas offers the greatest gain?**
@@ -91,7 +91,7 @@
 - C) In the direction of the feed line
 - **D) Broadside to the antenna** ✅
 
-> Placing a VHF or UHF antenna at the highest point available generally results in the best performance because VHF/UHF propagation is line-of-sight. Higher antennas can "see" farther, extending your range to the radio horizon.
+> The correct answer is D) Broadside to the antenna.
 
 ### T9A11
 **What is antenna gain?**
@@ -100,7 +100,7 @@
 - **C) The increase in signal strength in a specified direction compared to a reference antenna** ✅
 - D) The increase in impedance on receive or transmit compared to a reference antenna
 
-> A directional antenna pointed at the receiving station improves SSB and CW signals on VHF because it concentrates your transmitted power in one direction (more gain toward the target) and reduces received noise from other directions.
+> The correct answer is The increase in signal strength in a specified direction compared to a reference antenna.
 
 ## Group T9B — Feed Lines, Connectors, and SWR
 
@@ -129,7 +129,7 @@
 - C) It can handle more power than any other type of feed line
 - D) It is less expensive than any other type of feed line
 
-> The benefit of low-loss coaxial cable is that more of your transmitted power actually reaches the antenna, and more of the received signal reaches your radio. High-loss cable wastes power as heat.
+> The correct answer is It is easy to use and requires few special installation considerations.
 
 ### T9B04
 **What is the major function of an antenna tuner (antenna coupler)?**
@@ -138,7 +138,7 @@
 - C) It allows an antenna to be used on both transmit and receive
 - D) It automatically selects the proper antenna for the frequency band being used
 
-> Open wire (ladder line) feed line has the lowest loss of common feed line types. It can have 10 times less loss than coax at HF frequencies. The trade-off is that it requires more careful routing and can't be run through metal conduit.
+> The correct answer is It matches the antenna system impedance to the transceiver's output impedance.
 
 ### T9B05
 **What happens as the frequency of a signal in coaxial cable is increased?**
@@ -147,7 +147,7 @@
 - C) The characteristic impedance increases
 - **D) The loss increases** ✅
 
-> A PL-259 connector is the standard connector for coaxial cable at HF frequencies. It's the most common connector you'll encounter on HF equipment. Also called a UHF connector, though it's actually most suitable for HF.
+> The correct answer is D) The loss increases.
 
 ### T9B06
 **Which of the following connector types is most suitable as an RF connector for frequencies above 400 MHz?**
@@ -165,7 +165,7 @@
 - **C) They are commonly used at HF and VHF frequencies** ✅
 - D) They are a bayonet-type connector
 
-> RG-58 is a common type of coaxial cable used for short runs at VHF and UHF, though it has higher loss than larger cables. For longer runs or higher frequencies, lower-loss cables like RG-213 or LMR-400 are better choices.
+> The correct choice here is They are commonly used at HF and VHF frequencies.
 
 ### T9B08
 **Which of the following is a source of loss in coaxial feed line?**
@@ -174,7 +174,7 @@
 - C) Multiple connectors in the line
 - **D) All these choices are correct** ✅
 
-> The reason to use an impedance matching device (antenna tuner) between the transmitter and antenna system is to maximize power transfer to the antenna by matching the transmitter's output impedance to the load. A good match means less reflected power and more radiated signal.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T9B09
 **What can cause erratic changes in SWR?**
@@ -192,7 +192,7 @@
 - **C) RG-213 cable has less loss at a given frequency** ✅
 - D) RG-58 cable can handle higher power levels
 
-> An SWR of 1:1 means a perfect impedance match — all the power from the transmitter is delivered to the antenna with no reflections. In practice, an SWR of 1.5:1 or lower is considered excellent.
+> The correct answer is RG-213 cable has less loss at a given frequency.
 
 ### T9B11
 **Which of the following types of feed line has the lowest loss?**
@@ -210,4 +210,4 @@
 - C) The transmitter efficiency ratio
 - D) An indication of the quality of your station’s ground connection
 
-> The correct answer is A) A measure of how well a load is matched to a transmission line.
+> Standing wave ratio (SWR) is a measure of how well a load is matched to a transmission line. An SWR of 1:1 is a perfect match — all power goes to the antenna. Higher SWR means more power is reflected back toward the transmitter, reducing efficiency and potentially damaging equipment.

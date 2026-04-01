@@ -28,7 +28,7 @@
 - **C) Horizontal** ✅
 - D) Vertical
 
-> Multipath propagation — signals reflecting off buildings, vehicles, and terrain — causes irregular fading of VHF signals. The signal arrives via multiple paths with different delays and phases, creating constantly shifting interference patterns.
+> The correct answer is C) Horizontal.
 
 ### T3A04
 **What is the effect of antenna cross-polarization over a line-of-sight VHF or UHF path?**
@@ -46,7 +46,7 @@
 - C) Try the long path
 - D) Increase the antenna SWR
 
-> When an HF signal travels through the ionosphere, Faraday rotation changes its polarization. Because the polarization becomes unpredictable, either vertically or horizontally polarized antennas work on ionospheric paths — the mismatch penalty is less severe since the signal has components in both planes.
+> The correct answer is Try to find a path that reflects signals to the repeater.
 
 ### T3A06
 **What is the meaning of the term “picket fencing”?**
@@ -64,7 +64,7 @@
 - **C) Precipitation** ✅
 - D) Colder temperatures
 
-> For long-distance CW and SSB contacts on VHF and UHF, horizontal polarization is the standard. Vertical is used for FM. This convention exists because horizontal antennas like Yagis tend to pick up less man-made noise and are standard for directional weak-signal work.
+> The correct answer is C) Precipitation.
 
 ### T3A08
 **What is a likely cause of irregular fading of signals propagated by the ionosphere?**
@@ -73,7 +73,7 @@
 - C) Intermodulation distortion
 - **D) Random combining of signals arriving via different paths** ✅
 
-> Multipath propagation affects data transmissions by increasing error rates. When copies of a signal arrive at different times via different paths, they create inter-symbol interference. Digital modes designed for multipath can help, but the fundamental effect is more errors.
+> The correct answer is Random combining of signals arriving via different paths.
 
 ### T3A09
 **Which of the following results from the fact that signals propagated by the ionosphere are elliptically polarized?**
@@ -82,7 +82,7 @@
 - C) FM voice is unusable
 - D) Both the transmitting and receiving antennas must be of the same polarization
 
-> Radio signals can bend around sharp edges of objects through a phenomenon called knife-edge diffraction. This is why you can sometimes receive signals even when there's an obstacle between you and the transmitting station — the signal bends around the edge.
+> The correct choice here is Either vertically or horizontally polarized antennas may be used for transmission or reception.
 
 ### T3A10
 **What effect does multi-path propagation have on data transmissions?**
@@ -91,7 +91,7 @@
 - C) No significant changes will occur if the signals are transmitted using FM
 - **D) Error rates are likely to increase** ✅
 
-> Line-of-sight propagation is the normal mode for VHF and UHF — signals travel in straight lines from transmitter to receiver. The range is limited by the curvature of the earth, which is why antenna height is so important for VHF/UHF operation.
+> The correct answer is D) Error rates are likely to increase.
 
 ### T3A11
 **Which region of the atmosphere can reflect HF radio waves?**
@@ -129,7 +129,7 @@
 - C) The ratio of the energy in the magnetic field to the energy in the electric field
 - D) The ratio of the velocity to the wavelength
 
-> The relationship between wavelength and frequency is inverse — as frequency increases, wavelength decreases. They're connected by the speed of light: wavelength = 300 / frequency(MHz). Double the frequency and the wavelength is cut in half.
+> The correct answer is A) The orientation of the electric field.
 
 ### T3B03
 **What are the two components of a radio wave?**
@@ -138,7 +138,7 @@
 - **C) Electric and magnetic fields** ✅
 - D) Ionizing and non-ionizing radiation
 
-> The velocity of conventional electric current in a circuit is approximately 300,000,000 meters per second — the speed of light. Electrical signals in conductors travel at nearly the speed of light, though the actual electrons move much more slowly.
+> The correct answer is Electric and magnetic fields.
 
 ### T3B04
 **What is the velocity of a radio wave traveling through free space?**
@@ -174,7 +174,7 @@
 - C) Channel numbers
 - D) All these choices are correct
 
-> The approximate wavelength for a frequency of 146 MHz is about 2 meters. Using the formula: 300 ÷ 146 = 2.05 meters. This is why the 144–148 MHz band is called the "2-meter band."
+> The correct answer is A) The approximate wavelength in meters.
 
 ### T3B08
 **What frequency range is referred to as VHF?**
@@ -183,7 +183,7 @@
 - C) 300 kHz to 3000 kHz
 - D) 300 MHz to 3000 MHz
 
-> The approximate wavelength for a frequency of 440 MHz is about 0.7 meters (70 centimeters). Using the formula: 300 ÷ 440 = 0.68 meters. This is why the 420–450 MHz band is called the "70-centimeter band."
+> The correct answer is B) 30 MHz to 300 MHz.
 
 ### T3B09
 **What frequency range is referred to as UHF?**
@@ -201,7 +201,7 @@
 - **C) 3 to 30 MHz** ✅
 - D) 300 to 3000 kHz
 
-> The approximate wavelength for a frequency of 28.4 MHz is about 10 meters. Using the formula: 300 ÷ 28.4 = 10.6 meters. This is why the 28–29.7 MHz band is called the "10-meter band."
+> The correct answer is C) 3 to 30 MHz.
 
 ### T3B11
 **What is the approximate velocity of a radio wave in free space?**
@@ -230,7 +230,7 @@
 - **C) UHF signals are usually not propagated by the ionosphere** ✅
 - D) UHF signals are absorbed by the ionospheric D region
 
-> Tropospheric ducting is the propagation mode that uses temperature inversions in the atmosphere to refract VHF and UHF signals beyond normal line-of-sight range. It occurs when a warm air layer over cooler air creates a "duct" that bends signals back toward the ground.
+> The correct answer is UHF signals are usually not propagated by the ionosphere.
 
 ### T3C02
 **What is a characteristic of HF communication compared with communications on VHF and higher frequencies?**
@@ -239,7 +239,7 @@
 - **C) Long-distance ionospheric propagation is far more common on HF** ✅
 - D) There is less atmospheric interference (static) on HF
 
-> Under normal propagation conditions, which amateur band travels the farthest? The 10-meter band — it's the lowest frequency amateur band accessible to Technicians for voice, and lower frequencies generally propagate farther due to ionospheric reflection.
+> The correct answer is Long-distance ionospheric propagation is far more common on HF.
 
 ### T3C03
 **What is one characteristic of VHF signals received via auroral backscatter?**
@@ -266,7 +266,7 @@
 - C) Quantum tunneling
 - D) Doppler shift
 
-> You can tell if you're hearing a distant station via sporadic E propagation when signals from prior prior prior prior prior prior prior prior — skip it. You'll hear strong signals from hundreds of miles away on bands that normally only support local communication. The signals appear suddenly and may fade just as quickly.
+> The correct choice here is Knife-edge diffraction.
 
 ### T3C06
 **What type of propagation is responsible for allowing over-the-horizon VHF and UHF communications to ranges of approximately 300 miles on a regular basis?**
@@ -275,7 +275,7 @@
 - C) F2 region refraction
 - D) Faraday rotation
 
-> Meteor scatter allows brief communications using reflections off ionized trails left by meteors entering Earth's atmosphere. These trails last only seconds, so exchanges must be quick. It works best on 6 meters and 2 meters.
+> The correct choice here is Tropospheric ducting.
 
 ### T3C07
 **What band is best suited for communicating via meteor scatter?**
@@ -284,7 +284,7 @@
 - C) 2 meters
 - D) 70 centimeters
 
-> The MUF (Maximum Usable Frequency) is the highest frequency at which signals can be refracted back to Earth by the ionosphere at a given time. Frequencies above the MUF pass through the ionosphere into space. Below it, they bounce back — and the closer you are to the MUF, the farther you can communicate.
+> The correct answer is B) 6 meters.
 
 ### T3C08
 **What causes tropospheric ducting?**
@@ -293,7 +293,7 @@
 - C) Updrafts from hurricanes and tornadoes
 - **D) Temperature inversions in the atmosphere** ✅
 
-> The sun's activity drives ionospheric propagation. Sunspots, solar flares, and the 11-year solar cycle directly affect ionization levels, which determines which frequencies can propagate via the ionosphere. More sunspots generally mean better HF propagation.
+> The correct answer is D) Temperature inversions in the atmosphere.
 
 ### T3C09
 **What is generally the best time for long-distance 10-meter band propagation via the F region?**
@@ -311,7 +311,7 @@
 - C) 70 centimeters and 1.25 meters
 - D) All these choices are correct
 
-> Satellites in polar orbits can communicate with stations worldwide because the Earth rotates beneath them, eventually bringing every location into view. A single polar-orbiting satellite can cover the entire globe as the Earth turns.
+> The correct choice here is 6 and 10 meters.
 
 ### T3C11
 **Why is the radio horizon for VHF and UHF signals more distant than the visual horizon?**
@@ -320,4 +320,4 @@
 - **C) The atmosphere refracts radio waves slightly** ✅
 - D) Radio waves are blocked by dust particles
 
-> Approximately 12 hours is a good estimate for the time it takes a satellite in a low Earth orbit to complete one revolution. LEO satellites at typical altitudes orbit in about 90–100 minutes, but the exam answer reflects a simplified view of the orbital period concept.
+> The correct answer is The atmosphere refracts radio waves slightly.

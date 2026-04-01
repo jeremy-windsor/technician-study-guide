@@ -19,7 +19,7 @@
 - C) Watt-hours
 - D) Amperes
 
-> Electrical power is measured in watts. Power is the rate at which energy is used or produced in a circuit — it's what heats your resistors and lights your LEDs. Don't confuse watts (power) with volts (electrical pressure), watt-hours (energy over time), or amperes (current flow). Watts = power, period.
+> The correct answer is B) Watts.
 
 ### T5A03
 **What is the term for the flow of electrons in an electric circuit?**
@@ -82,7 +82,7 @@
 - **C) Current that alternates between positive and negative directions** ✅
 - D) All these answers are correct
 
-> A battery converts chemical energy into electrical energy. The chemical reactions inside the battery create a voltage difference between the terminals, which pushes current through an external circuit. When the chemicals are used up, the battery is dead.
+> The correct choice here is Current that alternates between positive and negative directions.
 
 ### T5A10
 **Which term describes the rate at which electrical energy is used?**
@@ -91,7 +91,7 @@
 - **C) Power** ✅
 - D) Voltage
 
-> DC stands for direct current, which flows in one direction only — from negative to positive (or by convention, positive to negative). Batteries produce DC. AC (alternating current) reverses direction periodically.
+> Power is the correct term or definition for this question.
 
 ### T5A11
 **What type of current flow is opposed by resistance?**
@@ -100,7 +100,7 @@
 - C) RF current
 - **D) All these choices are correct** ✅
 
-> AC stands for alternating current, which reverses direction periodically. Household wall outlets provide AC power. The current flows back and forth many times per second (60 Hz in the US). Transformers only work with AC, not DC.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ## Group T5B — Metric prefixes and unit conversions; decibels
 
@@ -120,7 +120,7 @@
 - C) 15 GHz
 - D) 150 kHz
 
-> A gain of 3 dB means approximately doubling the power. Decibels are logarithmic: +3 dB = 2× power, +10 dB = 10× power, +20 dB = 100× power. Similarly, -3 dB means half the power. The dB scale makes it easy to express large power ratios.
+> This is a unit-conversion or decibel question. Work it out and you get 1500 kHz.
 
 ### T5B03
 **Which is equal to one kilovolt?**
@@ -129,7 +129,7 @@
 - **C) One thousand volts** ✅
 - D) One million volts
 
-> A loss of 3 dB is approximately a 50% reduction — you lose half your power. If you start with 100 watts and lose 3 dB, you're down to about 50 watts. Each additional 3 dB of loss cuts the power in half again.
+> This is a unit-conversion or decibel question. Work it out and you get One thousand volts.
 
 ### T5B04
 **Which is equal to one microvolt?**
@@ -138,7 +138,7 @@
 - C) One thousand kilovolts
 - D) One one-thousandth of a volt
 
-> A signal report of 20 dB over S9 means the signal is extremely strong — 100 times more powerful than the S9 reference level. Each S-unit above S9 is about 6 dB, and 20 dB above S9 is a very strong signal indeed.
+> This is a unit-conversion or decibel question. Work it out and you get One one-millionth of a volt.
 
 ### T5B05
 **Which is equal to 500 milliwatts?**
@@ -156,7 +156,7 @@
 - C) 3,000,000 amperes
 - **D) 3 amperes** ✅
 
-> If a transmitter puts out 10 watts and the antenna system has 2 dB of loss, about 6 watts reaches the antenna. 2 dB of loss means you lose roughly 37% of your power. The rest is dissipated as heat in the feed line and connectors.
+> This is a unit-conversion or decibel question. Work it out and you get 3 amperes.
 
 ### T5B07
 **Which is equal to 3.525 MHz?**
@@ -165,7 +165,7 @@
 - **C) 3525 kHz** ✅
 - D) 3,525,000 kHz
 
-> If a transmitter puts out 10 watts and the antenna has 6 dBd gain, the effective radiated power (ERP) is approximately 40 watts. Each 3 dB of gain doubles the power, so 6 dB = 4× power: 10 × 4 = 40 watts ERP.
+> This is a unit-conversion or decibel question. Work it out and you get 3525 kHz.
 
 ### T5B08
 **Which is equal to 1,000,000 picofarads?**
@@ -174,7 +174,7 @@
 - C) 1000 microfarads
 - D) 1,000,000,000 microfarads
 
-> If you double the power from 5 watts to 10 watts, that's a 3 dB increase. Doubling power is always +3 dB, regardless of the starting power level. This is one of the most important dB relationships to memorize.
+> This is a unit-conversion or decibel question. Work it out and you get 1 microfarad.
 
 ### T5B09
 **Which decibel value most closely represents a power increase from 5 watts to 10 watts?**
@@ -183,7 +183,7 @@
 - C) 5 dB
 - D) 10 dB
 
-> The unit of frequency is the hertz (Hz). Named after Heinrich Hertz, one hertz equals one cycle per second. Amateur radio commonly uses kilohertz (kHz), megahertz (MHz), and gigahertz (GHz).
+> This is a unit-conversion or decibel question. Work it out and you get 3 dB.
 
 ### T5B10
 **Which decibel value most closely represents a power decrease from 12 watts to 3 watts?**
@@ -192,7 +192,7 @@
 - **C) -6 dB** ✅
 - D) -9 dB
 
-> A frequency of 28,400 kHz equals 28.400 MHz. To convert kHz to MHz, divide by 1,000. To convert MHz to kHz, multiply by 1,000. Moving the decimal point three places handles the conversion.
+> This is a unit-conversion or decibel question. Work it out and you get -6 dB.
 
 ### T5B11
 **Which decibel value represents a power increase from 20 watts to 200 watts?**
@@ -201,7 +201,7 @@
 - C) 18 dB
 - D) 28 dB
 
-> 1,500,000 hertz equals 1500 kHz. To convert Hz to kHz, divide by 1,000. 1,500,000 ÷ 1,000 = 1,500 kHz, which is also equal to 1.5 MHz.
+> This is a unit-conversion or decibel question. Work it out and you get 10 dB.
 
 ### T5B12
 **Which is equal to 28400 kHz?**
@@ -210,7 +210,7 @@
 - C) 284.00 MHz
 - **D) 28.400 MHz** ✅
 
-> Mega (M) is the metric prefix for one million, or 10^6. So 1 megahertz = 1,000,000 hertz. The prefix progression is: kilo (10^3), mega (10^6), giga (10^9).
+> This is a unit-conversion or decibel question. Work it out and you get 28.400 MHz.
 
 ### T5B13
 **Which is equal to 2425 MHz?**
@@ -302,7 +302,7 @@
 - C) 23.8 watts
 - D) 3.8 watts
 
-> If a 12-volt battery supplies 0.25 amperes to a circuit, the power is 3 watts. Using P = E × I: 12 volts × 0.25 amps = 3 watts. Simple multiplication of voltage and current gives you power in watts.
+> Apply the appropriate circuit formula and you get 138 watts.
 
 ### T5C10
 **How much power is delivered by a voltage of 12 volts DC and a current of 2.5 amperes?**
@@ -311,7 +311,7 @@
 - C) 14.5 watts
 - D) 0.208 watts
 
-> If a 120-volt circuit draws 2.5 amps, the power is 300 watts. P = E × I: 120 × 2.5 = 300 watts. This is a practical household example — a 300-watt load on a standard wall outlet.
+> Apply the appropriate circuit formula and you get 30 watts.
 
 ### T5C11
 **How much current is required to deliver 120 watts at a voltage of 12 volts DC?**
@@ -320,7 +320,7 @@
 - C) 12 amperes
 - D) 132 amperes
 
-> Power is measured in watts (W). Named after James Watt, one watt equals one volt times one ampere. In amateur radio, power is often expressed in watts or milliwatts (mW) for low-power operation.
+> Apply the appropriate circuit formula and you get 10 amperes.
 
 ### T5C12
 **What is impedance?**
@@ -376,7 +376,7 @@
 - **C) 8 ohms** ✅
 - D) 13.5 ohms
 
-> Using E = I × R: 2 amps × 50 ohms = 100 volts. Multiply the current by the resistance to find the voltage drop across the circuit.
+> Apply the appropriate circuit formula and you get 8 ohms.
 
 ### T5D06
 **What is the resistance of a circuit that draws 4 amperes from a 12-volt source?**
@@ -385,7 +385,7 @@
 - C) 48 ohms
 - D) 8 ohms
 
-> Using E = I × R: 0.5 amps × 2 ohms = 1 volt. Even though both values are small, the math is the same. Half an amp through 2 ohms gives you 1 volt.
+> Apply the appropriate circuit formula and you get 3 ohms.
 
 ### T5D07
 **What is the current in a circuit with an applied voltage of 120 volts and a resistance of 80 ohms?**
@@ -403,7 +403,7 @@
 - **C) 2 amperes** ✅
 - D) 100 amperes
 
-> Using P = E × I: 13.8 volts × 10 amps = 138 watts. This is a typical mobile radio setup — a 13.8V power supply delivering 10 amps to the radio equals about 138 watts of power consumption.
+> Apply the appropriate circuit formula and you get 2 amperes.
 
 ### T5D09
 **What is the current through a 24-ohm resistor connected across 240 volts?**
@@ -421,7 +421,7 @@
 - C) 2.5 volts
 - D) 1.5 volts
 
-> Using P = E² / R: 12² ÷ 50 = 144 ÷ 50 = 2.88 watts, approximately 2.9 watts. When you know voltage and resistance but not current, use this form of the power equation.
+> Apply the appropriate circuit formula and you get 1 volt.
 
 ### T5D11
 **What is the voltage across a 10-ohm resistor if a current of 1 ampere flows through it?**
@@ -430,7 +430,7 @@
 - C) 11 volts
 - D) 9 volts
 
-> Using I = P / E: 50 watts ÷ 120 volts ≈ 0.42 amps. Rearranging P = E × I to solve for current gives you the current drawn by a device of known power and voltage.
+> Apply the appropriate circuit formula and you get 10 volts.
 
 ### T5D12
 **What is the voltage across a 10-ohm resistor if a current of 2 amperes flows through it?**
@@ -439,7 +439,7 @@
 - C) 12 volts
 - **D) 20 volts** ✅
 
-> Using R = E / I: 240 volts ÷ 24 amps = 10 ohms. This is Ohm's Law in its simplest form — voltage divided by current equals resistance.
+> Apply the appropriate circuit formula and you get 20 volts.
 
 ### T5D13
 **In which type of circuit is the current always the same through all components?**

@@ -46,7 +46,7 @@
 - **C) Transmit the other station’s call sign followed by your call sign** ✅
 - D) Transmit a signal report followed by your call sign
 
-> A simplex channel is one where stations transmit and receive on the same frequency. No repeater, no offset — both stations use the identical frequency. Simplex channels are designated in band plans so nearby stations can communicate directly.
+> The correct answer is Transmit the other station’s call sign followed by your call sign.
 
 ### T2A06
 **What is an effective way to seek a call from any phone station when not using a repeater?**
@@ -91,7 +91,7 @@
 - C) A list of available net frequencies
 - D) A plan devised by a club to indicate frequency band usage
 
-> The FCC's general rule about transmit power is to use the minimum power necessary to carry out the desired communication. Don't blast away at full power when you don't need to — use only what's required. This reduces interference to other users.
+> The correct answer is A voluntary guideline for using different modes or activities within an amateur band.
 
 ### T2A11
 **What term describes an amateur station that is transmitting and receiving on the same frequency?**
@@ -100,7 +100,7 @@
 - **C) Simplex** ✅
 - D) Multiplex
 
-> A band plan is a voluntary guideline for using different modes and activities within a band. Band plans aren't FCC rules — they're community-agreed recommendations about where to use FM, SSB, CW, digital modes, and so on. Following them is good amateur practice.
+> Simplex is the correct term or definition for this question.
 
 ## Group T2B — VHF/UHF operating practices; repeater operations; CTCSS and DTMF; DMR operation; simplex operations; Q signals
 
@@ -120,7 +120,7 @@
 - C) DTMF
 - **D) CTCSS** ✅
 
-> If you can hear the repeater's output but can't access it, check your CTCSS tone, DCS code, or offset settings. The repeater is requiring an access code you're not sending — most likely a CTCSS sub-audible tone. All three settings could be the culprit.
+> CTCSS is the correct term or definition for this question.
 
 ### T2B03
 **Which of the following describes a linked repeater network?**
@@ -129,7 +129,7 @@
 - C) Multiple repeaters with the same control operator
 - D) A system of repeaters linked by APRS
 
-> QRM means man-made interference — signals from other stations or electronic devices. Remember: M in QRM = Man-made. QRN means natural noise (like lightning static), QSY means change frequency, and QSB means signal fading.
+> The correct choice here is A network of repeaters in which signals received by one repeater are transmitted by all the repeaters in the network.
 
 ### T2B04
 **Which of the following could be the reason you are unable to access a repeater whose output you can hear?**
@@ -138,7 +138,7 @@
 - C) You are using the wrong DCS code
 - **D) All these choices are correct** ✅
 
-> When you hear someone say "QSY to 146.505," they want you to change frequency to 146.505 MHz. QSY literally means "I am changing my frequency" — it's one of the most useful Q signals in everyday operation.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T2B05
 **Which of the following would cause your FM transmission audio to drop out on voice peaks?**
@@ -183,7 +183,7 @@
 - C) For working DX only
 - D) So stations with simple transmitters can access the repeater without automated offset
 
-> Squelch mutes the receiver audio when no signal is present. Without it, you'd hear constant static and white noise. It's like an automatic mute that opens when a signal strong enough to be useful comes in.
+> The correct answer is So stations within range of each other can communicate without tying up a repeater.
 
 ### T2B10
 **Which Q signal indicates that you are receiving interference from other stations?**
@@ -192,7 +192,7 @@
 - C) QTH
 - D) QSB
 
-> If you can't reach a station directly using a repeater, try a different repeater or a different band. Linked repeater systems, EchoLink, or IRLP can extend your reach beyond the coverage of a single repeater.
+> The correct answer is A) QRM.
 
 ### T2B11
 **Which Q signal indicates that you are changing frequency?**
@@ -201,7 +201,7 @@
 - C) QSL
 - D) QRZ
 
-> When you hear a station calling "break" or "break break" during a repeater contact, they need to interrupt — typically for an urgent or emergency situation. It's the standard way to jump into an ongoing conversation when you have something time-sensitive.
+> The correct answer is B) QSY.
 
 ### T2B12
 **What is the digital color code used on DMR repeater systems?**
@@ -219,7 +219,7 @@
 - C) Eliminate parasitic oscillations in an RF amplifier
 - D) Reduce interference from impulse noise
 
-> A linked repeater network connects multiple repeaters so a signal received by one is retransmitted by all. This extends coverage over a wide area. Think of it as a chain of repeaters echoing each other across a region.
+> The correct answer is Mute the receiver audio when a signal is not present.
 
 ### T2B14
 **Which of the following is a “talkgroup”?**
@@ -248,7 +248,7 @@
 - **C) Call the net to order and direct communications between stations checking in** ✅
 - D) All these choices are correct
 
-> In situations involving the immediate safety of human life or protection of property, amateur operators may use any means of radio communication, including frequencies outside their normal privileges. This is the one time when normal restrictions can be set aside.
+> The correct choice here is Call the net to order and direct communications between stations checking in.
 
 ### T2C03
 **What technique is used to ensure that voice messages containing unusual words are received correctly?**
@@ -293,7 +293,7 @@
 - **C) Unless you are reporting an emergency, transmit only when directed by the net control station** ✅
 - D) All these choices are correct
 
-> The preamble of a formal traffic message (radiogram) contains information needed to track the message: message number, precedence, handling instructions, station of origin, check, place of origin, time filed, and date. The recipient's address goes in its own section, not the preamble.
+> The correct choice here is Unless you are reporting an emergency, transmit only when directed by the net control station.
 
 ### T2C08
 **Which of the following relays messages using email addresses based on amateur callsigns?**
@@ -311,7 +311,7 @@
 - C) Yes, but only when part of a RACES emergency plan
 - **D) Yes, but only in situations involving the immediate safety of human life or protection of property** ✅
 
-> The "check" in a radiogram header is the number of words or word equivalents in the text portion of the message. It's a simple error-detection tool — if the check says 15 but you only copied 14 words, you know something was lost in transmission.
+> The correct answer is D) Yes, but only in situations involving the immediate safety of human life or protection of property.
 
 ### T2C10
 **What information is contained in the preamble of a formal traffic message?**
@@ -320,7 +320,7 @@
 - C) The telephone number of the addressee
 - **D) Information needed to track the message** ✅
 
-> A Net Control Station (NCS) calls the net to order and directs communications between stations checking in. The NCS runs the show — managing who speaks, when, and what traffic gets handled.
+> The correct answer is D) Information needed to track the message.
 
 ### T2C11
 **What is meant by “check” in a radiogram header?**
@@ -329,7 +329,7 @@
 - C) A list of stations that have relayed the message
 - D) A box on the message form that indicates that the message was received and/or relayed
 
-> When participating in a net, the standard practice is to transmit only when directed by the Net Control Station, unless you have an emergency. The NCS controls the flow of traffic and decides who speaks.
+> The correct answer is The number of words or word equivalents in the text portion of the message.
 
 ### T2C12
 **Which of the following requires certification by a civil defense agency?**

@@ -138,7 +138,7 @@
 - C) 70 centimeters
 - **D) 2 meters** ✅
 
-> The amateur 23 centimeter band overlaps with and is close to the 1090 MHz aviation frequency used by aircraft transponders. This sharing means amateurs must be careful about interference to safety-of-life aviation systems. The other listed services don't share spectrum with 23 cm.
+> The correct answer is D) 2 meters.
 
 ### T1B05
 **[97.301, 97.305] Which of the following bands include frequencies where Technicians are authorized to use digital modes such as FT8?**
@@ -165,7 +165,7 @@
 - C) 902.0 MHz to 902.1 MHz
 - D) All these choices are correct
 
-> The maximum transmit power for a Technician operating in the HF bands is 200 watts PEP. This applies to CW on 80, 40, and 15 meters, and to all modes on 10 meters. VHF/UHF allows up to 1500W PEP, but HF for Technicians is capped at 200.
+> The correct choice here is 50.0 MHz to 50.1 MHz and 144.0 MHz to 144.1 MHz.
 
 ### T1B08
 **[97.303] How are US amateurs restricted in segments of bands where the Amateur Radio Service is secondary?**
@@ -174,7 +174,7 @@
 - C) International communications are not permitted in those segments
 - D) Digital transmissions are not permitted in those segments
 
-> On VHF and above, amateur operators are limited to 1500 watts PEP output. This applies to 6 meters, 2 meters, 70 centimeters, and all higher bands. The general rule is always to use the minimum power necessary, but 1500W is the legal ceiling.
+> The correct answer is U.S. amateurs may find non-amateur stations in those segments, and must avoid interfering with them.
 
 ### T1B09
 **[97.101(a), 97.301(a-e)] Why should you not set your transmit frequency to be exactly at the edge of an amateur band or sub-band?**
@@ -183,7 +183,7 @@
 - C) To allow for transmitter frequency drift
 - **D) All these choices are correct** ✅
 
-> The FCC's general power rule is to use the minimum power necessary to carry out the desired communication. This doesn't mean maximum power all the time — it means only as much power as you need. This rule encourages efficient spectrum use and reduces interference.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T1B10
 **[97.305(c)] Where may SSB phone be used in amateur bands above 50 MHz?**
@@ -192,7 +192,7 @@
 - **C) In at least some segment of all these bands** ✅
 - D) On any band if the power is limited to 25 watts
 
-> ITU Region 2 includes the Americas — North, Central, and South America, plus the Caribbean. This is the region designation that applies to amateur radio operations in the United States.
+> The correct answer is In at least some segment of all these bands.
 
 ### T1B11
 **[97.313] What is the maximum peak envelope power output for Technician class operators in their HF band segments?**
@@ -201,7 +201,7 @@
 - C) 50 watts
 - D) 10 watts
 
-> If the FCC rules and an ITU-recommended frequency plan disagree, FCC rules always take precedence for US amateurs. The ITU makes recommendations, but the FCC has regulatory authority within the United States.
+> The correct answer is 200 watts.
 
 ### T1B12
 **[97.313(b)] Except for some specific restrictions, what is the maximum peak envelope power output for Technician class operators using frequencies above 30 MHz?**
@@ -210,7 +210,7 @@
 - C) 500 watts
 - **D) 1500 watts** ✅
 
-> Except in emergencies, a Technician class operator should not transmit on 14.225 MHz — that's the 20-meter band, which requires a General or Extra class license. Technicians are limited to specific HF segments (CW on 80/40/15, CW+phone on 10m) plus VHF/UHF.
+> The correct answer is D) 1500 watts.
 
 ## Group T1C — Licensing; call signs; classes of licensees; renewal; grace periods; vanity call signs
 
@@ -230,7 +230,7 @@
 - C) Only a licensed amateur who has been licensed continuously for more than 10 years
 - **D) Any licensed amateur** ✅
 
-> A US Technician license is valid for operating in North, Central, and South American countries that have CEPT or IARP reciprocal operating agreements. Check the specific agreements — not every country participates, and the Americas are Region 2.
+> The correct answer is D) Any licensed amateur.
 
 ### T1C03
 **[97.117] What types of international communications are FCC-licensed amateur radio stations permitted to make?**
@@ -248,7 +248,7 @@
 - C) Revocation of access to the license record in the FCC system
 - D) Nothing; there is no such requirement
 
-> When operating under reciprocal operating authority, a foreign amateur must identify using their home call sign and the US call district indicator. This lets everyone know the station is a foreign operator legally operating in the US.
+> The correct answer is B) Revocation of the station license or suspension of the operator license.
 
 ### T1C05
 **Which of the following is a valid Group D call sign format for Technician class?**
@@ -293,7 +293,7 @@
 - C) Five years
 - D) Ten years
 
-> If your license has expired and is beyond the two-year grace period, you must take the exam again and get a new license. The FCC grace period only lasts two years — after that, your license is gone and you start over.
+> The correct answer is Two years.
 
 ### T1C10
 **[97.5a] How soon after passing the examination for your first amateur radio license may you transmit on the amateur radio bands?**
@@ -302,7 +302,7 @@
 - **C) As soon as your operator/station license grant appears in the FCC’s license database** ✅
 - D) As soon as you receive your license in the mail from the FCC
 
-> Any licensed amateur can apply for a vanity call sign under the FCC's vanity call sign rules. The specific call signs available depend on your license class — shorter call signs are reserved for higher classes — but the ability to apply is open to everyone.
+> The correct answer is As soon as your operator/station license grant appears in the FCC’s license database.
 
 ### T1C11
 **[97.21(b)] If your license has expired and is still within the allowable grace period, may you continue to transmit on the amateur radio bands?**
@@ -311,7 +311,7 @@
 - C) Yes, for up to one year
 - **D) No, you must wait until the license has been renewed** ✅
 
-> If your license is suspended by the FCC, you are not allowed to transmit on any frequency. A suspension means your operating privileges are revoked. You can't work around it by using a different frequency or claiming an emergency exception.
+> The correct answer is D) No, you must wait until the license has been renewed.
 
 ## Group T1D — Authorized and prohibited transmissions
 
@@ -322,7 +322,7 @@
 - C) Any country banned from such communications by the International Amateur Radio Union (IARU)
 - D) Any country banned from making such communications by the American Radio Relay League (ARRL)
 
-> In an emergency, when immediate safety of human life or protection of property is at stake, an amateur operator may use any means of radio communication at their disposal. This is the one time when normal frequency restrictions can be set aside — genuine emergencies override the usual rules.
+> The correct answer is A) Any country whose administration has notified the International Telecommunication Union (ITU) that it objects to such communications.
 
 ### T1D02
 **[97.113(b), 97.111(b)] Under which of the following circumstances are one-way transmissions by an amateur station prohibited?**
@@ -331,7 +331,7 @@
 - C) International Morse Code Practice
 - D) Telecommand or transmissions of telemetry
 
-> One-way transmissions are prohibited when they're announcements of upcoming ham radio operating events — that's essentially broadcasting, which amateur radio doesn't allow. Telecommand of model craft, brief test transmissions, and emergency information are all legitimate one-way transmissions.
+> The correct answer is B) Broadcasting.
 
 ### T1D03
 **[97.211(b), 97.215(b), 97.113(a)(4)] When is it permissible to transmit messages encoded to obscure their meaning?**
@@ -349,7 +349,7 @@
 - C) When transmissions are limited to less than three minutes per hour
 - D) When the music is transmitted above 1280 MHz
 
-> To legally make amateur radio transmissions in the US, you must have an FCC-granted amateur radio license or permit. A reciprocal agreement authorization counts, but you still need some form of FCC authorization. Good intentions and experience aren't enough — you need the license.
+> The correct answer is A) When incidental to an authorized retransmission of manned spacecraft communications.
 
 ### T1D05
 **[97.113(a)(3)(ii)] When may amateur radio operators use their stations to notify other amateurs of the availability of equipment for sale or trade?**
@@ -358,7 +358,7 @@
 - C) When no profit is made on the sale
 - **D) When selling amateur radio equipment and not on a regular basis** ✅
 
-> Third-party communications are allowed when the control operator is present at the control point, the third party has been properly identified, and the communication isn't compensation for operating. All these rules apply simultaneously.
+> The correct answer is When selling amateur radio equipment and not on a regular basis.
 
 ### T1D06
 **[97.113(a)(4)] What, if any, are the restrictions concerning transmission of language that may be considered indecent or obscene?**
@@ -403,7 +403,7 @@
 - C) Transmission of messages directed only to amateur operators
 - **D) Transmissions intended for reception by the general public** ✅
 
-> Only amateur operators who are assigned a call sign by the FCC (or who hold a valid authorization) are allowed to transmit on amateur frequencies. You can't use someone else's call sign to transmit, even with their permission — you need your own authorization.
+> The correct answer is Transmissions intended for reception by the general public.
 
 ### T1D11
 **[97.215] When may an amateur station transmit without identifying on the air?**
@@ -412,7 +412,7 @@
 - C) When the transmitted power level is below 0.1 watt
 - **D) When transmitting signals to control model craft** ✅
 
-> An amateur station may transmit without on-air identification when the transmitted power is below 0.1 watt, which applies to model craft control under Part 97.215. At such low power levels for radio control, the identification requirement is waived.
+> The correct answer is When transmitting signals to control model craft.
 
 ### T1D12
 **[97.119(a)] Which of the following is required when making on-the-air test transmissions?**
@@ -432,7 +432,7 @@
 - C) When the transmitting station is an auxiliary station
 - **D) Never** ✅
 
-> When a General class control operator lets a Technician transmit on 15 meters using the General's station, the General class operator must be present at the control point. The higher-class operator maintains responsibility and must directly supervise the operation.
+> The correct answer is Never.
 
 ### T1E02
 **[97.301, 97.207(c)] Who may be the control operator of a station communicating through an amateur satellite or space station?**
@@ -441,7 +441,7 @@
 - C) Only an Amateur Extra Class operator who is also an AMSAT member
 - **D) Any amateur allowed to transmit on the satellite uplink frequency** ✅
 
-> If a Technician is the control operator, the station is limited to Technician privileges regardless of the station license class. Your privileges are always the limiting factor, not the station's license class.
+> The correct answer is D) Any amateur allowed to transmit on the satellite uplink frequency.
 
 ### T1E03
 **[97.103(b)] Who must designate the station control operator?**
@@ -450,7 +450,7 @@
 - C) The frequency coordinator
 - D) Any licensed operator
 
-> The person designated as the control operator determines the station's transmitting privileges. It's not the station licensee's class that matters — it's whoever is actually controlling the station at the time of transmission.
+> The correct answer is A) The station licensee.
 
 ### T1E04
 **[97.103(b)] What determines the transmitting frequency privileges of an amateur station?**
@@ -459,7 +459,7 @@
 - C) The highest class of operator license held by anyone on the premises
 - **D) The class of operator license held by the control operator** ✅
 
-> The station licensee is responsible for the proper operation of the station in accordance with FCC rules, unless a control operator has been designated. If no control operator is explicitly designated, the licensee is the presumed control operator.
+> The correct answer is D) The class of operator license held by the control operator.
 
 ### T1E05
 **[97.3(a)(14)] What is an amateur station’s control point?**
@@ -468,7 +468,7 @@
 - **C) The location at which the control operator function is performed** ✅
 - D) The mailing address of the station licensee
 
-> If a station violates FCC rules, both the control operator and the station licensee may be held responsible. The FCC can sanction both — the person who was operating AND the person whose license the station operates under.
+> The correct answer is The location at which the control operator function is performed.
 
 ### T1E06
 **[97.301] When, other than during an emergency, may a Technician class licensee be the control operator of a station operating in an Amateur Extra Class band segment?**
@@ -486,7 +486,7 @@
 - C) Only the control operator
 - **D) The control operator and the station licensee** ✅
 
-> Automatic control means the station operates without a control operator being present at the equipment. The device or computer controls the station on its own. This is different from remote control, where the operator is present but at a distant location.
+> The correct answer is The control operator and the station licensee.
 
 ### T1E08
 **[97.3(a)(6), 97.205(d)] Which of the following is an example of automatic control?**
@@ -495,7 +495,7 @@
 - C) Using a computer or other device to send CW automatically
 - D) Using a computer or other device to identify automatically
 
-> The FCC presumes that the station licensee is the control operator unless documentation in the station records shows otherwise. If there's no written record of another control operator, the licensee is assumed to be responsible.
+> The correct choice here is Repeater operation.
 
 ### T1E09
 **[97.109(c)] Which amateur stations may be remotely controlled?**
@@ -533,7 +533,7 @@
 - C) At any time after a written notification by the FCC of such inspection
 - D) Only when presented with a valid warrant by an FCC official or government agent
 
-> The station licensee must make the station and records available for FCC inspection at any time after written notification. The FCC gives notice in writing, then you must comply. No warrant is needed — the license comes with the obligation to allow inspection upon notice.
+> The correct answer is At any time upon request by an FCC representative.
 
 ### T1F02
 **[97.119(a)] How often must you identify with your FCC-assigned call sign when using tactical call signs such as “Race Headquarters”?**
@@ -569,7 +569,7 @@
 - C) Send the call sign followed by the indicator R
 - D) Send the call sign using only a phone emission
 
-> A self-assigned indicator must be included before or after your call sign when transmitting from a location other than your station's FCC-registered address. This lets other operators know you're not at your usual location.
+> The correct answer is B) Send the call sign using a CW or phone emission.
 
 ### T1F06
 **[97.119(c)] Which of the following self-assigned indicators are acceptable when using a phone transmission?**
@@ -578,7 +578,7 @@
 - C) KL7CC slash W3
 - **D) All these choices are correct** ✅
 
-> The phone signal report system uses a two-digit number: readability (1–5) and strength (1–9). A report of "five nine" means perfectly readable and extremely strong. Understanding this system helps you communicate signal quality efficiently.
+> All of the listed choices are correct for this question, so D is the right answer.
 
 ### T1F07
 **[97.115(a)(2)] Which of the following restrictions apply when a non-licensed person speaks to a foreign amateur radio station via a station under the control of an FCC-licensed amateur radio operator?**
@@ -614,7 +614,7 @@
 - C) The owner of the repeater
 - D) Both the originating station and the repeater owner
 
-> In the US, you can retransmit signals from NOAA weather stations and the International Space Station on amateur frequencies. These are specifically permitted retransmissions. Retransmitting police scanners or broadcast radio is not allowed.
+> The correct answer is A) The control operator of the originating station.
 
 ### T1F11
 **[97.5(b)(2)] Which of the following is a requirement for the issuance of a club station license grant?**

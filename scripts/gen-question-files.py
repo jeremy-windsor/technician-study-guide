@@ -6,6 +6,7 @@ subelement into subelements/, matching the existing study-guide format.
 """
 
 import json
+import re
 import sys
 from pathlib import Path
 from collections import defaultdict
@@ -72,6 +73,52 @@ GROUP_DESCRIPTIONS = {
 # Key = question ID, value = explanation paragraph.
 
 EXPLANATIONS: dict[str, str] = {}
+
+# Questions whose legacy explanation text is off-topic for the 2026-2030 pool.
+# These IDs intentionally fall back to a generated explanation that always
+# matches the current question/answer pair.
+FALLBACK_EXPLANATION_IDS = {
+    # T1
+    "T1B04", "T1B07", "T1B08", "T1B09", "T1B10", "T1B11", "T1B12",
+    "T1C02", "T1C04", "T1C09", "T1C10", "T1C11",
+    "T1D01", "T1D02", "T1D04", "T1D05", "T1D10", "T1D11",
+    "T1E01", "T1E02", "T1E03", "T1E04", "T1E05", "T1E07", "T1E08",
+    "T1F01", "T1F05", "T1F06", "T1F10",
+    # T2
+    "T2A05", "T2A10", "T2A11",
+    "T2B02", "T2B03", "T2B04", "T2B09", "T2B10", "T2B11", "T2B13",
+    "T2C02", "T2C07", "T2C09", "T2C10", "T2C11",
+    # T3
+    "T3A03", "T3A05", "T3A07", "T3A08", "T3A09", "T3A10",
+    "T3B02", "T3B03", "T3B07", "T3B08", "T3B10",
+    "T3C01", "T3C02", "T3C05", "T3C06", "T3C07", "T3C08", "T3C10", "T3C11",
+    # T4
+    "T4A05", "T4A06", "T4A09",
+    "T4B02", "T4B03", "T4B06", "T4B10", "T4B11",
+    # T5
+    "T5A02", "T5A09", "T5A10", "T5A11",
+    "T5B02", "T5B03", "T5B04", "T5B06", "T5B07", "T5B08", "T5B09", "T5B10", "T5B11", "T5B12",
+    "T5C09", "T5C10", "T5C11",
+    "T5D05", "T5D06", "T5D08", "T5D10", "T5D11", "T5D12",
+    # T6
+    "T6A02", "T6A03", "T6A05", "T6A08", "T6A10", "T6A11",
+    "T6B01", "T6B02", "T6B06", "T6B08", "T6B09", "T6B10",
+    "T6C09", "T6C10", "T6C11", "T6C12",
+    "T6D01", "T6D04", "T6D05", "T6D08", "T6D09", "T6D10", "T6D11",
+    # T7
+    "T7A02", "T7A04", "T7A05", "T7A06", "T7A07", "T7A08",
+    "T7B03", "T7B06", "T7B08", "T7B09", "T7B10",
+    "T7C02", "T7C04", "T7C06", "T7C07", "T7C08", "T7C09",
+    "T7D02", "T7D03", "T7D04", "T7D06", "T7D07", "T7D08", "T7D10", "T7D11",
+    # T8
+    "T8A01", "T8A02", "T8A03", "T8A04", "T8A11", "T8A12",
+    "T8B01", "T8B02", "T8B03", "T8B04", "T8B05", "T8B06", "T8B07", "T8B08", "T8B09",
+    "T8C01", "T8C07", "T8C09", "T8C11",
+    "T8D01", "T8D03", "T8D07", "T8D10",
+    # T9
+    "T9A02", "T9A05", "T9A10", "T9A11",
+    "T9B03", "T9B04", "T9B05", "T9B07", "T9B08", "T9B10",
+}
 
 
 def _load_explanations() -> None:
@@ -301,6 +348,7 @@ def _load_explanations() -> None:
     E["T4A09"] = "Transmit/receive (T/R) switching at the antenna connector of a modern transceiver is performed by electronic switching circuits. These solid-state switches are fast and reliable, replacing the mechanical relays used in older equipment."
     E["T4A10"] = "A digital mode hotspot provides nearby transceivers with communication access to a digital voice or data network. It acts as a personal low-power gateway, connecting your DMR, D-STAR, or Fusion radio to the internet-linked digital network through your home internet connection."
     E["T4A11"] = "The negative power return of a mobile transceiver should be connected at the 12-volt battery chassis ground — the same point where the battery's negative terminal connects to the vehicle chassis. This ensures a clean, low-resistance ground connection and prevents ground loops."
+    E["T4A12"] = "An electronic keyer is a device that assists in manual sending of Morse code. It automatically generates properly timed dots and dashes when you press a paddle — you control the characters, but the keyer handles the precise timing. This makes CW sending faster, more consistent, and less tiring than using a straight key."
 
     # ── T4B ──────────────────────────────────────────────────────────
     E["T4B01"] = "Excessive microphone gain on SSB transmissions causes distorted audio and excessive bandwidth, potentially causing splatter into adjacent frequencies. The signal becomes over-modulated, and other stations will hear garbled, distorted audio. Keep the mic gain set properly — more is not better."
@@ -398,6 +446,7 @@ def _load_explanations() -> None:
     E["T6B09"] = "Semiconductor material is used in a solar cell to convert light energy into electrical energy. When photons hit the semiconductor junction, they knock electrons free, creating current — this is the photovoltaic effect."
     E["T6B10"] = "The approximate junction threshold voltage of a typical silicon diode is 0.7 volts. This means a silicon diode needs about 0.7V of forward bias before significant current flows. Germanium diodes have a lower threshold of about 0.3V."
     E["T6B11"] = "In amplifiers, the term \"gain\" refers to the ratio of the output signal to the input signal — it can describe voltage gain, current gain, or power gain. All of these are valid meanings of gain in the context of amplifiers."
+    E["T6B12"] = "The three electrodes of a bipolar junction transistor are the emitter, base, and collector. The base controls current flow between the emitter and collector. A small current into the base allows a much larger current to flow from collector to emitter — that's how transistors amplify."
 
     # ── T6C ──────────────────────────────────────────────────────────
     E["T6C01"] = "An electrical diagram using standard component symbols is called a schematic. Schematics use standardized symbols to represent resistors, capacitors, transistors, and other components, showing how they're connected. It's the universal language of electronics."
@@ -558,8 +607,67 @@ def _load_explanations() -> None:
     E["T9B09"] = "A high SWR reading can indicate a problem with the antenna system — such as a bad connector, wrong-length antenna, or broken feed line. High SWR means a poor impedance match, which wastes power as reflected energy."
     E["T9B10"] = "An SWR of 1:1 means a perfect impedance match — all the power from the transmitter is delivered to the antenna with no reflections. In practice, an SWR of 1.5:1 or lower is considered excellent."
     E["T9B11"] = "Air-dielectric hardline (rigid or semi-rigid coaxial cable) has the lowest loss of common feed line types. However, it's expensive, heavy, and difficult to install. For most amateur stations, high-quality flexible coax is a practical compromise."
+    E["T9B12"] = "Standing wave ratio (SWR) is a measure of how well a load is matched to a transmission line. An SWR of 1:1 is a perfect match — all power goes to the antenna. Higher SWR means more power is reflected back toward the transmitter, reducing efficiency and potentially damaging equipment."
+
+    for qid in FALLBACK_EXPLANATION_IDS:
+        E[qid] = ""
 
     # fmt: on
+
+
+RULE_CITATION_RE = re.compile(r"^\[[^\]]+\]\s*")
+
+
+def build_fallback_explanation(q: dict) -> str:
+    """Generate a safe explanation that always matches the current question."""
+    answer = q["answers"][q["correct"]]
+    question = RULE_CITATION_RE.sub("", q["question"]).strip()
+    q_lower = question.lower()
+
+    if answer == "All these choices are correct":
+        return "All of the listed choices are correct for this question, so D is the right answer."
+
+    if q["group"].startswith("T5B"):
+        return f"This is a unit-conversion or decibel question. Work it out and you get {answer}."
+
+    if q["group"].startswith(("T5C", "T5D")) and any(ch.isdigit() for ch in question):
+        return f"Apply the appropriate circuit formula and you get {answer}."
+
+    if q["group"].startswith("T6C"):
+        return f"{answer} is the component or connection shown in the referenced figure."
+
+    if q["group"].startswith("T7D"):
+        return f"{answer} is the correct measurement method, tool, or precaution here."
+
+    if q_lower.startswith(("what is ", "what are ")):
+        return f"The correct answer is {answer}."
+
+    if q_lower.startswith(("what does ", "which term", "what term")):
+        return f"{answer} is the correct term or definition for this question."
+
+    if q_lower.startswith(("which of the following", "which frequency", "which band", "what type")):
+        return f"The correct choice here is {answer}."
+
+    if q_lower.startswith(("where ", "when ", "how ", "why ")):
+        return f"The correct answer is {answer}."
+
+    return f"The correct answer is {q['correct']}) {answer}."
+
+
+def validate_explanations(questions: list[dict]) -> None:
+    """Fail fast if the explanation map drifts from the question pool."""
+    question_ids = {q["id"] for q in questions}
+    explanation_ids = set(EXPLANATIONS)
+    missing = sorted(question_ids - explanation_ids)
+    orphaned = sorted(explanation_ids - question_ids)
+
+    if missing or orphaned:
+        issues = []
+        if missing:
+            issues.append(f"missing explanation keys: {', '.join(missing)}")
+        if orphaned:
+            issues.append(f"orphan explanation keys: {', '.join(orphaned)}")
+        raise SystemExit("; ".join(issues))
 
 
 def load_pool() -> dict:
@@ -595,7 +703,7 @@ def format_question(q: dict) -> str:
 
     explanation = EXPLANATIONS.get(q["id"], "")
     if not explanation:
-        explanation = f"The correct answer is {q['correct']}) {q['answers'][q['correct']]}."
+        explanation = build_fallback_explanation(q)
     lines.append("")
     lines.append(f"> {explanation}")
 
@@ -629,6 +737,7 @@ def generate_subelement_file(
 def main() -> None:
     _load_explanations()
     pool = load_pool()
+    validate_explanations(pool["questions"])
 
     subelements_meta = pool["subelements"]
     grouped = group_questions(pool["questions"])

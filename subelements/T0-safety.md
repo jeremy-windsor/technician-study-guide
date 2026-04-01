@@ -2,7 +2,7 @@
 
 ## Electrical and Power Safety
 
-Let's talk about the hazards that come with working around electricity and batteries at your amateur radio station. Even something as simple as a 12-volt storage battery can be dangerous — not because it'll shock you through dry skin, but because shorting the terminals can deliver hundreds of amps instantly, melting wires, causing burns, and potentially igniting hydrogen gas. The danger from a 12-volt battery is about massive current, not voltage.
+Let's talk about the hazards that come with working around electricity and batteries at your amateur radio station. Even something as simple as a 12-volt storage battery that lacks internal protection circuitry can be dangerous — not because it'll shock you through dry skin, but because shorting the terminals can deliver hundreds of amps instantly, melting wires, causing burns, and potentially igniting hydrogen gas. The danger from a 12-volt battery is about massive current, not voltage.
 
 Speaking of current, when electrical current flows through the human body, it causes multiple hazards. It heats tissue, causing burns. It disrupts the electrical functions of cells, which can stop your heart or damage nerves. And it causes involuntary muscle contractions, which can prevent you from letting go of the source. Even small currents through the heart can be fatal. All three of these effects are real dangers.
 
@@ -14,7 +14,7 @@ Never replace a 5-ampere fuse with a 20-ampere fuse. A larger fuse would allow f
 
 A fuse or circuit breaker should be installed in series with the hot conductor only. Fusing the neutral wire could create a dangerous condition where equipment appears to be turned off but the hot wire is still live. And a fuse in parallel would short-circuit the power line. Series with the hot wire only is the safe configuration.
 
-There are several good practices to guard against electrical shock at your station. Use three-wire cords and plugs for all AC powered equipment. Connect all AC powered station equipment to a common safety ground to prevent dangerous voltage differences between pieces of equipment. And install mechanical interlocks in high-voltage circuits to prevent access when they're energized. All three of these practices are important — layered safety is the best approach.
+There are several good practices to guard against electrical shock at your station. Use three-wire cords and plugs for all AC powered equipment. Connect all AC powered station equipment to a common safety ground to prevent dangerous voltage differences between pieces of equipment. And make sure high-voltage capacitors are fully discharged before working inside equipment. All three of these practices are important — layered safety is the best approach.
 
 ## Battery Safety
 

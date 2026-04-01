@@ -20,7 +20,7 @@ The FCC requires you to maintain a correct email address on file with them. If t
 
 The FCC currently issues new licenses for only three classes: Technician, General, and Amateur Extra. Novice, Technician Plus, and Advanced are no longer issued, though existing holders can still renew those licenses.
 
-Any licensed amateur can apply for a vanity call sign under the FCC's vanity call sign rules. The specific call signs available to you may depend on your license class, but the ability to apply is open to everyone. A valid Technician class call sign follows a two-by-three format — that's a two-letter prefix, one numeral, and a three-letter suffix, like KF1XXX. Formats like a two-by-one or one-by-two are reserved for higher classes or vanity calls.
+Any licensed amateur can apply for a vanity call sign under the FCC's vanity call sign rules. The specific call signs available to you may depend on your license class, but the ability to apply is open to everyone. A valid Technician class call sign follows a two-by-three format — also called a Group D call sign — that's a two-letter prefix, one numeral, and a three-letter suffix, like KF1XXX. Formats like a two-by-one or one-by-two are reserved for higher classes or vanity calls.
 
 ## Definitions and Key Terms
 
@@ -58,7 +58,7 @@ SSB phone is permitted in at least some segment of all amateur bands above 50 me
 
 ## Power Limits
 
-Technicians are limited to 200 watts peak envelope power on their HF band segments, which is the 10 meter band. A common trap is thinking it's 100 watts, but the actual limit is 200 watts.
+Technicians are limited to 200 watts peak envelope power on their HF band segments. That includes the 10 meter phone/data/CW privileges and the Technician CW segments on 80, 40, and 15 meters. A common trap is thinking it's 100 watts, but the actual limit is 200 watts.
 
 Above 30 megahertz — that's VHF and UHF — Technicians can run up to 1500 watts PEP, the same maximum power as any amateur. Don't confuse the HF power limit of 200 watts with VHF and UHF, where the full 1500-watt limit applies.
 
@@ -104,7 +104,7 @@ Station identification when using a phone emission must be in English. You can h
 
 When indicating you're operating from a different call district, you can say "stroke," "slant," or "slash" before the district number — all three are acceptable ways to verbalize the separator.
 
-The only time you can transmit without identifying on the air is when the transmitted power level is below 0.1 watt, such as when controlling model craft — RC airplanes, boats, or cars. All other transmissions require station identification.
+The only time you can transmit without identifying on the air is when transmitting signals to control model craft — RC airplanes, boats, or cars. This exemption under Part 97.215 is specifically for radio control of models, not a general low-power exemption. All other transmissions require station identification.
 
 Even test transmissions require station identification — you must identify the transmitting station when making on-the-air test transmissions. There's no time restriction and no need to notify the FCC for test transmissions — just identify your station. This is a simple but important rule: every on-the-air transmission, including tests, must include proper station identification.
 
