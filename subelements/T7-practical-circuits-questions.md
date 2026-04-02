@@ -192,7 +192,7 @@
 - C) You are in a bad location
 - **D) All these choices are correct** ✅
 
-> All of the listed choices are correct for this question, so D is the right answer.
+> All three cause distorted FM audio: (A) being off-frequency makes the repeater receiver misinterpret your signal, (B) speaking too loudly or too close over-deviates the FM modulator, and (C) a bad location creates multipath or weak signal conditions. Since all three apply, D is correct.
 
 ### T7B11
 **Which of the following can eliminate distorted voice transmissions?**

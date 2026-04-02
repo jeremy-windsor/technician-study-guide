@@ -24,7 +24,7 @@ A potential drawback of using a handheld VHF transceiver inside a vehicle that l
 
 Knowing the approximate physical size of antennas for different frequencies is practical knowledge you'll use when building or buying antennas.
 
-A 19-inch-long vertical antenna is often used on 2 meters because it is a resonant quarter-wave at that frequency. At 146 megahertz, a full wavelength is about 80 inches — roughly 2 meters. A quarter of that is about 20 inches, and with velocity factor adjustment it works out to approximately 19 inches. The formula is: length in inches equals 2808 divided by the frequency in megahertz.
+A 19-inch-long vertical antenna is often used on 2 meters because it is a resonant quarter-wave at that frequency. At 146 megahertz, a full wavelength is about 80 inches — roughly 2 meters. A quarter of that is about 20 inches, and with velocity factor adjustment it works out to approximately 19 inches. The formula is: length in inches equals 2808 divided by the frequency in megahertz (that's 234 feet × 12 inches/foot = 2808, since a quarter-wave in feet is 234/f(MHz)).
 
 A half-wavelength 6-meter dipole antenna is approximately 112 inches long, which is about 9 and a third feet. The name "6 meters" refers to the full wavelength, and the dipole is half of that — about 3 meters or 118 inches, adjusted down to about 112 inches for velocity factor.
 

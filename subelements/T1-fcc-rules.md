@@ -104,7 +104,7 @@ Station identification when using a phone emission must be in English. You can h
 
 When indicating you're operating from a different call district, you can say "stroke," "slant," or "slash" before the district number — all three are acceptable ways to verbalize the separator.
 
-The only time you can transmit without identifying on the air is when transmitting signals to control model craft — RC airplanes, boats, or cars. This exemption under Part 97.215 is specifically for radio control of models, not a general low-power exemption. All other transmissions require station identification.
+The only time you can transmit without identifying on the air is when transmitting signals to control model craft — RC airplanes, boats, or cars. This exemption under Part 97.215 applies to radio control of models operating at 1 watt or less input power. It’s specifically for model craft control, not a general low-power exemption. All other transmissions require station identification.
 
 Even test transmissions require station identification — you must identify the transmitting station when making on-the-air test transmissions. There's no time restriction and no need to notify the FCC for test transmissions — just identify your station. This is a simple but important rule: every on-the-air transmission, including tests, must include proper station identification.
 

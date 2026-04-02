@@ -44,8 +44,8 @@ Read this the morning of your exam. Key facts, formulas, and numbers that show u
 | **80m** | 3.525–3.600 MHz | CW only | 200W PEP |
 | **40m** | 7.025–7.125 MHz | CW only | 200W PEP |
 | **15m** | 21.025–21.200 MHz | CW only | 200W PEP |
-| **10m** | 28.000–28.300 MHz | CW, RTTY, data | 200W PEP |
-| **10m** | 28.300–28.500 MHz | CW, SSB | 200W PEP |
+| **10m (data)** | 28.000–28.300 MHz | CW, RTTY, data | 200W PEP |
+| **10m (voice)** | 28.300–28.500 MHz | CW, SSB | 200W PEP |
 | **6m** | 50–54 MHz | All modes | 1500W PEP |
 | **2m** | 144–148 MHz | All modes | 1500W PEP |
 | **1.25m** | 222–225 MHz | All modes | 1500W PEP |
@@ -60,6 +60,7 @@ Read this the morning of your exam. Key facts, formulas, and numbers that show u
 |-----------|------|
 | 146.520 MHz | 2m FM national calling frequency |
 | 446.000 MHz | 70cm FM national calling frequency |
+| 223.500 MHz | 1.25m FM national calling frequency |
 | 52.525 MHz | 6m FM national calling frequency |
 | 28.200–28.300 MHz | HF beacon sub-band (10m) |
 | 156.800 MHz | NOT amateur — marine channel 16 (emergency) |
@@ -149,7 +150,7 @@ Read this the morning of your exam. Key facts, formulas, and numbers that show u
 ## Common Traps
 
 - **RACES vs ARES** — RACES requires civil defense agency certification; ARES is purely voluntary
-- **"All these choices are correct"** — usually wrong unless it really is all of them
+- **"All these choices are correct"** — it's the right answer ~40% of the time. Evaluate each option independently rather than guessing based on statistics
 - **Power in watts vs. dBm** — exam always means watts unless it says otherwise
 - **Wavelength formula** — it's 300/MHz, not 300×MHz
 - **Ohm's Law** — know all three forms cold: E=IR, I=E/R, R=E/I

@@ -1,6 +1,6 @@
 # 7-Day Study Plan
 
-You can pass this exam in a week. The pool is 411 questions — sounds like a lot, but many answers are common sense once you understand the concepts.
+You can pass this exam in a week. The pool is about 410 questions (411 for 2022–2026, 409 for 2026–2030) — sounds like a lot, but many answers are common sense once you understand the concepts.
 
 ## Strategy
 
