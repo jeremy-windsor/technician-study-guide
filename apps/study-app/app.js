@@ -59,6 +59,14 @@ const SECTION_NARRATIVE_AUDIO = Object.freeze({
   T9: '../../subelements/T9-antennas-feedlines.mp3',
 });
 
+// Technician exam: 35 questions, 26 to pass (74%)
+const EXAM_TOTAL = 35;
+const EXAM_PASS = 26;
+const EXAM_TIME = 26 * 60; // seconds
+
+// Per-subelement exam question distribution
+const EXAM_WEIGHTS = { T1:6, T2:3, T3:3, T4:2, T5:4, T6:4, T7:4, T8:4, T9:2, T0:3 };
+
 const BADGES = [
   { id: 'first_flip', icon: '🃏', name: 'First Flip', desc: 'Flip your first flashcard' },
   { id: 'first_test', icon: '📝', name: 'Test Taker', desc: 'Complete your first practice exam' },
@@ -140,7 +148,7 @@ function normalizeSavedState(saved) {
   if (Array.isArray(saved.tests)) {
     next.tests = saved.tests.map(test => {
       if (!isPlainObject(test)) return null;
-      const total = Math.max(1, toNonNegativeInt(test.total, 35));
+      const total = Math.max(1, toNonNegativeInt(test.total, EXAM_TOTAL));
       const score = Math.min(total, toNonNegativeInt(test.score, 0));
       const pct = Math.min(100, toNonNegativeInt(test.pct, Math.round(score / total * 100)));
       const date = normalizeIsoDate(test.date);
@@ -1099,7 +1107,7 @@ let testAnswers = [];  // user's selected answer indices
 let testRevealed = []; // which have been revealed
 let testCurrentQ = 0;
 let testTimer = null;
-let testTimeLeft = 26 * 60;
+let testTimeLeft = EXAM_TIME;
 let testStartTime = null;
 
 function showTestStart() {
@@ -1111,12 +1119,9 @@ function showTestStart() {
 }
 
 function buildTestDeck() {
-  // Real exam draws from each subelement proportionally — same weights for both 2022-2026 and 2026-2030 pools
-  // Per NCVEC: T1(6), T2(3), T3(3), T4(2), T5(4), T6(4), T7(4), T8(4), T9(2), T0(3) = 35
-  const weights = { T1:6, T2:3, T3:3, T4:2, T5:4, T6:4, T7:4, T8:4, T9:2, T0:3 };
   const deck = [];
 
-  for (const [se, count] of Object.entries(weights)) {
+  for (const [se, count] of Object.entries(EXAM_WEIGHTS)) {
     const pool = QUESTION_POOL.filter(q => q.id.startsWith(se));
     const shuffled = shuffle([...pool]);
     deck.push(...shuffled.slice(0, count));
@@ -1135,10 +1140,10 @@ function shuffle(arr) {
 
 function startTest() {
   testQuestions = buildTestDeck();
-  testAnswers = new Array(35).fill(-1);
-  testRevealed = new Array(35).fill(false);
+  testAnswers = new Array(EXAM_TOTAL).fill(-1);
+  testRevealed = new Array(EXAM_TOTAL).fill(false);
   testCurrentQ = 0;
-  testTimeLeft = 26 * 60;
+  testTimeLeft = EXAM_TIME;
   testStartTime = Date.now();
 
   document.getElementById('test-start').style.display = 'none';
@@ -1188,7 +1193,7 @@ function renderTestQuestion() {
   document.getElementById('test-qnum').textContent = n;
   document.getElementById('test-qid').textContent = q.id;
   document.getElementById('test-question').textContent = q.question;
-  const testPct = Math.round(n / 35 * 100);
+  const testPct = Math.round(n / EXAM_TOTAL * 100);
   document.getElementById('test-bar').style.width = testPct + '%';
   const testBarContainer = document.getElementById('test-bar-container');
   if (testBarContainer) testBarContainer.setAttribute('aria-valuenow', testPct);
@@ -1197,7 +1202,7 @@ function renderTestQuestion() {
 
   document.getElementById('test-prev-btn').disabled = testCurrentQ === 0;
   document.getElementById('test-next-btn').textContent =
-    testCurrentQ === 34 ? 'Submit →' : 'Next →';
+    testCurrentQ === EXAM_TOTAL - 1 ? 'Submit →' : 'Next →';
   const showAnswerBtn = document.getElementById('test-show-answer-btn');
   if (showAnswerBtn) showAnswerBtn.disabled = testRevealed[testCurrentQ] === true;
 
@@ -1256,8 +1261,8 @@ function endExamEarly() {
   const answered = testAnswers.filter(a => a !== -1).length;
   const correctSoFar = testQuestions.reduce((n, q, i) => n + (testAnswers[i] === q.correct ? 1 : 0), 0);
   const msg = answered === 0
-    ? 'End exam now? All 35 questions will be marked wrong.'
-    : `End exam now?\n\n${answered} of 35 answered · ${correctSoFar} correct so far\nUnanswered questions count as wrong.`;
+    ? `End exam now? All ${EXAM_TOTAL} questions will be marked wrong.`
+    : `End exam now?\n\n${answered} of ${EXAM_TOTAL} answered · ${correctSoFar} correct so far\nUnanswered questions count as wrong.`;
   if (!confirm(msg)) return;
   submitTest();
 }
@@ -1270,7 +1275,7 @@ function testPrev() {
 }
 
 function testNext() {
-  if (testCurrentQ < 34) {
+  if (testCurrentQ < EXAM_TOTAL - 1) {
     testCurrentQ++;
     renderTestQuestion();
   } else {
@@ -1298,10 +1303,10 @@ function submitTest() {
     }
   });
 
-  const pct = Math.round(correct / 35 * 100);
-  const pass = correct >= 26;
+  const pct = Math.round(correct / EXAM_TOTAL * 100);
+  const pass = correct >= EXAM_PASS;
 
-  state.tests.push({ score: correct, total: 35, pct, date: new Date().toISOString(), wrong: wrongQids });
+  state.tests.push({ score: correct, total: EXAM_TOTAL, pct, date: new Date().toISOString(), wrong: wrongQids });
   saveState();
   checkBadges();
 
@@ -1314,10 +1319,10 @@ function showTestResults(correct, pct, pass, wrongQids) {
   updateFormulaFab(); // Show FAB again after test ends
 
   document.getElementById('score-emoji').textContent = pass ? (pct === 100 ? '💯' : '🏆') : '📖';
-  document.getElementById('score-num').textContent = `${correct}/35`;
+  document.getElementById('score-num').textContent = `${correct}/${EXAM_TOTAL}`;
   document.getElementById('score-num').className = 'score-num ' + (pass ? 'pass' : 'fail');
   document.getElementById('score-label').textContent = pass ? '✓ PASS' : '✗ FAIL';
-  document.getElementById('score-sub').textContent = `${pct}% · Need 74% (26/35) to pass`;
+  document.getElementById('score-sub').textContent = `${pct}% · Need 74% (${EXAM_PASS}/${EXAM_TOTAL}) to pass`;
 
   const elapsed = Math.round((Date.now() - testStartTime) / 1000);
   const mins = Math.floor(elapsed / 60);
@@ -1358,11 +1363,11 @@ function renderProgress() {
     histList.innerHTML = '<div class="empty-state"><div class="empty-icon">📝</div><p>No tests taken yet</p></div>';
   } else {
     histList.innerHTML = [...state.tests].reverse().slice(0, 10).map(t => {
-      const pass = t.score >= 26;
+      const pass = t.score >= EXAM_PASS;
       const d = new Date(t.date);
       const dateStr = d.toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' });
       return `<div class="history-item">
-        <div class="history-score ${pass?'pass':'fail'}">${escapeHtml(t.score)}/35</div>
+        <div class="history-score ${pass?'pass':'fail'}">${escapeHtml(t.score)}/${EXAM_TOTAL}</div>
         <div class="history-info">
           <div>${escapeHtml(t.pct)}% · ${pass ? '✓ Pass' : '✗ Fail'}</div>
           <div class="history-date">${escapeHtml(dateStr)}</div>
@@ -1425,8 +1430,8 @@ function checkBadges() {
 
   if (Object.values(state.cards).some(c => c.seen)) checkBadge('first_flip');
   if (tests.length >= 1) checkBadge('first_test');
-  if (tests.some(t => t.score >= 26)) checkBadge('first_pass');
-  if (tests.some(t => t.score === 35)) checkBadge('perfect_test');
+  if (tests.some(t => t.score >= EXAM_PASS)) checkBadge('first_pass');
+  if (tests.some(t => t.score === EXAM_TOTAL)) checkBadge('perfect_test');
   if (tests.length >= 5) checkBadge('5_tests');
 
   const seenCount = Object.values(state.cards).filter(c => c.seen).length;
@@ -1493,7 +1498,7 @@ function doReset() {
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').catch(() => {});
+    navigator.serviceWorker.register('./sw.js', { updateViaCache: 'none' }).catch(() => {});
   });
 }
 
